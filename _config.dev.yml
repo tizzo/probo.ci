@@ -1,1 +1,2 @@
 # Override settings in _config.yml here
+baseurl: "" # the subpath of your site, e.g. /blog/

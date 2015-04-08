@@ -1,2 +1,10 @@
 # Override settings in _config.yml here
 baseurl: "" # the subpath of your site, e.g. /blog/
+
+# Assets pipeline settings
+assets:
+  css_compressor: 
+  js_compressor: 
+  cache: false
+  cachebust: none
+  debug: true

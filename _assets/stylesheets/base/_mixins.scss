@@ -7,4 +7,9 @@
 	border: 2px solid $border;
 	border-radius: 3px;
 	padding: 0.5em 1em;
+	cursor: pointer;
+}
+
+@function em($pixel) {
+	@return $pixel / 16px * 1em;
 }

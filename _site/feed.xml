@@ -4,10 +4,10 @@
     <title>Proviso</title>
     <description>Proviso is a Quality Assurance platform that lets your team test  features on your site while in development, helping you get  feedback while you’re working.  
 </description>
-    <link>http://proviso.ci/proviso.ci/</link>
-    <atom:link href="http://proviso.ci/proviso.ci/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 09 Apr 2015 12:21:03 -0400</pubDate>
-    <lastBuildDate>Thu, 09 Apr 2015 12:21:03 -0400</lastBuildDate>
+    <link>http://proviso.ci/</link>
+    <atom:link href="http://proviso.ci/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 09 Apr 2015 12:30:42 -0400</pubDate>
+    <lastBuildDate>Thu, 09 Apr 2015 12:30:42 -0400</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -28,8 +28,8 @@
 
 </description>
         <pubDate>Tue, 07 Apr 2015 08:25:07 -0400</pubDate>
-        <link>http://proviso.ci/proviso.ci/jekyll/update/2015/04/07/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://proviso.ci/proviso.ci/jekyll/update/2015/04/07/welcome-to-jekyll.html</guid>
+        <link>http://proviso.ci/jekyll/update/2015/04/07/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://proviso.ci/jekyll/update/2015/04/07/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>

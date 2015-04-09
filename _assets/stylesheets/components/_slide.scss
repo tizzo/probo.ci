@@ -1,5 +1,8 @@
 .slide {
-	height: 100vh;
+	margin: 0;
+	padding: em(2 * $base-spacing);
+	min-height: 100vh;
+	text-align: center;
 
 	button {
 		@include button;

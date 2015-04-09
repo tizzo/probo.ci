@@ -1,0 +1,26 @@
+.slide {
+	height: 100vh;
+
+	button {
+		@include button;
+	}
+}
+
+[data-slide='1'] {
+	background: image-url('proviso-gradient-bg.jpg') top left repeat-x $finn;
+	color: $off-white;
+}
+
+[data-slide='2'] {
+	color: $off-black;
+}
+
+[data-slide='3'] {
+	background-color: $toledo;
+	color: $off-white;
+}
+
+[data-slide='4'] {
+	background: image-url('proviso-sphere.png') bottom center no-repeat $off-white;
+	color: $off-black;
+}

@@ -106,7 +106,7 @@ module.exports = function(grunt) {
         modernizr: {
             dist: {
                 outputFile: '<%= app.assets %>/javascripts/modernizr.js',
-                tests: ['respond', 'svg', 'mq', 'touch', 'localstorage', 'css_filters', 'css_backgroundsizecover', 'inputtypes', 'url_data_uri'],
+                tests: ['respond', 'svg', 'mq', 'touch', 'localstorage', 'css_filters', 'css_backgroundsizecover', 'inputtypes', 'url_data_uri', 'css_transforms'],
                 uglify: false,
                 parseFiles: false
             }

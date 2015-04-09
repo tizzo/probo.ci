@@ -201,6 +201,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
+  breakpoint
   bundler
   compass (> 1.0)
   compass-normalize

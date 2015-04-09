@@ -1,6 +1,6 @@
 require 'compass'    # compass frameworks MUST be required BEFORE
 require 'respond-to' # jekyll-assets/compass to be auto-injected
-
+require 'breakpoint'
 require 'sass'
 require 'uglifier'
 require 'compass-normalize'

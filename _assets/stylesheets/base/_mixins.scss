@@ -1,0 +1,10 @@
+@mixin button($bg: $finn, $color: $off-white, $border: $toledo) {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	color: $color;
+	background-color: $bg;
+	border: 2px solid $border;
+	border-radius: 3px;
+	padding: 0.5em 1em;
+}

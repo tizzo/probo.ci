@@ -1,5 +1,6 @@
 @import "normalize";
 @import "compass";
+@import "breakpoint";
 
 @import "colors";
 @import "vars";
@@ -10,4 +11,17 @@ body {
     * {
         box-sizing: border-box;
     }
+}
+
+.wrapper {
+	width: 98%;
+	margin: 0 auto;
+
+	@include breakpoint($bp-medium-landscape) {
+		width: 95%;
+	}
+
+	@include breakpoint($bp-large) {
+		width: $site-width;
+	}
 }

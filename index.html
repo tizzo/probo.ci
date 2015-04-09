@@ -6,31 +6,35 @@ layout: default
 
   <section data-slide="1" class="segment slide">
   <div class="wrapper">
-    <h2>See your site for each change</h2>
-    <p>Proviso creates a persistent environment where you can see what your what your site will look like after every change. We keep the environment around as long as you want it so that your developers, QA team, project managers, and even clients can see your work in progress (if you want them to, that is).</p>
-    <button>Request a Demo</button>
+    <h2>Site-seeing made easy</h2>
+    <p>Proviso creates a persistent environment to preview and test each development change. Keep the environments as long as you like, letting your developers, QA testers, project managers, and clients see your work in progress.</p> 
+    {% image 'proviso-bash.png' alt="Proviso bash shell commands" class="full-width drop-shadow" %}   
     </div>
   </section>
 
   <section data-slide="2" class="segment slide">
   <div class="wrapper">
-    <h2>Integrated with Github and Stash</h2>
-    <p>We live in our pull request and our bet is that you probably do too. Proviso integrates with your pull requests sending the status back so that you can get links to your environment and your test results right from inside your pull requests.</p>
+    <h2>Github and Stash Integration</h2>
+    <p>We live in pull requests and our bet is you do too. Proviso creates an environment for each pull request, and gives you links to the site and test results within the pull request.</p>
+    {% image 'proviso-github.png' alt="Proviso screenshot in Github" class="full-width" %}
     </div>
   </section>
 
   <section data-slide="3" class="segment slide">
   <div class="wrapper">
-    <h2>Configured with a simple YAML file inside your repository</h2>
-    <p>Just log into create a .proviso.yml yaml file that tells us how to setup your site and how to run your tests.</p>
+    <h2>Configured with YAML</h2>
+    <p>A simple .proviso.yml yaml file in your repository tells Proviso how to set up your site and run your tests.</p>
+    {% image 'proviso-yaml.png' alt="Proviso YAML configuration file" class="full-width drop-shadow" %}
     </div>
   </section>
 
   <section data-slide="4" class="segment slide">
   <div class="wrapper">
-    <h2>Optimized for Data</h2>
-    <p>We will build an environment from your sanitized database backups so that you can see what your site is really going to look like with real content and the the most recent configuration.</p>
-  </section>
-  </div>
+    <h2>Optimized for Database-driven Apps</h2>
+    <p>Using your sanitized database backups, each Proviso environment has your site’s latest content and configuration. No more coordinating with the entire team to schedule a database sync from production to testing environments.</p>
+    {% image 'proviso-sphere.png' alt="Proviso sphere logo" %}
+    <button>Request a Demo</button>
+    </div>
+  </section>  
 
 </div>

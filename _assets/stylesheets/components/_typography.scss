@@ -1,0 +1,88 @@
+%no-dangling {
+	&:first-child, &:first-of-type {
+		margin-top: 0;
+	}
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	@include rem(font-size, 16px);
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+
+
+
+	@include breakpoint($bp-medium-portrait) {
+		@include rem(font-size, 20px);
+	}
+}
+
+h1, h2, h3, h4, h5 {
+	@extend %no-dangling;
+	font-family: 'Merriweather';
+	font-weight: 400;	
+	line-height: 1.2;
+	
+	@include breakpoint($bp-large)	 {
+		line-height: 1.58;
+	}
+}
+
+h1, %h1 {
+	@include rem(font-size, 36px);
+
+	@include breakpoint($bp-medium-portrait) {
+		@include rem(font-size, 42px);
+	}
+
+	@include breakpoint($bp-large) {
+		@include rem(font-size, 48px);
+	}
+}
+
+h2, %h2 {
+	@include rem(font-size, 28px);
+
+	@include breakpoint($bp-medium-portrait) {
+		@include rem(font-size, 32px);
+	}
+
+	@include breakpoint($bp-large) {
+		@include rem(font-size, 36px);
+	}
+}
+
+h3, %h3 {
+	@include rem(font-size, 22px);
+
+	@include breakpoint($bp-medium-portrait) {
+		@include rem(font-size, 24px);
+	}
+
+	@include breakpoint($bp-large) {
+		@include rem(font-size, 26px);
+	}
+}
+
+h4, %h4, h5, %h5 {
+	@include rem(font-size, 18px);
+
+	@include breakpoint($bp-medium-portrait) {
+		@include rem(font-size, 20px);
+	}
+
+	@include breakpoint($bp-large) {
+		@include rem(font-size, 22px);
+	}
+}
+
+p {
+	@extend %no-dangling;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}

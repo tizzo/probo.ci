@@ -1,0 +1,11 @@
+img {
+	max-width: 100%;
+	
+	&.full-width {		
+		width: auto;
+	}
+
+	&.drop-shadow {
+		box-shadow: 0 5px 20px rgba(0,0,0,0.8);
+	}
+}

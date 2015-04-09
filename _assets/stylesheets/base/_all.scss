@@ -5,23 +5,3 @@
 @import "colors";
 @import "vars";
 @import "mixins";
-
-
-body {
-    * {
-        box-sizing: border-box;
-    }
-}
-
-.wrapper {
-	width: 98%;
-	margin: 0 auto;
-
-	@include breakpoint($bp-medium-landscape) {
-		width: 95%;
-	}
-
-	@include breakpoint($bp-large) {
-		width: $site-width;
-	}
-}

@@ -7,7 +7,7 @@ body {
 .wrapper {
   width: 98%;
   margin: 0 auto;
-  padding: em(4 * $base-spacing) $inner-width-padding / 4;
+  padding: em(4 * $base-spacing) $inner-width-padding / 3;
 
   @include breakpoint($bp-medium-landscape) {
     width: 95%;
@@ -19,4 +19,12 @@ body {
     padding-left: $inner-width-padding;
     padding-right: $inner-width-padding;
   }
+}
+
+.row {
+  @include clearfix;
+}
+
+.column {
+  padding: em($base-spacing);
 }

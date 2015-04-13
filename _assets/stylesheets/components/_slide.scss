@@ -9,10 +9,18 @@
   height: 100vh;
   text-align: center;
   display: table-row;
-  
-  .wrapper {
+
+  .inner {
     display: table-cell;
     vertical-align: middle;
+  }
+
+  .row {
+    margin: 0 auto;
+
+    @include breakpoint($bp-large) {
+      width: 70%;
+    }
   }
 
   h2 {
@@ -41,8 +49,13 @@
 }
 
 [data-slide='0'] {
-  background: image-url('proviso-gradient-bg.jpg') top left repeat-x #19010E;
+  background: image-url('proviso-gradient-bg.png') top left repeat-x #19010E;
+  background-size: cover;
   color: $off-white;
+
+  @include breakpoint($bp-large) {
+    background-size: contain;
+  }
 }
 
 [data-slide='1'] {
@@ -57,4 +70,48 @@
 [data-slide='3'] {
   background-color: $off-white;
   color: $off-black;
+}
+
+.column.create,
+.column.test,
+.column.verify {
+
+  @include breakpoint($bp-medium-portrait) {
+    width: 30%;
+    float: left;
+    margin-right: 5%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+
+
+  @at-root {
+    .column__svg {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      @include breakpoint($bp-large) {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    .column__numeral {
+      @extend %h2;
+      display: block;
+      margin: 0;
+    }
+
+    .column__content {
+      @include rem(font-size, 15px);
+    }
+  }
 }

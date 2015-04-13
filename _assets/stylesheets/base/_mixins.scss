@@ -1,13 +1,13 @@
-@mixin button($bg: $finn, $color: $off-white, $border: $toledo, $radius: 2px) {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	color: $color;
-	background-color: $bg;
-	border: 2px solid $border;
-	border-radius: $radius;
-	padding: 0.5em 1em;
-	cursor: pointer;
+@mixin button($bg: $toledo, $color: $off-white, $border: $toledo, $radius: 0) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: $color;
+  background-color: $bg;
+  border: 2px solid $border;
+  border-radius: $radius;
+  padding: 0.5em 1em;
+  cursor: pointer;
   text-decoration: none;
   transition: all 0.5s linear;
 
@@ -21,7 +21,7 @@
 }
 
 @function em($pixel) {
-	@return $pixel / 16px * 1em;
+  @return $pixel / 16px * 1em;
 }
 
 // https://gist.github.com/webgefrickel/4530526

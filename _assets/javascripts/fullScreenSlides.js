@@ -6,7 +6,8 @@ var Proviso = (function (parent, $) {
     slides: $('.segment.slide'),
     nav: $('.slide-nav a'),
     useModal: true,
-    modalSelector: '#mc_embed_signup'
+    modalSelector: '#mc_embed_signup',
+    autoModalTime: 15 // show the modal automatically once every 15 minutes
   });
 
   fullScreenSlides.setActiveNav = function(slide) {
@@ -25,9 +26,18 @@ var Proviso = (function (parent, $) {
   };
 
   fullScreenSlides.showModal = function() {
-    var shownModal = localStorage.getItem('shownModal');
-    if (!shownModal) {
+    var modalMeta = JSON.parse( localStorage.getItem('modalMeta') )
+      , now = new Date().getTime();
 
+    console.log(now - modalMeta.lastCall);
+    var shouldShow = !modalMeta || now > modalMeta.lastCall;
+
+    if (shouldShow) {
+      $(fullScreenSlides.settings.modalSelector).trigger('openModal');
+      localStorage.setItem('modalMeta', JSON.stringify( {
+        shown: true,
+        lastCall: new Date().getTime() + 1000 * 60 * fullScreenSlides.settings.autoModalTime
+      } ));
     }
   };
 
@@ -53,7 +63,7 @@ var Proviso = (function (parent, $) {
   };
 
   fullScreenSlides.setupScrollSlides = function() {
-    $(window).on('touchmove wheel', function(e) {
+    $(window).on('touchmove wheel', throttle(function(e) {
       e.handled = false;
 
       if (!e.handled) {
@@ -73,16 +83,16 @@ var Proviso = (function (parent, $) {
 
         activeSlide = $inView.attr('data-slide');
         fullScreenSlides.setActiveNav(activeSlide);
+
+        // trigger the modal
+        if (fullScreenSlides.settings.useModal && parseInt(activeSlide) === 2) {
+          fullScreenSlides.showModal();
+        }
+
         e.handled = true;
       }
-    });
+    }, 500));
   };
-
-  if (fullScreenSlides.settings.slides.length
-    && fullScreenSlides.settings.nav.length) {
-    fullScreenSlides.setupSlideToggles();
-    fullScreenSlides.setupScrollSlides();
-  }
 
   return parent;
 

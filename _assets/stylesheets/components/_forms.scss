@@ -1,3 +1,84 @@
-.updates-form {
-
+input[type=submit] {
+  @include button;
 }
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=search],
+textarea {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 10px 12px;
+  border: none;
+  background-color: lighten($grey, 28%);
+  color: $white;
+  font-weight: bold;
+}
+
+.updates-form {
+  @include clearfix;
+  @include rem(font-size, 16px);
+  width: 98%;
+  background-color: $white;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  padding: 3 * $base-spacing;
+  max-width: 650px;
+
+  h2 {
+    @extend %h1;
+    margin: 20px 0 10px;
+  }
+
+  &__background {
+    display: none;
+  }
+
+  &__group,
+  &__submit {
+    float: left;
+  }
+
+  &__group {
+    position: relative;
+    margin-right: 5px;
+  }
+
+  @include breakpoint($bp-medium-portrait) {
+    width: 650px;
+
+    &__background {
+      display: block;
+        width: 30%;
+      float: left;
+    }
+
+    &__form {
+      width: 62%;
+      float: right;
+      text-align: center;
+    }
+
+    &__group {
+      margin-left: 50px;
+    }
+  }
+
+  @include breakpoint($bp-large) {
+
+    &__background {
+      width: 33%;
+    }
+
+    &__form {
+      width: 62%;
+    }
+  }
+}
+
+::-webkit-input-placeholder { color: $off-black; }
+::-moz-placeholder { color: $off-black; } /* firefox 19+ */
+:-ms-input-placeholder { color: $off-black; } /* ie */
+input:-moz-placeholder { color: $off-black; }

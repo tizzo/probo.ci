@@ -86,3 +86,8 @@ p {
 		margin-bottom: 0;
 	}
 }
+
+a {
+  @include link-colors($pale-pink, $toledo, $pale-pink, $pale-pink, $toledo);
+  transition: all 0.5s ease;
+}

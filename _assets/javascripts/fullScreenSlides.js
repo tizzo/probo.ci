@@ -24,6 +24,13 @@ var Proviso = (function (parent, $) {
     }, 1000);
   };
 
+  fullScreenSlides.showModal = function() {
+    var shownModal = localStorage.getItem('shownModal');
+    if (!shownModal) {
+
+    }
+  };
+
   fullScreenSlides.setupSlideToggles = function() {
     fullScreenSlides.settings.nav.each(function(i) {
       // cache this

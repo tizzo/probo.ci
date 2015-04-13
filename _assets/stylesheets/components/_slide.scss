@@ -1,48 +1,60 @@
+.home {
+  display: table;
+  width: 100%;
+}
+
 .slide {
-	margin: 0;	
-	min-height: 100vh;
-	text-align: center;
+  margin: 0;
+  min-height: 100vh;
+  height: 100vh;
+  text-align: center;
+  display: table-row;
+  
+  .wrapper {
+    display: table-cell;
+    vertical-align: middle;
+  }
 
-	h2 {
-		@extend %h1;
-		margin-bottom: $base-spacing;
-	}
+  h2 {
+    @extend %h1;
+    margin-bottom: $base-spacing;
+  }
 
-	img {
-		width: 98%;
-		display: block;
-		margin: em(4 * $base-spacing) auto;
+  img {
+    width: 98%;
+    display: block;
+    margin: em(4 * $base-spacing) auto;
 
-		@include breakpoint($bp-medium-portrait) {
-			width: 400px;
-		}
+    @include breakpoint($bp-medium-portrait) {
+      width: 400px;
+    }
 
-		&.full-width {
-			max-height: 60vh;
-		}
-	}
+    &.full-width {
+      max-height: 60vh;
+    }
+  }
 
-	button {
-		@include button($finn, $off-white, $finn, 0);
-		text-transform: uppercase;
-	}
+  .button {
+    @include button($finn, $off-white, $finn, 0);
+    text-transform: uppercase;
+  }
+}
+
+[data-slide='0'] {
+  background: image-url('proviso-gradient-bg.jpg') top left repeat-x #19010E;
+  color: $off-white;
 }
 
 [data-slide='1'] {
-	background: image-url('proviso-gradient-bg.jpg') top left repeat-x #19010E;
-	color: $off-white;
+  color: $off-black;
 }
 
 [data-slide='2'] {
-	color: $off-black;
+  background-color: $toledo;
+  color: $off-white;
 }
 
 [data-slide='3'] {
-	background-color: $toledo;
-	color: $off-white;
-}
-
-[data-slide='4'] {
-	background-color: $off-white;
-	color: $off-black;
+  background-color: $off-white;
+  color: $off-black;
 }

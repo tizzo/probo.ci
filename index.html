@@ -4,37 +4,54 @@ layout: default
 
 <div class="home">
 
-  <section data-slide="1" class="segment slide">
-  <div class="wrapper">
-    <h2>Site-seeing made easy</h2>
-    <p>Proviso creates a persistent environment to preview and test each development change. Keep the environments as long as you like, letting your developers, QA testers, project managers, and clients see your work in progress.</p> 
-    {% image 'proviso-bash.png' alt="Proviso bash shell commands" class="full-width drop-shadow" %}   
-    </div>
-  </section>
+    <section data-slide="0" class="segment slide">
+        <div class="wrapper">
+            <h2>Site-seeing made easy</h2>
 
-  <section data-slide="2" class="segment slide">
-  <div class="wrapper">
-    <h2>Github and Stash Integration</h2>
-    <p>We live in pull requests and our bet is you do too. Proviso creates an environment for each pull request, and gives you links to the site and test results within the pull request.</p>
-    {% image 'proviso-github.png' alt="Proviso screenshot in Github" class="full-width" %}
-    </div>
-  </section>
+            <p>Proviso creates a persistent environment to preview and test each development change. Keep the
+                environments as long as you like, letting your developers, QA testers, project managers, and clients see
+                your work in progress.</p>
+            {% image 'proviso-bash.png' alt="Proviso bash shell commands" class="full-width drop-shadow" %}
+        </div>
+    </section>
 
-  <section data-slide="3" class="segment slide">
-  <div class="wrapper">
-    <h2>Configured with YAML</h2>
-    <p>A simple .proviso.yml yaml file in your repository tells Proviso how to set up your site and run your tests.</p>
-    {% image 'proviso-yaml.png' alt="Proviso YAML configuration file" class="full-width drop-shadow" %}
-    </div>
-  </section>
+    <section data-slide="1" class="segment slide">
+        <div class="wrapper">
+            <h2>Github and Stash Integration</h2>
 
-  <section data-slide="4" class="segment slide">
-  <div class="wrapper">
-    <h2>Optimized for Database-driven Apps</h2>
-    <p>Using your sanitized database backups, each Proviso environment has your site’s latest content and configuration. No more coordinating with the entire team to schedule a database sync from production to testing environments.</p>
-    {% image 'proviso-sphere.png' alt="Proviso sphere logo" %}
-    <button>Request a Demo</button>
-    </div>
-  </section>  
+            <p>We live in pull requests and our bet is you do too. Proviso creates an environment for each pull request,
+                and gives you links to the site and test results within the pull request.</p>
+            {% image 'proviso-github.png' alt="Proviso screenshot in Github" class="full-width" %}
+        </div>
+    </section>
+
+    <section data-slide="2" class="segment slide">
+        <div class="wrapper">
+            <h2>Configured with YAML</h2>
+
+            <p>A simple .proviso.yml yaml file in your repository tells Proviso how to set up your site and run your
+                tests.</p>
+            {% image 'proviso-yaml.png' alt="Proviso YAML configuration file" class="full-width drop-shadow" %}
+        </div>
+    </section>
+
+    <section data-slide="3" class="segment slide">
+        <div class="wrapper">
+            <h2>Optimized for Database-driven Apps</h2>
+
+            <p>Using your sanitized database backups, each Proviso environment has your site’s latest content and
+                configuration. No more coordinating with the entire team to schedule a database sync from production to
+                testing environments.</p>
+            {% image 'proviso-sphere.png' alt="Proviso sphere logo" %}
+            <a class="button" href="mailto:howard@zivtech.com">Request a Demo</a>
+        </div>
+    </section>
+
+    <nav class="slide-nav">
+        <a href="#" data-slide-href="0" class="active">View slide 1</a>
+        <a href="#" data-slide-href="1">View slide 2</a>
+        <a href="#" data-slide-href="2">View slide 3</a>
+        <a href="#" data-slide-href="3">View slide 4</a>
+    </nav>
 
 </div>

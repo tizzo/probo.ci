@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h1, %h1 {
-	@include rem(font-size, 36px);
+	@include rem(font-size, 32px);
 
 	@include breakpoint($bp-medium-portrait) {
 		@include rem(font-size, 42px);

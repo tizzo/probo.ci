@@ -29,8 +29,7 @@ var Proviso = (function (parent, $) {
     var modalMeta = JSON.parse( localStorage.getItem('modalMeta') )
       , now = new Date().getTime();
 
-    console.log(now - modalMeta.lastCall);
-    var shouldShow = !modalMeta || now > modalMeta.lastCall;
+    var shouldShow = modalMeta || now > modalMeta.lastCall;
 
     if (shouldShow) {
       $(fullScreenSlides.settings.modalSelector).trigger('openModal');

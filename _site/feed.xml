@@ -4,10 +4,10 @@
     <title>Probo</title>
     <description>Probo is a Quality Assurance platform that lets your team test  features on your site while in development, helping you get  feedback while you’re working.  
 </description>
-    <link>http://probo.ci/probo.ci/</link>
-    <atom:link href="http://probo.ci/probo.ci/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 06 May 2015 10:44:02 -0400</pubDate>
-    <lastBuildDate>Wed, 06 May 2015 10:44:02 -0400</lastBuildDate>
+    <link>http://probo.ci/</link>
+    <atom:link href="http://probo.ci/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 06 May 2015 10:51:15 -0400</pubDate>
+    <lastBuildDate>Wed, 06 May 2015 10:51:15 -0400</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -28,8 +28,8 @@
 
 </description>
         <pubDate>Tue, 07 Apr 2015 08:25:07 -0400</pubDate>
-        <link>http://probo.ci/probo.ci/jekyll/update/2015/04/07/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://probo.ci/probo.ci/jekyll/update/2015/04/07/welcome-to-jekyll.html</guid>
+        <link>http://probo.ci/jekyll/update/2015/04/07/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://probo.ci/jekyll/update/2015/04/07/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>

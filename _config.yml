@@ -1,14 +1,14 @@
 # Site settings
-title: Proviso
+title: Probo
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
-  Proviso is a Quality Assurance platform that lets your team test 
+  Probo is a Quality Assurance platform that lets your team test 
   features on your site while in development, helping you get 
   feedback while you’re working.  
-baseurl: "/proviso.ci" # the subpath of your site, e.g. /blog/
-url: "http://proviso.ci" # the base hostname & protocol for your site
+baseurl: "/probo.ci" # the subpath of your site, e.g. /blog/
+url: "http://probo.ci" # the base hostname & protocol for your site
 twitter_username: zivtech
-github_username:  zivtech
+github_username:  proboci
 
 # Build settings
 highlighter: pygments

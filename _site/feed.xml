@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Proviso</title>
-    <description>Proviso is a Quality Assurance platform that lets your team test  features on your site while in development, helping you get  feedback while you’re working.  
+    <title>Probo</title>
+    <description>Probo is a Quality Assurance platform that lets your team test  features on your site while in development, helping you get  feedback while you’re working.  
 </description>
-    <link>http://proviso.ci/proviso.ci/</link>
-    <atom:link href="http://proviso.ci/proviso.ci/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 14 Apr 2015 10:32:08 -0400</pubDate>
-    <lastBuildDate>Tue, 14 Apr 2015 10:32:08 -0400</lastBuildDate>
+    <link>http://probo.ci/</link>
+    <atom:link href="http://probo.ci/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 06 May 2015 10:03:59 -0400</pubDate>
+    <lastBuildDate>Wed, 06 May 2015 10:03:59 -0400</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -28,8 +28,8 @@
 
 </description>
         <pubDate>Tue, 07 Apr 2015 08:25:07 -0400</pubDate>
-        <link>http://proviso.ci/proviso.ci/jekyll/update/2015/04/07/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://proviso.ci/proviso.ci/jekyll/update/2015/04/07/welcome-to-jekyll.html</guid>
+        <link>http://probo.ci/jekyll/update/2015/04/07/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://probo.ci/jekyll/update/2015/04/07/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>

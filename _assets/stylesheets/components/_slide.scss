@@ -52,10 +52,6 @@
   background: image-url('proviso-gradient-bg.png') top left repeat-x #19010E;
   background-size: cover;
   color: $off-white;
-
-  @include breakpoint($bp-large) {
-    background-size: contain;
-  }
 }
 
 [data-slide='1'] {

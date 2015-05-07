@@ -24,8 +24,8 @@ textarea {
   background-color: $white;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
-  padding: 3 * $base-spacing;
-  max-width: 650px;
+  padding: 5 * $base-spacing 2 * $base-spacing;
+  max-width: 700px;
 
   h2 {
     @extend %h1;

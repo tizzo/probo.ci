@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: left-sidebar
 title: Github Integration
 class: documentation
 permalink: /docs/github/

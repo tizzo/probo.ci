@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: left-sidebar
 title: About Probo
 class: documentation
 permalink: /docs/about/

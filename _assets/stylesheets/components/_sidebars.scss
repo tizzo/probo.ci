@@ -1,0 +1,37 @@
+.wrapper {
+  #sidebar-first {
+      width: 24%;
+      display: block;
+      float: left;
+    h4 {
+      padding: 12px;
+      margin: 0;
+      font-size: 14px;
+      border-bottom: 1px solid #5f264d;
+    }
+    ul {
+      padding-left: 0;
+      font-size: 14px;
+      margin: 0;
+      li {
+        list-style-type: none;
+        a {
+          text-decoration: none;
+          display: block;
+          padding: 12px;
+          border-bottom: 1px solid #f7f2f5;
+          &:hover {
+            background: #e4d1de;
+          }
+        }
+        a.current {
+          background: #f7f2f5;
+        }
+      }
+    }
+  }
+  .page-content {
+    width: 70%;
+    float: right;
+  }  
+}

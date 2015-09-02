@@ -646,7 +646,11 @@ img.drop-shadow {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
 }
 
-/* line 2, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_header.scss */
+/* line 1, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_header.scss */
+.site-header {
+  height: 70px;
+}
+/* line 3, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_header.scss */
 .site-header .wrapper {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
@@ -654,10 +658,28 @@ img.drop-shadow {
 /* line 7, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_header.scss */
 .site-header .site-title {
   display: block;
+  float: left;
 }
 /* line 10, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_header.scss */
 .site-header .site-title img {
   height: 55px;
+}
+
+/* line 16, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_header.scss */
+nav#main {
+  float: right;
+  margin: auto;
+}
+/* line 19, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_header.scss */
+nav#main a {
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  border-radius: 12px;
+}
+/* line 24, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_header.scss */
+nav#main a:hover {
+  background: #f7f2f5;
 }
 
 /* line 1, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_slide-nav.scss */
@@ -690,8 +712,11 @@ img.drop-shadow {
   background-color: #EBEBEB;
   color: #737373;
   text-align: center;
+  display: block;
+  clear: both;
+  overflow: hidden;
 }
-/* line 7, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_footer.scss */
+/* line 10, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_footer.scss */
 .site-footer__logo {
   display: block;
   margin: 10px auto;
@@ -822,4 +847,48 @@ textarea {
 /* line 84, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_forms.scss */
 input:-moz-placeholder {
   color: #404040;
+}
+
+/* line 2, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_sidebars.scss */
+.wrapper #sidebar-first {
+  width: 24%;
+  display: block;
+  float: left;
+}
+/* line 6, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_sidebars.scss */
+.wrapper #sidebar-first h4 {
+  padding: 12px;
+  margin: 0;
+  font-size: 14px;
+  border-bottom: 1px solid #5f264d;
+}
+/* line 12, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_sidebars.scss */
+.wrapper #sidebar-first ul {
+  padding-left: 0;
+  font-size: 14px;
+  margin: 0;
+}
+/* line 16, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_sidebars.scss */
+.wrapper #sidebar-first ul li {
+  list-style-type: none;
+}
+/* line 18, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_sidebars.scss */
+.wrapper #sidebar-first ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 12px;
+  border-bottom: 1px solid #f7f2f5;
+}
+/* line 23, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_sidebars.scss */
+.wrapper #sidebar-first ul li a:hover {
+  background: #e4d1de;
+}
+/* line 27, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_sidebars.scss */
+.wrapper #sidebar-first ul li a.current {
+  background: #f7f2f5;
+}
+/* line 33, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_sidebars.scss */
+.wrapper .page-content {
+  width: 70%;
+  float: right;
 }

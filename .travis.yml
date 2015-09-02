@@ -5,3 +5,8 @@ script: bundle exec rake deploy
 env:
   global:
     secure: e026KSabZAPEYNrmKP/bWqhzFPfPbeZb6Xf+v0dreT4TykSCNwtylxT9YHSxmLUZoAwcy4VMp9A4og+M5yRLa435bzVkzTFP5H2yiMzTvYOUou3cBFM8+iFleCOhnAX0fS2e7mvl0yBrYpmf06BYD+0SiYayEMc6p5BYvaRDhb3G+WOyjuHRDf/Yrsd+amaIClwkPBinP6xjL79HO9eUdpy/09YK5G6xHhOuNvRFuf9A3UI3RB8Tyzkrwli1zLEV4wxI6OSD3HMk7Hh51QPo/hd3DNgT1tErLkYhtPofC5dW6pAAAr92ndPra054/8TvA9yPh6tFLNCcjM2QgP7MBYKl4RSkFovFJLjY1d6KgWH55ly7elktzEiTi7kC9zHkCHA9w4mZCDi6YcjSwH+jRcDBS6wyvq31MQ6UcBPC3FSbMovECNhRSuSMtLllUTsNJP3GRH+rmPKPrTlqa8cqNG5QyeyyLiRrBmI3z6gnsBE+ZFETHW8dXA5i3agMyCZ5PTaB8e8D6mH2owqPowGMjry+V1MpFIfxPZlVpbd1+jN6oLgSqAt8C0uLDX8Oa7SMZ8KykfX0wTWlqTtHm+knoCsOOFBVDbqP3ehEO2RvZkhz5uTk/vKcmUxD3Y2l2YnBBqqUzeBv8RRzQTAtn5MO1ro/kImJw4UVnbJt8gF9hRk=
+notifications:
+  email:
+    - howard@zivtech.com
+    - sean@zivtech.com
+    - jcole@zivtech.com

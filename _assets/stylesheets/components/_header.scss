@@ -1,18 +1,28 @@
 .site-header {
+  height: 70px;
 	.wrapper {
 		padding-top: 0.5em;
 		padding-bottom: 0.5em;
 	}
-
 	.site-title {
 		display: block;
-		
+		float: left;
 		img {
 			height: 55px;
 		}
 	}
+}
 
-	ul {
-
+nav#main {
+	float: right;
+	margin: auto;
+	a {
+    display: block;
+    padding: 12px;
+		text-decoration: none;
+    border-radius: 12px;
+    &:hover {
+      background: #f7f2f5;
+    }
 	}
 }

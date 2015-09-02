@@ -3,6 +3,7 @@ ruby '2.2.0'
 gem 'bundler', '1.8.3'
 gem 'jekyll', '2.4.0'
 gem 'rack-jekyll', '0.3.5'
+gem 'rake-jekyll', '1.1.0
 gem 'github-pages', '33'
 gem 'kramdown', '1.5.0'
 gem 'jekyll-assets', '0.14.0'

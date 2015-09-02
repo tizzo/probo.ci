@@ -5,8 +5,13 @@
     <description>Probo website</description>
     <link>http://probo.ci/</link>
     <atom:link href="http://probo.ci/feed.xml" rel="self" type="application/rss+xml"/>
+<<<<<<< HEAD
     <pubDate>Thu, 03 Sep 2015 10:03:38 -0400</pubDate>
     <lastBuildDate>Thu, 03 Sep 2015 10:03:38 -0400</lastBuildDate>
+=======
+    <pubDate>Wed, 02 Sep 2015 14:42:22 -0400</pubDate>
+    <lastBuildDate>Wed, 02 Sep 2015 14:42:22 -0400</lastBuildDate>
+>>>>>>> add bottom padding to main content
     <generator>Jekyll v2.4.0</generator>
     
       <item>

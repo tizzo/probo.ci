@@ -1,12 +1,10 @@
 # Site settings
-title: Probo
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Probo is a Quality Assurance platform that lets your team test 
-  features on your site while in development, helping you get 
-  feedback while you’re working.  
+title: Probo.ci
+email: info@probo.ci
+description: Probo website
+
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://probo.ci" # the base hostname & protocol for your site
+url: "http://probo.ci"
 twitter_username: zivtech
 github_username:  proboci
 
@@ -30,6 +28,7 @@ assets:
     - _assets/javascripts
     - _assets/stylesheets
     - _assets/posts
+    - _assets/docs
   css_compressor: sass
   js_compressor: uglifier
   cache: true

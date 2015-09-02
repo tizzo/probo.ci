@@ -214,7 +214,7 @@ DEPENDENCIES
   kramdown (= 1.5.0)
   octopress-minify-html (= 1.2.4)
   rack-jekyll (= 0.3.5)
-  rake-jekyll
+  rake-jekyll (= 1.1.0)
   respond-to (= 2.6)
   rubyzip (= 1.1.7)
   sass (>= 3.4)

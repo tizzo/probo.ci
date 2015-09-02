@@ -4,14 +4,6 @@ title: About Probo
 class: documentation
 permalink: /docs/about/
 ---
-<section>
-  <ul class="side-nav">
-  {% for link in site.data.side-nav %}
-      <li><a href="{{ link.link }}">{{ link.title }}</a></li>
-  {% endfor %}
-  </ul>
-</section>
-
 ##What is Probo?
 
 Probo is an [open sourced](https://github.com/ProboCI/probo) Quality Assurance (QA) tool for developers and an User Acceptance Testing (UAT) tool for business users. Probo creates various sandbox test sites as the team develops so that other users can see and interact with changes earlier and more frequently throughout development  with “earlier and more frequently throughout development

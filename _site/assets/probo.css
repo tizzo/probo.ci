@@ -891,4 +891,5 @@ input:-moz-placeholder {
 .wrapper .page-content {
   width: 70%;
   float: right;
+  padding-bottom: 24px;
 }

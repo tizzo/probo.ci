@@ -5,16 +5,16 @@
 //= require jquery.easymodal
 //= require fullScreenSlides
 
-(function(Proviso, $) {
+(function(Probo, $) {
   // prepare the modal for use
   $('#mc_embed_signup').easyModal();
 
   // enable the homepage slides
-  if (Proviso.fullScreenSlides && $('.home').length) {
-    if (Proviso.fullScreenSlides.settings.slides.length
-      && Proviso.fullScreenSlides.settings.nav.length) {
-      Proviso.fullScreenSlides.setupSlideToggles();
-      Proviso.fullScreenSlides.setupScrollSlides();
+  if (Probo.fullScreenSlides && $('.home').length) {
+    if (Probo.fullScreenSlides.settings.slides.length
+      && Probo.fullScreenSlides.settings.nav.length) {
+      Probo.fullScreenSlides.setupSlideToggles();
+      Probo.fullScreenSlides.setupScrollSlides();
     }
   }
-})(Proviso || {}, jQuery);
+})(Probo || {}, jQuery);

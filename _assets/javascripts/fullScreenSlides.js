@@ -1,4 +1,4 @@
-var Proviso = (function (parent, $) {
+var Probo = (function (parent, $) {
 
   var fullScreenSlides = parent.fullScreenSlides = parent.fullScreenSlides || {};
 
@@ -95,4 +95,4 @@ var Proviso = (function (parent, $) {
 
   return parent;
 
-})(Proviso || {}, jQuery);
+})(Probo || {}, jQuery);

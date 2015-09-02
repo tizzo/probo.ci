@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <section>
+      {% include sidebars/docs.md %}
+    <section>
+
+    <div class="page-content">
+        {{ content }}
+    </div>
+
+    {% include footer.html %}
+
+    {% include updates-form.html %}
+
+    {% include github-fork.html %}
+
+    {% javascript probo %}
+  </body>
+
+</html>

@@ -3,6 +3,9 @@
   background-color: $pale-grey;
   color: $grey;
   text-align: center;
+  display: block;
+  clear: both;
+  overflow: hidden;
 
   &__logo {
     display: block;

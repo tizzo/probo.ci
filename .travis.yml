@@ -10,3 +10,6 @@ notifications:
     - howard@zivtech.com
     - sean@zivtech.com
     - jcole@zivtech.com
+branches:
+  only:
+    - master

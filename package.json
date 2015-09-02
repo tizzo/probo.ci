@@ -1,16 +1,16 @@
 {
-  "name": "Proviso",
+  "name": "Probo.ci",
   "version": "0.0.1",
-  "description": "Proviso CI and QA tool",
+  "description": "Probo CI and QA tool",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zivtech/proviso.ci"
+    "url": "https://github.com/ProboCI/probo.ci"
   },
   "author": "Zivtech",
   "bugs": {
-    "url": "https://github.com/zivtech/proviso.ci/issues"
+    "url": "https://github.com/ProboCI/probo.ci/issues"
   },
-  "homepage": "http://proviso.ci",
+  "homepage": "http://probo.ci",
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-browser-sync": "~2.0.0",

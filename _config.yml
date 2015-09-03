@@ -2,11 +2,12 @@
 title: Probo.ci
 email: info@probo.ci
 description: Probo website
-
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://probo.ci"
 twitter_username: zivtech
 github_username:  proboci
+paginate:  5
+paginate_path: "/blog/page:num/"
 
 # Build settings
 highlighter: pygments

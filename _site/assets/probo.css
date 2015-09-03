@@ -591,6 +591,50 @@ a:active {
   font-size: 1.5rem;
 }
 
+/* line 1, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_blog.scss */
+.blog-post-preview {
+  border-bottom: 1px solid #f7f2f5;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+/* line 5, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_blog.scss */
+.blog-post-preview h2 {
+  margin: 0;
+  font-size: 24px;
+}
+/* line 8, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_blog.scss */
+.blog-post-preview h2 a {
+  text-decoration: none;
+  color: #252021;
+}
+/* line 13, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_blog.scss */
+.blog-post-preview a.blog-post-date {
+  text-decoration: none;
+  color: #252021;
+}
+
+/* line 20, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_blog.scss */
+.post .post-content .message {
+  visibility: hidden;
+  height: 0;
+}
+
+/* line 26, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_blog.scss */
+header.post-header {
+  border-bottom: 1px solid #f7f2f5;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+/* line 30, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_blog.scss */
+header.post-header .post-meta {
+  font-size: 18px;
+}
+/* line 32, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_blog.scss */
+header.post-header .post-meta .date {
+  color: #737373;
+  font-weight: bold;
+}
+
 /* line 1, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_layout.scss */
 body {
   background-color: #ffffff;
@@ -676,8 +720,9 @@ nav#main a {
   padding: 12px;
   text-decoration: none;
   border-radius: 12px;
+  float: left;
 }
-/* line 24, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_header.scss */
+/* line 25, /Users/seanwolfe/Documents/Dev/probo.ci/_assets/stylesheets/components/_header.scss */
 nav#main a:hover {
   background: #f7f2f5;
 }

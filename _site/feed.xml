@@ -5,35 +5,24 @@
     <description>Probo website</description>
     <link>http://probo.ci/</link>
     <atom:link href="http://probo.ci/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Sep 2015 11:32:56 -0400</pubDate>
-    <lastBuildDate>Thu, 03 Sep 2015 11:32:56 -0400</lastBuildDate>
+    <pubDate>Thu, 03 Sep 2015 15:45:35 -0400</pubDate>
+    <lastBuildDate>Thu, 03 Sep 2015 15:45:35 -0400</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+        <title>Introducing Probo CI</title>
+        <description>&lt;div class=&quot;message&quot;&gt;
+&lt;a href=&quot;http://probo.ci/&quot;&gt;Probo.CI&lt;/a&gt; is a new &lt;a href=&quot;https://github.com/ProboCI/probo&quot;&gt;open source&lt;/a&gt; continuous integration system designed from the ground up to work with Drupal.
+&lt;/div&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://probo.ci/&quot;&gt;Probo.CI&lt;/a&gt; is a new &lt;a href=&quot;https://github.com/ProboCI/probo&quot;&gt;open source&lt;/a&gt; continuous integration system designed from the ground up to work with Drupal. It integrates with Githhub to build your pull requests and post the status of your builds back to the Github PR, just like travis.ci. The part that is different from travis.ci is that it does not tear down your environment at the end and but instead posts a link to that environment on the github issue for easy code review, client feedback, and project manager evaluation. In order to save on resources with large numbers of containers, Probo shuts down containers while you’re not using them and starts them up again on demand to give you just-in-time access to your development environments. Probo is designed to be easy to extend and easy to wire into a broader devops ecosystem.&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;Under the hood, Probo.ci is written in &lt;a href=&quot;https://nodejs.org/&quot;&gt;Node.js&lt;/a&gt; and powered by &lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt;.  This means that with just a little configuration you can run on your own container images and test your Drupal sites on whatever versions of whatever services your stack needs. Probo is implemented using a microservice architecture and ships with services for receiving Github notifications of push and pull request events and posting statuses back to the status API, another for creating, starting, and stopping the containers, and a third for proxying incoming requests to the correct container (and starting the container if it was stopped to save on resources). It also ships with tools for use as a local test runner (especially helpful when you’re getting your project ready to build server side).&lt;/p&gt;
 </description>
-        <pubDate>Tue, 07 Apr 2015 08:25:07 -0400</pubDate>
-        <link>http://probo.ci/jekyll/update/2015/04/07/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://probo.ci/jekyll/update/2015/04/07/welcome-to-jekyll.html</guid>
+        <pubDate>Thu, 03 Sep 2015 00:00:00 -0400</pubDate>
+        <link>http://probo.ci/2015/09/03/introducing-probo-cI.html</link>
+        <guid isPermaLink="true">http://probo.ci/2015/09/03/introducing-probo-cI.html</guid>
         
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
         
       </item>
     

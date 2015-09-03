@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Stash Integration | Demonstrate. Test. Approve.</title>
-  <meta name="description" content="Probo website">
+  <title>Introducing Probo CI | Demonstrate. Test. Approve.</title>
+  <meta name="description" content="Probo.CI is a new open source continuous integration system designed from the ground up to work with Drupal.">
 
   <link rel="stylesheet" href="/assets/probo.css">
 
   <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32.png" />
-  <link rel="canonical" href="http://probo.ci/docs/stash/">
+  <link rel="canonical" href="http://probo.ci/2015/09/03/introducing-probo-cI.html">
 </head>
 
   <body>
@@ -36,30 +36,28 @@
 </header>
 
 
-    <div class="wrapper">
+    <div class="page-content">
+        <div class="wrapper">
+	<div class="post">
 
-      <div id="sidebar-first">
-        <h4><a href="/docs/" class="current">Getting Started</a></h4>
-        <ul>
-	<li><a href="/docs/about/" >What is Probo?</a></li>
-	<li><a href="/docs/github/" >Github Integration</a></li>
-	<li><a href="/docs/stash/" class="current">Stash Integration</a></li>
-<!-- 	<li><a href="/docs/dashboard/" >Probo Dashboard</a></li>
-	<li><a href="/docs/workflow/" >Probo Recommended Workflow</a></li> -->
-	<li><a href="/docs/faq/" >Probo FAQ</a></li>
-</ul>
-      </div>
+	  <header class="post-header">
+	    <h1 class="post-title">Introducing Probo CI</h1>
+	    <p class="post-meta"><span class="date">Sep 3, 2015</span> | <span class="author">Posted by: Howard Tyson</span></p>
+	  </header>
 
-      <div class="page-content">
-          <h2 id="stash-integration">Stash Integration</h2>
+	  <article class="post-content">
+	    <div class="message">
+<a href="http://probo.ci/">Probo.CI</a> is a new <a href="https://github.com/ProboCI/probo">open source</a> continuous integration system designed from the ground up to work with Drupal.
+</div>
 
-<p>Probo integrates with <a href="https://www.atlassian.com/software/stash">Stash</a> (a version control application created by Atlassian). Within the Stash pull request user interface, Probo adds a link indicating the Probo site builds.</p>
+<p><a href="http://probo.ci/">Probo.CI</a> is a new <a href="https://github.com/ProboCI/probo">open source</a> continuous integration system designed from the ground up to work with Drupal. It integrates with Githhub to build your pull requests and post the status of your builds back to the Github PR, just like travis.ci. The part that is different from travis.ci is that it does not tear down your environment at the end and but instead posts a link to that environment on the github issue for easy code review, client feedback, and project manager evaluation. In order to save on resources with large numbers of containers, Probo shuts down containers while you’re not using them and starts them up again on demand to give you just-in-time access to your development environments. Probo is designed to be easy to extend and easy to wire into a broader devops ecosystem.</p>
 
-<p>Clicking on that link brings up a pop up window listing all the Probo sandbox site builds, their automated test status, and their site links. Senior developers who are reviewing the pull request can see whether any automated tests failed against a Probo site build.</p>
+<p>Under the hood, Probo.ci is written in <a href="https://nodejs.org/">Node.js</a> and powered by <a href="https://www.docker.com/">Docker</a>.  This means that with just a little configuration you can run on your own container images and test your Drupal sites on whatever versions of whatever services your stack needs. Probo is implemented using a microservice architecture and ships with services for receiving Github notifications of push and pull request events and posting statuses back to the status API, another for creating, starting, and stopping the containers, and a third for proxying incoming requests to the correct container (and starting the container if it was stopped to save on resources). It also ships with tools for use as a local test runner (especially helpful when you’re getting your project ready to build server side).</p>
 
-<p>Click on a Probo sandbox site link to go to an isolated copy of the site, which is built with the code from the pull request. Play with the site to see any effects from the pull request. Send this link to the business user who requested the functionality, so that they can visually and interactively verify if the desired changes align with their expectations.</p>
+	  </article>
 
-      </div>
+	</div>
+</div>
 
     </div>
 

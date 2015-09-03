@@ -2,6 +2,7 @@
 layout: post
 title: Introducing Probo CI
 author: Howard Tyson
+comments: true
 ---
 <div class="message">
 <a href="http://probo.ci/">Probo.CI</a> is a new <a href="https://github.com/ProboCI/probo">open source</a> continuous integration system designed from the ground up to work with Drupal.

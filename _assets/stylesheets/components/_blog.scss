@@ -1,0 +1,37 @@
+.blog-post-preview {
+  border-bottom: 1px solid #f7f2f5;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  h2 {
+    margin: 0;
+    font-size: 24px;
+    a {
+      text-decoration: none;
+      color: #252021;
+    }
+  }
+  a.blog-post-date {
+    text-decoration: none;
+    color: #252021;
+  }
+}
+.post {
+  .post-content {
+    .message {
+      visibility: hidden;
+      height: 0;
+    }
+  }
+}
+header.post-header {
+  border-bottom: 1px solid #f7f2f5;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  .post-meta {
+    font-size: 18px;
+    .date {
+      color: #737373;
+      font-weight: bold;
+    }
+  }
+}

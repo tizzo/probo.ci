@@ -1,4 +1,4 @@
-# Probo.ci
+# Probo.ci [![Build Status](https://travis-ci.org/ProboCI/probo.ci.svg?branch=master)](https://travis-ci.org/ProboCI/probo.ci)
 
 [probo.ci.io](http://probo.ci) site
 

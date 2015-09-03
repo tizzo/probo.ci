@@ -13,17 +13,29 @@
 	}
 }
 
-nav#main {
+ul#navigation {
 	float: right;
 	margin: auto;
 	a {
     display: block;
     padding: 12px;
 		text-decoration: none;
-    border-radius: 12px;
-    float: left;
-    &:hover {
-      background: #f7f2f5;
+  	float: none;
+  	clear: both;
+  	width: 100%;
+  	border-radius: 0;
+	  border-bottom: 1px solid #f7f2f5;
+	  padding-bottom: 12px;
+	  margin-bottom: 12px;
+    @include breakpoint($bp-medium-portrait) {
+	    border-radius: 12px;
+	    float: left;
+	    width: auto;
+	    clear: none;
+	    border-bottom: 0 solid #f7f2f5;
+	    &:hover {
+	      background: #f7f2f5;
+	    }
     }
 	}
 }

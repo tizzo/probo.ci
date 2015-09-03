@@ -5,8 +5,15 @@ body {
   }
 }
 
+.github-banner {
+  display: none;
+  @include breakpoint($bp-medium-portrait) {
+    display: block;
+  }
+}
+
 .wrapper {
-  width: 94%;
+  // width: 94%;
   margin: 0 auto;
   padding: em(4 * $base-spacing) $inner-width-padding / 3;
 

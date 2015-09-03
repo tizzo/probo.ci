@@ -7,9 +7,12 @@ env:
     secure: e026KSabZAPEYNrmKP/bWqhzFPfPbeZb6Xf+v0dreT4TykSCNwtylxT9YHSxmLUZoAwcy4VMp9A4og+M5yRLa435bzVkzTFP5H2yiMzTvYOUou3cBFM8+iFleCOhnAX0fS2e7mvl0yBrYpmf06BYD+0SiYayEMc6p5BYvaRDhb3G+WOyjuHRDf/Yrsd+amaIClwkPBinP6xjL79HO9eUdpy/09YK5G6xHhOuNvRFuf9A3UI3RB8Tyzkrwli1zLEV4wxI6OSD3HMk7Hh51QPo/hd3DNgT1tErLkYhtPofC5dW6pAAAr92ndPra054/8TvA9yPh6tFLNCcjM2QgP7MBYKl4RSkFovFJLjY1d6KgWH55ly7elktzEiTi7kC9zHkCHA9w4mZCDi6YcjSwH+jRcDBS6wyvq31MQ6UcBPC3FSbMovECNhRSuSMtLllUTsNJP3GRH+rmPKPrTlqa8cqNG5QyeyyLiRrBmI3z6gnsBE+ZFETHW8dXA5i3agMyCZ5PTaB8e8D6mH2owqPowGMjry+V1MpFIfxPZlVpbd1+jN6oLgSqAt8C0uLDX8Oa7SMZ8KykfX0wTWlqTtHm+knoCsOOFBVDbqP3ehEO2RvZkhz5uTk/vKcmUxD3Y2l2YnBBqqUzeBv8RRzQTAtn5MO1ro/kImJw4UVnbJt8gF9hRk=
 notifications:
   email:
-    - howard@zivtech.com
-    - sean@zivtech.com
-    - jcole@zivtech.com
+  - howard@zivtech.com
+  - sean@zivtech.com
+  - jcole@zivtech.com
+  hipchat:
+    rooms:
+      secure: t9AzQdoqzdXayO+SGwW+UeVirv0M2wt+s5tHaUw4WqrLFbqRPPpjdbOIBztPSFUPLvaHZiwst9kKK92Zt3PSmb28QgQaiDxXpaCRngOqiEudk5OQHFMKW0LqSrJt/VIS0HZe6Rft9xPhjY0wwkHjtWBGMVscpMOFcsLnhEfpBnya030osILvhPLCq/rMOYvHjnD5ik8OYk2RLdc/plrEJv/Xwnt1Ih2aVr+QVus+DemBm2bxbCfAWoev2g/Zm08mlh9zsP7RtPtjUOQzgT8WiJfQqkSp1TTT78lK7hxQyxy6OHk5PYmGBTAiXIPEDtihEqUAzK0SemOdHZ2A8a7lYOnVPQBrCddvvRMAnk7h8Sy3mkgDFUp1Jc3Z+4CIwDkvq/Vu3v6la3QQ1zz6WFF4ozO19ki4jxsTMATirvidj+OIv1+c3liCtKlOj9QpcqjxVY26RbVqmWz4PBDH4ANhrOYhdqU32C8x5G5EwOvyDhxWtriI0v5joubC3ItFZX2Y79DtvE7Y5pgBZfVH1SIbcUa/McPpUtE/yJ+jtL8KsU0yAdBuAJAkMeUv/panq+DIDWLOMwFohWbsKmUUdu+cbh0jHe/gSUbLq7r5KUBYFoxWE0g1ckWrde8QQChbkoYOoDFRLJoucsD7xzIEilVebNJmSCxR7PeqavxGDl1dKCY=
 branches:
   only:
-    - master
+  - master

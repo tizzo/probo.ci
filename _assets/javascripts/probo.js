@@ -3,6 +3,7 @@
 //= require throttle
 //= require jquery-2.1.3.min
 //= require jquery.easymodal
+//= require jquery.slimmenu.min.js
 //= require fullScreenSlides
 
 (function(Probo, $) {
@@ -17,4 +18,15 @@
       Probo.fullScreenSlides.setupScrollSlides();
     }
   }
+
+  $('#navigation').slimmenu(
+  {
+      resizeWidth: '800',
+      collapserTitle: 'Main Menu',
+      animSpeed: 'medium',
+      easingEffect: null,
+      indentChildren: false,
+      childrenIndenter: '&nbsp;'
+  });
+
 })(Probo || {}, jQuery);

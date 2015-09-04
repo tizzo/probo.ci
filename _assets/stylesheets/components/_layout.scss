@@ -7,15 +7,15 @@ body {
 
 .github-banner {
   display: none;
-  @include breakpoint($bp-medium-portrait) {
-    display: block;
-  }
+  // @include breakpoint($bp-medium-portrait) {
+  //   display: block;
+  // }
 }
 
 .wrapper {
   // width: 94%;
   margin: 0 auto;
-  padding: em(4 * $base-spacing) $inner-width-padding / 3;
+  // padding: em(4 * $base-spacing) $inner-width-padding / 3;
 
   @include breakpoint($bp-medium-landscape) {
     width: 95%;
@@ -27,6 +27,10 @@ body {
     padding-left: $inner-width-padding;
     padding-right: $inner-width-padding;
   }
+}
+
+.page-content {
+  padding-top: 70px;
 }
 
 .row {

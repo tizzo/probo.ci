@@ -31,9 +31,11 @@ body {
 .sidebar-page {
   .page-content {
     padding-top: 0;
+    @include breakpoint($bp-medium-portrait) {
+      padding-top: 70px;
+    }
   }
 }
-
 .page-content {
   padding-top: 70px;
 }

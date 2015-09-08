@@ -1,7 +1,14 @@
 .blog-post-preview {
   border-bottom: 1px solid #f7f2f5;
-  padding-bottom: 24px;
   margin-bottom: 24px;
+  padding: 0 12px;
+  padding-bottom: 24px;
+  @include breakpoint($bp-medium-portrait) {
+    padding: 0;
+  }
+  .blog-post-title {
+    padding: 0;
+  }
   h2 {
     margin: 0;
     font-size: 24px;
@@ -31,7 +38,7 @@ header.post-header {
   padding-bottom: 24px;
   margin-bottom: 24px;
   .post-meta {
-    font-size: 18px;
+    font-size: 14px;
     .date {
       color: #737373;
       font-weight: bold;

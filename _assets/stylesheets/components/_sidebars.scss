@@ -4,9 +4,14 @@
       width: 100%;
       float: none;
       margin-bottom: 24px;
+      padding-top: 75px;
       @include breakpoint($bp-medium-portrait) {
+      padding-top: 0;
       width: 24%;
       float: left;
+      position: fixed;
+      top: 100px;
+      max-width: 270px;
       }
     h4 {
       padding: 12px;

@@ -1,7 +1,9 @@
 language: ruby
 sudo: false
 rvm: 2.2.0
-before_script: git push origin --delete gh-pages
+before_script: 
+- chmod ugo+x delete-gh-pages.sh
+- ./delete-gh-pages.sh
 script: bundle exec rake deploy
 env:
   global:

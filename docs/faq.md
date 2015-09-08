@@ -13,6 +13,6 @@ Once a Pull Request is submitted, Probo starts building a site for each automate
 ###How much does Probo cost?
 It depends. Probo currently has three ways of working with it, an Open Source Software version, an enterprise version, and a Software-as-a-Service version. 
 
-###What's the difference between the Open Source Software and Enterprise version?
+<!-- ###What's the difference between the Open Source Software and Enterprise version? -->
 
-###What's the difference between SaaS and Open Source Software or Enterprise versions?
+<!-- ###What's the difference between SaaS and Open Source Software or Enterprise versions? -->

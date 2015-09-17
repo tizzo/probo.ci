@@ -40,6 +40,7 @@ gems:
 - respond-to
 - sass
 - uglifier
+- font-awesome-sass
 - compass-normalize
 - jekyll-assets
 - jekyll-assets/compass

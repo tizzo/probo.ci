@@ -3,7 +3,8 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="{{ page.class }}">
+  <div class="inner">
 
     {% include header.html %}
 
@@ -18,6 +19,7 @@
     {% include github-fork.html %}
 
     {% javascript probo %}
+  </div>
   </body>
 
 </html>

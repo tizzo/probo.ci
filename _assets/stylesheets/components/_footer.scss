@@ -14,3 +14,31 @@
     opacity: 0.4;
   }
 }
+
+
+$footer-height-desk:175px;
+$footer-height-mobile:140px;
+
+html, body {height: 100%;}
+.inner{
+  height:100%;
+}
+
+.page-content{
+  overflow: auto;
+  padding-bottom: $footer-height-mobile;
+  min-height: 100%;
+  @include breakpoint($bp-medium-portrait) {
+    padding-bottom: $footer-height-desk;
+  }
+}
+.site-footer{
+  position: relative;
+  margin-top: -$footer-height-mobile; /* negative value of footer height */
+  height: $footer-height-mobile;
+  clear:both;
+  @include breakpoint($bp-medium-portrait) {
+    margin-top: -$footer-height-desk; /* negative value of footer height */
+    height: $footer-height-desk;
+  }
+}

@@ -1,96 +1,97 @@
 %no-dangling {
-	&:first-child, &:first-of-type {
-		margin-top: 0;
-	}
+  &:first-child, &:first-of-type {
+    margin-top: 0;
+  }
 }
 
 html {
-	font-size: 62.5%;
+  font-size: 100%;
+  // font-size: 62.5%;
 }
 
 body {
-	line-height: 1.8;
-	@include rem(font-size, 14px);
-	-webkit-font-smoothing: antialiased;
+  line-height: 1.8;
+  @include rem(font-size, 8.75px);
+  -webkit-font-smoothing: antialiased;
 
 
 
-	@include breakpoint($bp-medium-portrait) {
-		@include rem(font-size, 18px);
-	}
+  @include breakpoint($bp-medium-portrait) {
+    @include rem(font-size, 11.25px);
+  }
 }
 
 h1, h2, h3, h4, h5 {
-	@extend %no-dangling;
-	font-family: 'Merriweather';
-	font-weight: 400;	
-	line-height: 1.7;
-	padding: 0 12px;
-	@include breakpoint($bp-medium-portrait) {
-		@include rem(font-size, 20px);
-		padding: 0;
-	}
-	@include breakpoint($bp-large)	 {
-		line-height: 1.58;
-	}
+  @extend %no-dangling;
+  font-family: 'Merriweather';
+  font-weight: 400;
+  line-height: 1.7;
+  padding: 0 12px;
+  @include breakpoint($bp-medium-portrait) {
+    @include rem(font-size, 17.5px);
+    padding: 0;
+  }
+  @include breakpoint($bp-large)   {
+    line-height: 1.58;
+  }
 }
 
 h1, %h1 {
-	@include rem(font-size, 26px);
-	margin-bottom: 12px;
-	@include breakpoint($bp-medium-portrait) {
-		@include rem(font-size, 42px);
-	}
+  @include rem(font-size, 16.25px);
+  margin-bottom: 12px;
+  @include breakpoint($bp-medium-portrait) {
+    @include rem(font-size, 26.25px);
+  }
 
-	@include breakpoint($bp-large) {
-		@include rem(font-size, 48px);
-	}
+  @include breakpoint($bp-large) {
+    @include rem(font-size, 26.25px);
+  }
 }
 
 h2, %h2 {
-	@include rem(font-size, 28px);
-	margin-bottom: 12px;
-	@include breakpoint($bp-medium-portrait) {
-		@include rem(font-size, 32px);
-	}
+  @include rem(font-size, 17.5px);
+  margin-bottom: 12px;
+  @include breakpoint($bp-medium-portrait) {
+    @include rem(font-size, 18.125px);
+  }
 
-	@include breakpoint($bp-large) {
-		@include rem(font-size, 36px);
-	}
+  @include breakpoint($bp-large) {
+    @include rem(font-size, 22.5px);
+  }
 }
 
 h3, %h3 {
-	@include rem(font-size, 22px);
+  @include rem(font-size, 13.75px);
 
-	@include breakpoint($bp-medium-portrait) {
-		@include rem(font-size, 24px);
-	}
+  @include breakpoint($bp-medium-portrait) {
+    @include rem(font-size, 15px);
+  }
 
-	@include breakpoint($bp-large) {
-		@include rem(font-size, 26px);
-	}
+  @include breakpoint($bp-large) {
+    @include rem(font-size, 16.25px);
+  }
 }
 
 h4, %h4, h5, %h5 {
-	@include rem(font-size, 18px);
-	@include breakpoint($bp-medium-portrait) {
-		@include rem(font-size, 20px);
-	}
+  @include rem(font-size, 11.25px);
+  @include breakpoint($bp-medium-portrait) {
+    @include rem(font-size, 17.5px);
+  }
 
-	@include breakpoint($bp-large) {
-		@include rem(font-size, 22px);
-	}
+  @include breakpoint($bp-large) {
+    @include rem(font-size, 13.75px);
+  }
 }
 
 p {
-	@extend %no-dangling;
-	&:last-child {
-		margin-bottom: 0;
-	}
-	padding: 0 12px;
-	@include breakpoint($bp-medium-portrait) {
-		padding: 0;
-	}
+  @extend %no-dangling;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  padding: 0 12px;
+  @include breakpoint($bp-medium-portrait) {
+    padding: 0;
+  }
 }
 
 a {

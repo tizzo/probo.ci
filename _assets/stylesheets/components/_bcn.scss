@@ -179,16 +179,16 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: image-url('logo-lines.png') right 200% no-repeat;
+    background: image-url('logo-lines.png') right 550px no-repeat;
     transition: all 3s ease;
     @include breakpoint($bp-medium-portrait){
-      background: image-url('logo-lines.png') right 140% no-repeat;
+      background: image-url('logo-lines.png') right 350px no-repeat;
     }
     @include breakpoint($bp-medium-landscape){
-      background: image-url('logo-lines.png') right 160% no-repeat;
+      background: image-url('logo-lines.png') right 450px no-repeat;
     }
     @include breakpoint($bp-larger){
-      background: image-url('logo-lines.png') right 120% no-repeat;
+      background: image-url('logo-lines.png') right 480px no-repeat;
     }
     opacity: .2;
   }

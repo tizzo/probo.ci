@@ -109,9 +109,9 @@
       overflow: hidden;
       z-index: -1;
       animation: rotateHello 18s linear infinite 0s;
-      @include rem(font-size, 25px);
+      font-size: 25px;
       @include breakpoint($bp-medium-portrait) {
-        @include rem(font-size, 40px);
+        font-size: 40px;
       }
     }
     span:nth-child(2) {
@@ -135,9 +135,9 @@
     display: inline-block;
     margin-left:0;
     margin-top:40px;
-    @include rem(font-size, 20px);
+    font-size:20px;
     @include breakpoint($bp-medium-portrait) {
-      @include rem(font-size, 32px);
+      font-size:32px;
     }
     @include breakpoint($bp-medium-portrait) {
       margin-left: 160px;
@@ -149,18 +149,18 @@
 .rotate-hello {
   span.lrg {
     padding-top: 10px;
-    @include rem(font-size, 21px);
+    font-size:21px;
     @include breakpoint($bp-medium-portrait) {
-      @include rem(font-size, 33px);
+      font-size:33px;
     }
   }
 }
 
 .bcn .purple {
   color:$toledo;
-  @include rem(font-size, 17px);
+  font-size:17px;
   @include breakpoint($bp-medium-portrait) {
-    @include rem(font-size, 20px);
+    font-size:20px;
   }
 }
 

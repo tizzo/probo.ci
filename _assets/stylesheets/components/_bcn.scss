@@ -164,6 +164,11 @@
   }
 }
 
+//because of the 3d transformations
+body.bcn *{
+  backface-visibility: hidden;
+}
+
 .bcn {
   .site-header{
     z-index:2;

@@ -4,13 +4,13 @@
 }
 
 .slide {
-  margin: 0;  
+  margin: 0;
   text-align: center;
   display: table-row;
 
   .inner {
     padding: 50px 0;
-    display: table-cell;
+    // display: table-cell;
     vertical-align: middle;
   }
 

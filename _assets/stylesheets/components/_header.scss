@@ -13,20 +13,64 @@
   .wrapper {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+    position: relative;
+  }
+  a#simple-menu {
+    position: absolute;
+    left: 24px;
+    top: 24px;
+    display: block;
+    z-index: 10000;
+    height: 20px;
+    width: 35px;
+    @include breakpoint($bp-medium-portrait) {
+      display: none;
+      visibility: hidden;
+      height: 0;
+    }
   }
   .site-title {
     display: block;
-    float: left;
     padding: 0 12px;
+    margin: 0 auto;
+    text-align: center;
+    margin: 0 auto;
+    @include breakpoint($bp-medium-portrait) {
+      float: left;
+    }
     img {
       height: 55px;
     }
   }
 }
-
+// responsive nav styles
+#sidr {
+  display: block;
+  @include breakpoint($bp-medium-portrait) {
+    display: none;
+  }
+  ul {
+    li {
+      a {
+        color: white;
+        &:hover {
+          background-color: #9b4a81;
+        }
+      }
+    }
+  }
+}
 ul#navigation {
   float: right;
   margin: auto;
+  display: none;
+  @include breakpoint($bp-medium-portrait) {
+    display: block;
+  }
+  li {
+    list-style-type: none;
+    float: left;
+  }
   a {
     display: block;
     padding: 12px;
@@ -38,14 +82,10 @@ ul#navigation {
     border-bottom: 1px solid #f7f2f5;
     padding-bottom: 12px;
     @include breakpoint($bp-medium-portrait) {
-      border-radius: 12px;
       float: left;
       width: auto;
       clear: none;
       border-bottom: 0 solid #f7f2f5;
-      &:hover {
-        background: #f7f2f5;
-      }
     }
   }
 }

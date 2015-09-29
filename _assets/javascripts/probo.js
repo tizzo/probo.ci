@@ -4,6 +4,7 @@
 //= require jquery-2.1.3.min
 //= require jquery.easymodal
 //= require jquery.slimmenu.min.js
+//= require jquery.sidr.min.js
 //= require fullScreenSlides
 
 (function(Probo, $) {
@@ -19,15 +20,7 @@
     }
   }
 
-  $('#navigation').slimmenu(
-    {
-      resizeWidth: '800',
-      collapserTitle: 'Main Menu',
-      animSpeed: 'medium',
-      easingEffect: null,
-      indentChildren: false,
-      childrenIndenter: '&nbsp;'
-    });
+   $('#simple-menu').sidr();
 
   //fallback for css animation breaking on ios scroll
   var hello = ['Hello', 'Hola', 'Bonjour', 'Bon dia', 'Namaste'];

@@ -20,7 +20,7 @@ When the build runs, your source code for the commit that triggered the build is
 
 Sample `.probo.yaml` file:
 
-``` yaml
+```
 # Each step is the build/test process
 # the name of each step is the build context, and will get its own status updates
 steps:

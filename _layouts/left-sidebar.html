@@ -3,23 +3,24 @@
 
   {% include head.html %}
 
-  <body class="sidebar-page">
+  <body class="sidebar-page site">
+    <div class="site-content">
+      {% include header.html %}
 
-    {% include header.html %}
+      <div class="wrapper">
 
-    <div class="wrapper">
+        <div id="sidebar-first">
+          <h4>{% link /docs/ Getting Started %}</h4>
+          {% include sidebars/docs.md %}
+        </div>
 
-      <div id="sidebar-first">
-        <h4>{% link /docs/ Getting Started %}</h4>
-        {% include sidebars/docs.md %}
-      </div>
+        <div class="page-content">
+            {{ content }}
+        </div>
 
-      <div class="page-content">
-          {{ content }}
       </div>
 
     </div>
-
     {% include footer.html %}
 
     {% include updates-form.html %}

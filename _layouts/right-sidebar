@@ -4,18 +4,20 @@
   {% include head.html %}
 
   <body class="sidebar-page site">
+    <div class="site-content">
 
-    {% include header.html %}
+      {% include header.html %}
 
-    <div class="wrapper">
+      <div class="wrapper">
 
-      <div class="page-content">
-          {{ content }}
+        <div class="page-content">
+            {{ content }}
+        </div>
+
+        <div id="sidebar-second">
+        </div>
+
       </div>
-
-      <div id="sidebar-second">
-      </div>
-
     </div>
     {% include footer.html %}
 

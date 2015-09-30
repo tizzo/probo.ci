@@ -1,9 +1,6 @@
 language: ruby
 sudo: false
 rvm: 2.2.0
-before_script: 
-- chmod ugo+x delete-gh-pages.sh
-- '[ "${TRAVIS_PULL_REQUEST}" != "false" ] || ./delete-gh-pages.sh'
 script: bundle exec rake deploy
 env:
   global:

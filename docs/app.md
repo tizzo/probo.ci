@@ -6,7 +6,8 @@ permalink: /docs/app/
 published: true
 ---
 
-##Using the Probo App
+
+## Using the Probo App
 
 The Probo App is currently being opened to Beta testers on a rolling basis. This documentation is for Beta testers.
 

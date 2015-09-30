@@ -5,6 +5,16 @@ body {
   }
 }
 
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  .site-content,
+  .inner {
+    flex: 1;
+  }
+}
+
 .github-banner {
   display: none;
   // @include breakpoint($bp-medium-portrait) {

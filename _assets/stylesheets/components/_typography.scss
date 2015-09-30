@@ -98,3 +98,19 @@ a {
   @include link-colors($pale-pink, $toledo, $pale-pink, $pale-pink, $toledo);
   transition: all 0.5s ease;
 }
+
+.highlight {
+  padding: 12px;
+  font-size: 14px;
+  background: #f7f7f7;
+  border: 1px solid #d8d8d8;
+  code {
+    background: none;
+  }
+}
+
+code {
+  background: #f7f2f5;
+  font-size: 14px;
+  padding: 4px;
+}

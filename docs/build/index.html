@@ -9,9 +9,9 @@
   <title>Build Configuration | Demonstrate. Test. Approve.</title>
   <meta name="description" content="Probo website">
 
-  <link rel="stylesheet" href="/assets/probo-f63166c0683841c9b987cf8bd7a6c3e0.css">
+  <link rel="stylesheet" href="/assets/probo-4a0bb30ffa2384c2612233964821c8c1.css">
 
-  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-476a40e8e0d3b803bce78d99eab41a88.png" />
+  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-eb5d48c9c6ea7ce26d15d2a4aa5f8e4a.png" />
   <link rel="canonical" href="http://probo.ci/docs/build/">
 </head>
 
@@ -89,15 +89,14 @@
 
 <p>Sample <code>.probo.yaml</code> file:</p>
 
-<pre><code class="language-yaml"># Each step is the build/test process
-# the name of each step is the build context, and will get its own status updates
-steps:
-  - name: Look Around
-    plugin: 'Shell'  # this is the default plugin
-    command: "ls $SRC_DIR"  
-  - name: Create Site
-    command: "drush fec myrepo --json-config='{\"settings_php.snippets\": []}'"
-</code></pre>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># Each step is the build/test process</span>
+<span class="c1"># the name of each step is the build context, and will get its own status updates</span>
+<span class="l-Scalar-Plain">steps</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Look Around</span>
+    <span class="l-Scalar-Plain">plugin</span><span class="p-Indicator">:</span> <span class="s">&#39;Shell&#39;</span>  <span class="c1"># this is the default plugin</span>
+    <span class="l-Scalar-Plain">command</span><span class="p-Indicator">:</span> <span class="s">&quot;ls</span><span class="nv"> </span><span class="s">$SRC_DIR&quot;</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Create Site</span>
+    <span class="l-Scalar-Plain">command</span><span class="p-Indicator">:</span> <span class="s">&quot;drush</span><span class="nv"> </span><span class="s">fec</span><span class="nv"> </span><span class="s">myrepo</span><span class="nv"> </span><span class="s">--json-config=&#39;{\&quot;settings_php.snippets\&quot;:</span><span class="nv"> </span><span class="s">[]}&#39;&quot;</span></code></pre></div>
 
 <p>See the <a href="https://github.com/zivtech/bear">Drupal Bear</a> repository for a full example.</p>
 
@@ -110,7 +109,7 @@ steps:
 
     <div class="wrapper">
         <p>To learn more and see Probo in action <br /><a class="button" href="mailto:info@probo.ci">request a demo today</a></p>
-        <img src="/assets/probo-logo-bw-225-ee3099139d2abce0e8e108a905ccd3d0.png" alt='black and white probo logo' class='site-footer__logo'>
+        <img src="/assets/probo-logo-bw-225-76599c34d4ea60bce5aa93f7516ccbf5.png" alt='black and white probo logo' class='site-footer__logo'>
     </div>
 
 </footer>

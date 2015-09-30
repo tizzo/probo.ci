@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Probo Docs | Demonstrate. Test. Approve.</title>
+  <meta name="description" content="Probo website">
+
+  <link rel="stylesheet" href="/assets/probo-2738d8e343d787d2f2964f71e4519893.css">
+
+  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-f742758b36339394e86861a59d09a8fb.png" />
+  <link rel="canonical" href="http://probo.ci/docs/">
+</head>
+
+  <body class="sidebar-page">
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a id="simple-menu" href="#sidr"><?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 29.1 22.4" enable-background="new 0 0 29.1 22.4" xml:space="preserve">
+<rect x="0.1" y="0" fill="#3C122C" width="25" height="3"/>
+<rect x="0.1" y="8.1" fill="#3C122C" width="25" height="3"/>
+<rect x="0.1" y="16.2" fill="#3C122C" width="25" height="3"/>
+</svg>
+</a>
+
+		<div id="sidr">
+	    <ul>
+	    
+	        <li><a href="/docs">Documentation</a></li>
+	    
+	        <li><a href="/blog">Blog</a></li>
+	    
+	    </ul>
+		</div>
+
+    <a class="site-title" href="/"><img src="/assets/probo-logo-no-slogan-81b9236eda53d65b767b41310193850f.png" alt="Probo logo with name"></a>
+
+    <ul id="navigation">
+    
+        <li><a href="/docs">Documentation</a></li>
+    
+        <li><a href="/blog">Blog</a></li>
+    
+    </ul>
+
+  </div>
+
+</header>
+
+
+    <div class="wrapper">
+
+      <div id="sidebar-first">
+        <h4><a href="/docs/" class="current">Getting Started</a></h4>
+        <ul>
+	<li><a href="/docs/about/" >What is Probo?</a></li>
+	<li><a href="/docs/github/" >Github Integration</a></li>
+	<li><a href="/docs/stash/" >Stash Integration</a></li>
+ 	<li><a href="/docs/app/" >Probo App</a></li>
+ 	<li><a href="/docs/build/" >Build Configuration</a></li>
+<!--	<li><a href="/docs/workflow/" >Probo Recommended Workflow</a></li> -->
+	<li><a href="/docs/faq/" >Probo FAQ</a></li>
+</ul>
+
+      </div>
+
+      <div class="page-content">
+          <h2 id="what-is-probo">What is Probo?</h2>
+
+<p>Probo is an <a href="https://github.com/ProboCI/probo">open source</a> Quality Assurance (QA) tool for web development projects. Probo creates test environments for each new feature as your team develops so that everyone (QA or UAT testers, project managers, developers) can see and interact with development changes earlier and more frequently throughout development without waiting for an environment update.</p>
+
+<h2 id="why-use-probo">Why use Probo?</h2>
+
+<p>Typical web application projects have environments for live, staging, development, and local developer sites. When a developer completes a task, the work needs to be reviewed and tested in multiple ways (for example, automated testing, manual QA, UAT, and code review by a senior developer). Because each environment can only run code from one git branch at a time, in order to test  code it needs to be merged with other work. When you have to merge work in order to test it you run into some of the following  problems: </p>
+
+<ul>
+  <li>Delays before testing occurs.</li>
+  <li>Bottlenecks at the code review step.</li>
+  <li>Confusing or unstable dev or staging environments with many changes happening at once.</li>
+  <li>Insufficiently tested automated deployment steps.</li>
+  <li>Technical barrier of entry to review work before deployment.</li>
+  <li>Difficulty deploying a subset of the work which was already merged.</li>
+  <li>The testing environment becomes ‘junked up’ from testing. You need to re-sync it from the production database but also don’t want to lose the testing content you need for review.</li>
+</ul>
+
+<p>Probo spins up a new environment when you create a pull request - before you merge your code. This makes it easy to preview and test work. We’ve found this workflow to be a massive improvement for quality and efficiency</p>
+
+<h3 id="probo-for-automated-qa">Probo for Automated QA</h3>
+
+<p>Probo integrates with version control applications (<a href="http://github.com/">Github</a> and <a href="https://www.atlassian.com/software/stash">Stash</a>) to run automated QA tests upon every <a href="http://oss-watch.ac.uk/resources/pullrequest">pull request</a>. When a developer submits a pull request, Probo automatically builds sandbox sites and runs each test against a Probo sandbox site. From Github or Stash, the pull request reviewer can see the status of all each test run and click into its respective sandbox site to interact within it. If a test fails, then the team knows that there is a problem with the code submitted, saving reviewers, – who are often senior developers, – valuable time. Probo uses <a href="https://www.docker.com/">Docker</a> to create these isolated sandbox sites on demand, so these sites stay available for as long as they are needed.</p>
+
+<h3 id="probo-for-business-uat">Probo for Business UAT</h3>
+
+<p>The sandbox sites created by Probo can also be used for business users to provide earlier UAT feedback. Business owners no longer have to wait until the end when a dedicated UAT environment is updated. The sandbox sites are created with realistic data and content from a backup (such as  from a production site). Visually demonstrate each development change to your business user, so that there is no misunderstanding about the end results before the end of your development period, when (and the code is merged).</p>
+
+      </div>
+
+    </div>
+
+    <footer class="site-footer">
+
+    <div class="wrapper">
+        <p>To learn more and see Probo in action <br /><a class="button" href="mailto:info@probo.ci">request a demo today</a></p>
+        <img src="/assets/probo-logo-bw-225-19159d6884cc4cc6122df30eeb8e625a.png" alt='black and white probo logo' class='site-footer__logo'>
+    </div>
+
+</footer>
+
+<div class="overlay"></div>
+
+    <!-- This form is from MailChimp -->
+<div id="mc_embed_signup" class="updates-form" style="display: none">
+    <img src="/assets/probo-sphere-84e5d8bea7e96b87140c64989ae142fa.png" alt="Probo sphere logo" class='updates-form__background'>
+    <form action="//zivtech.us1.list-manage.com/subscribe/post?u=a6b5ac96de7e7b9fbe11b2007&amp;id=1d3b5dbec7"
+          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate updates-form__form"
+          target="_blank" novalidate>
+        <h2>Notify Me!</h2>
+        <p>Let me know when hosted Probo reaches Beta!</p>
+        <div id="mc_embed_signup_scroll">
+            <div style="position: absolute; left: -5000px;">
+                <input type="text" name="b_a6b5ac96de7e7b9fbe11b2007_1d3b5dbec7" tabindex="-1" value="">
+            </div>
+            <div class="mc-field-group updates-form__group">
+                <label for="mce-EMAIL" class="u-hidden focussable">Email Address</label>
+                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email" required>
+            </div>
+            <input type="submit" value="Go!" name="subscribe" id="mc-embedded-subscribe" class="updates-form__submit">
+        </div>
+    </form>
+</div>
+
+    <a href="https://github.com/ProboCI/probo" class="github-banner"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+
+    <script src="/assets/probo-6f31815f9f5ad3f652a2eedf37eb4d52.js"></script>
+  </body>
+
+</html>

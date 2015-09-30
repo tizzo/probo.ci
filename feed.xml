@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Probo.ci</title>
+    <description>Probo website</description>
+    <link>http://probo.ci/</link>
+    <atom:link href="http://probo.ci/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 30 Sep 2015 14:56:59 +0000</pubDate>
+    <lastBuildDate>Wed, 30 Sep 2015 14:56:59 +0000</lastBuildDate>
+    <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Introducing Probo CI</title>
+        <description>&lt;div class=&quot;message&quot;&gt;
+&lt;a href=&quot;http://probo.ci/&quot;&gt;Probo.CI&lt;/a&gt; is a new &lt;a href=&quot;https://github.com/ProboCI/probo&quot;&gt;open source&lt;/a&gt; continuous integration system designed from the ground up to work with Drupal.
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://probo.ci/&quot;&gt;Probo.CI&lt;/a&gt; is a new &lt;a href=&quot;https://github.com/ProboCI/probo&quot;&gt;open source&lt;/a&gt; continuous integration system designed from the ground up to work with Drupal. It integrates with Githhub to build your pull requests and post the status of your builds back to the Github PR, just like travis.ci. The part that is different from travis.ci is that it does not tear down your environment at the end and but instead posts a link to that environment on the github issue for easy code review, client feedback, and project manager evaluation. In order to save on resources with large numbers of containers, Probo shuts down containers while you’re not using them and starts them up again on demand to give you just-in-time access to your development environments. Probo is designed to be easy to extend and easy to wire into a broader devops ecosystem.&lt;/p&gt;
+
+&lt;p&gt;Under the hood, Probo.ci is written in &lt;a href=&quot;https://nodejs.org/&quot;&gt;Node.js&lt;/a&gt; and powered by &lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt;.  This means that with just a little configuration you can run on your own container images and test your Drupal sites on whatever versions of whatever services your stack needs. Probo is implemented using a microservice architecture and ships with services for receiving Github notifications of push and pull request events and posting statuses back to the status API, another for creating, starting, and stopping the containers, and a third for proxying incoming requests to the correct container (and starting the container if it was stopped to save on resources). It also ships with tools for use as a local test runner (especially helpful when you’re getting your project ready to build server side).&lt;/p&gt;
+</description>
+        <pubDate>Thu, 03 Sep 2015 00:00:00 +0000</pubDate>
+        <link>http://probo.ci/2015/09/03/introducing-probo-cI.html</link>
+        <guid isPermaLink="true">http://probo.ci/2015/09/03/introducing-probo-cI.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

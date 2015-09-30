@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body class="sidebar-page">
+  <body class="sidebar-page site">
 
     {% include header.html %}
 
@@ -17,7 +17,6 @@
       </div>
 
     </div>
-
     {% include footer.html %}
 
     {% include updates-form.html %}

@@ -6,6 +6,7 @@ permalink: /docs/stash/
 published: true
 ---
 
+
 ## Stash Integration
 
 Probo integrates with [Stash](https://www.atlassian.com/software/stash) (a version control application created by Atlassian). Within the Stash pull request user interface, Probo adds a link indicating the Probo site builds.

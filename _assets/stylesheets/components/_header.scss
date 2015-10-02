@@ -15,14 +15,15 @@
     padding-bottom: 0.5em;
     position: relative;
   }
-  a#simple-menu {
+  #simple-menu {
     position: absolute;
-    left: 24px;
-    top: 24px;
+    left: 15px;
+    top: 15px;
     display: block;
     z-index: 10000;
-    height: 20px;
-    width: 35px;
+    height: 40px;
+    width: 40px;
+    padding: 12px 8px;
     @include breakpoint($bp-medium-portrait) {
       display: none;
       visibility: hidden;
@@ -46,10 +47,6 @@
 }
 // responsive nav styles
 #sidr {
-  display: block;
-  @include breakpoint($bp-medium-portrait) {
-    display: none;
-  }
   ul {
     li {
       a {
@@ -59,6 +56,10 @@
         }
       }
     }
+  }
+
+  @include breakpoint($bp-medium-portrait) {
+    @include visuallyhidden;
   }
 }
 ul#navigation {

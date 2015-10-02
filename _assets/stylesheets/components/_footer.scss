@@ -1,12 +1,12 @@
 .site-footer {
-  @include rem(font-size, 16px);
-  background-color: $pale-grey;
+  @include rem(font-size, 12px);
+  background-color: $dark-grey;
   color: $grey;
   text-align: center;
   display: block;
   clear: both;
   overflow: hidden;
-
+  color: $pale-grey;
   &__logo {
     display: block;
     margin: $base-spacing auto;

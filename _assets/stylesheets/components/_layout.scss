@@ -5,10 +5,27 @@ body {
   }
 }
 
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  .site-content,
+  .inner {
+    flex: 1;
+  }
+}
+
+.github-banner {
+  display: none;
+  // @include breakpoint($bp-medium-portrait) {
+  //   display: block;
+  // }
+}
+
 .wrapper {
-  width: 94%;
+  // width: 94%;
   margin: 0 auto;
-  padding: em(4 * $base-spacing) $inner-width-padding / 3;
+  // padding: em(4 * $base-spacing) $inner-width-padding / 3;
 
   @include breakpoint($bp-medium-landscape) {
     width: 95%;
@@ -20,6 +37,17 @@ body {
     padding-left: $inner-width-padding;
     padding-right: $inner-width-padding;
   }
+}
+.sidebar-page {
+  .page-content {
+    padding-top: 0;
+    @include breakpoint($bp-medium-portrait) {
+      padding-top: 70px;
+    }
+  }
+}
+.page-content {
+  padding-top: 70px;
 }
 
 .row {

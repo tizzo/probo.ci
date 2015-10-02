@@ -3,6 +3,8 @@
 //= require throttle
 //= require jquery-2.1.3.min
 //= require jquery.easymodal
+//= require jquery.slimmenu.min.js
+//= require jquery.sidr.min.js
 //= require fullScreenSlides
 
 (function(Probo, $) {
@@ -17,4 +19,24 @@
       Probo.fullScreenSlides.setupScrollSlides();
     }
   }
+
+  if ($.fn.sidr instanceof Function) {
+    $('#simple-menu').css('display', '').sidr({side: 'left'});
+  }
+
+  //fallback for css animation breaking on ios scroll
+  var hello = ['Hello', 'Hola', 'Bonjour', 'Bon dia', 'Namaste'];
+  var count = 1;
+  setInterval(function () {
+    $("span.hello").fadeOut(600, function () {
+      $(this).html(hello[count]);
+      count++;
+      if (count == hello.length)
+        count = 0;
+      $(this).fadeIn(500, function () {
+      });
+    });
+  }, 4000);
+
+
 })(Probo || {}, jQuery);

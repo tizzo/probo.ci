@@ -1,0 +1,217 @@
+//BCN
+#mc_embed_signup_bcn {
+  padding-bottom:20px;
+  @include breakpoint($bp-medium-portrait) {
+    padding-bottom:0;
+  }
+  .mc-field-group {
+    margin: 10px 0;
+  }
+  input[type=text],
+  input[type=email] {
+    min-width: 235px;
+    @include breakpoint($bp-medium-portrait) {
+      min-width: 280px;
+    }
+  }
+  label.icon {
+    background-color: $toledo;
+    height: 43px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 38px;
+    text-align: center;
+    width: 40px;
+    margin: 0;
+    float: left;
+    color: $pale-grey;
+    @include breakpoint($bp-medium-portrait) {
+      height: 43px;
+    }
+    i {
+      display: block;
+      line-height: 38px;
+      font-family: fontawesome;
+      vertical-align: middle;
+      @include breakpoint($bp-medium-portrait) {
+        line-height: 43px;
+      }
+
+    }
+    .no-icon {
+      float: none;
+    }
+  }
+}
+
+
+#mc_embed_signup_bcn input:focus::-webkit-input-placeholder {
+  transition: text-indent 0.5s 0.5s ease;
+  text-indent: -100%;
+  opacity: 1;
+}
+
+#mc_embed_signup_bcn {
+  .checkbox {
+    ul, ul li {
+      padding: 0;
+      list-style: none;
+    }
+    label {
+      padding-left: 15px;
+    }
+  }
+}
+
+@keyframes rotateHello {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  5% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  17% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  20% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+.bcn {
+  h2 {
+    @include breakpoint($bp-medium-portrait) {
+      margin-bottom: 30px;
+    }
+  }
+  .rotate-hello {
+    display:none !important;
+    @include breakpoint($bp-medium-portrait) {
+      display: block !important;
+    }
+    span {
+      position: absolute;
+      opacity: 0;
+      overflow: hidden;
+      z-index: -1;
+      animation: rotateHello 18s linear infinite 0s;
+      font-size: 25px;
+      @include breakpoint($bp-medium-portrait) {
+        font-size: 40px;
+      }
+    }
+    span:nth-child(2) {
+      animation-delay: 3s;
+    }
+    span:nth-child(3) {
+      animation-delay: 6s;
+    }
+    span:nth-child(4) {
+      animation-delay: 9s;
+    }
+    span:nth-child(5) {
+      animation-delay: 12s;
+    }
+    span:nth-child(6) {
+      animation-delay: 15s;
+    }
+  }
+  .not-hello {
+    padding-top: 8px;
+    display: inline-block;
+    margin-left:0;
+    font-size:20px;
+    @include breakpoint($bp-medium-portrait) {
+      font-size:32px;
+      margin-left: 160px;
+    }
+  }
+}
+
+.mobile-only{
+  display:block;
+  margin-right:20px;
+  @include breakpoint($bp-medium-portrait) {
+    display:none !important;
+  }
+}
+
+.rotate-hello {
+  span.lrg {
+    padding-top: 10px;
+    font-size:21px;
+    @include breakpoint($bp-medium-portrait) {
+      font-size:33px;
+    }
+  }
+}
+
+.bcn .purple {
+  color:$toledo;
+  font-size:17px;
+  @include breakpoint($bp-medium-portrait) {
+    font-size:20px;
+  }
+}
+
+//because of the 3d transformations
+body.bcn *{
+  backface-visibility: hidden;
+}
+
+.bcn {
+  .site-header{
+    z-index:2;
+  }
+  .page-content{
+    position:relative;
+    @include breakpoint($bp-medium-portrait) {
+      min-height:700px;
+    }
+  }
+  .page-content:before {
+    content:"";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: image-url('logo-lines.png') right 550px no-repeat;
+    transition: all 3s ease;
+    @include breakpoint($bp-medium-portrait){
+      background: image-url('logo-lines.png') right 350px no-repeat;
+    }
+    @include breakpoint($bp-medium-landscape){
+      background: image-url('logo-lines.png') right 450px no-repeat;
+    }
+    @include breakpoint($bp-larger){
+      background: image-url('logo-lines.png') right 480px no-repeat;
+    }
+    opacity: .2;
+  }
+
+  .post-content {
+    padding: 0 20px;
+    @include breakpoint($bp-medium-landscape) {
+      padding:0;
+    }
+  }
+}
+
+

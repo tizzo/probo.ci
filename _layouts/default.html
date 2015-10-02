@@ -3,14 +3,18 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="{{ page.class }} site">
+    <div class="site-content">
+      <div class="inner">
 
-    {% include header.html %}
+        {% include header.html %}
 
-    <div class="page-content">
-        {{ content }}
+        <div class="page-content">
+            {{ content }}
+        </div>
+
+      </div>
     </div>
-
     {% include footer.html %}
 
     {% include updates-form.html %}

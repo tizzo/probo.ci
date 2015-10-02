@@ -1,28 +1,93 @@
 .site-header {
   height: 70px;
-	.wrapper {
-		padding-top: 0.5em;
-		padding-bottom: 0.5em;
-	}
-	.site-title {
-		display: block;
-		float: left;
-		img {
-			height: 55px;
-		}
-	}
+  position: fixed;
+  width: 100%;
+  opacity: 1;
+  -webkit-filter: drop-shadow(0 3px 2px rgba(0,0,0,0.1));
+  filter: drop-shadow(0 3px 2px rgba(0,0,0,0.1));
+  transition: none !important;
+  background: #FFFFFF;
+  @include breakpoint($bp-medium-portrait) {
+    opacity: .95;
+  }
+  .wrapper {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    position: relative;
+  }
+  #simple-menu {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    display: block;
+    z-index: 10000;
+    height: 40px;
+    width: 40px;
+    padding: 12px 8px;
+    @include breakpoint($bp-medium-portrait) {
+      display: none;
+      visibility: hidden;
+      height: 0;
+    }
+  }
+  .site-title {
+    display: block;
+    padding: 6px 24px;
+    margin: 0 auto;
+    text-align: center;
+    margin: 0 auto;
+    @include breakpoint($bp-medium-portrait) {
+      float: left;
+    }
+    img {
+      height: 45px;
+      width: auto;
+    }
+  }
 }
+// responsive nav styles
+#sidr {
+  ul {
+    li {
+      a {
+        color: white;
+        &:hover {
+          background-color: #9b4a81;
+        }
+      }
+    }
+  }
 
-nav#main {
-	float: right;
-	margin: auto;
-	a {
+  @include breakpoint($bp-medium-portrait) {
+    @include visuallyhidden;
+  }
+}
+ul#navigation {
+  float: right;
+  margin: auto;
+  display: none;
+  @include breakpoint($bp-medium-portrait) {
+    display: block;
+  }
+  li {
+    list-style-type: none;
+    float: left;
+  }
+  a {
     display: block;
     padding: 12px;
-		text-decoration: none;
-    border-radius: 12px;
-    &:hover {
-      background: #f7f2f5;
+    text-decoration: none;
+    float: none;
+    clear: both;
+    width: 100%;
+    border-radius: 0;
+    border-bottom: 1px solid #f7f2f5;
+    padding-bottom: 12px;
+    @include breakpoint($bp-medium-portrait) {
+      float: left;
+      width: auto;
+      clear: none;
+      border-bottom: 0 solid #f7f2f5;
     }
-	}
+  }
 }

@@ -11,6 +11,25 @@
   // prepare the modal for use
   $('#mc_embed_signup').easyModal();
 
+  $('#sidebar-first ul').each(function() {
+    if (parseInt($(window).width()) < 420) {
+      var select = $(document.createElement('select')).insertBefore($(this).hide());
+      $('>li a', this).each(function() {
+          var a = $(this).click(function() {
+              if ($(this).attr('target')==='_blank') {
+                  window.open(this.href);
+              }
+              else {
+                  window.location.href = this.href;
+              }
+          }),
+          option = $(document.createElement('option')).appendTo(select).val(this.href).html($(this).html()).click(function() {
+              a.click();
+          });
+      });
+    }
+  });
+
   // enable the homepage slides
   if (Probo.fullScreenSlides && $('.home').length) {
     if (Probo.fullScreenSlides.settings.slides.length

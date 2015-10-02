@@ -24,6 +24,20 @@ textarea {
   }
 }
 
+.tinynav {
+  display: block;
+  @include breakpoint($bp-medium-portrait) {
+    display: none;
+  }
+}
+
+#sidebar-first ul {
+  display: none;
+  @include breakpoint($bp-medium-portrait) {
+    display: block;
+  }
+}
+
 select {
     display: block;
     width: 100%;

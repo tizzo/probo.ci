@@ -20,7 +20,9 @@
     }
   }
 
-   $('#simple-menu').sidr();
+  if ($.fn.sidr instanceof Function) {
+    $('#simple-menu').css('display', '').sidr({side: 'left'});
+  }
 
   //fallback for css animation breaking on ios scroll
   var hello = ['Hello', 'Hola', 'Bonjour', 'Bon dia', 'Namaste'];

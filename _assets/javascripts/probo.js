@@ -6,23 +6,13 @@
 //= require jquery.slimmenu.min.js
 //= require jquery.sidr.min.js
 //= require tinynav.js
-//= require fullScreenSlides
 
-(function (Probo, $) {
+(function (window, $) {
   // prepare the modal for use
   $('#mc_embed_signup').easyModal();
 
   // use tinynav
   $("#sidebar-first ul").tinyNav();
-
-  // enable the homepage slides
-  if (Probo.fullScreenSlides && $('.home').length) {
-    if (Probo.fullScreenSlides.settings.slides.length
-      && Probo.fullScreenSlides.settings.nav.length) {
-      Probo.fullScreenSlides.setupSlideToggles();
-      Probo.fullScreenSlides.setupScrollSlides();
-    }
-  }
 
   if ($.fn.sidr instanceof Function) {
     $('#simple-menu').css('display', '').sidr({side: 'left'});
@@ -42,5 +32,17 @@
     });
   }, 4000);
 
+  //click for modal
+  $('.request').click(function(e) {
+    $('#mc_embed_signup').trigger('openModal');
+    e.preventDefault();
+  });
 
-})(Probo || {}, jQuery);
+  $('.close-request').click(function(e) {
+    $('#mc_embed_signup').trigger('closeModal');
+    e.preventDefault();
+  });
+
+
+
+})(window || {}, jQuery);

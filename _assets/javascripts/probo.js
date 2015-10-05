@@ -5,47 +5,15 @@
 //= require jquery.easymodal
 //= require jquery.slimmenu.min.js
 //= require jquery.sidr.min.js
+//= require tinynav.js
 //= require fullScreenSlides
 
 (function (Probo, $) {
   // prepare the modal for use
   $('#mc_embed_signup').easyModal();
 
-  if (parseInt($(window).width()) < 420) {
-    makeSelectLists();
-  }
-
-  $(window).on('resize', throttle(function() {
-    if (parseInt($(window).width()) < 420) {
-      makeSelectLists();
-    }
-  }));
-
-  function makeSelectLists() {
-    $('#sidebar-first').each(function () {
-      var select = $('<select/>');
-      var lists = $(this).find('ul');
-      lists.each(function () {
-        var title = $(this).prev('h4');
-        $(title).hide();
-        if (title.length) {
-          var optgroup = $('<optgroup/>').attr('label', $(title).find('a').html()).appendTo(select);
-          $(this).find('li').each(function (i) {
-            var option = $('<option/>').appendTo(optgroup).val(window.location.origin + $(this).find('a').attr('href')).html($(this).find('a').html());
-          });
-        } else {
-          $(this).find('li').each(function (i) {
-            var option = $('<option/>').appendTo(optgroup).val(window.location.origin + $(this).find('a').attr('href')).html($(this).find('a').html());
-          });
-        }
-        $(this).hide();
-      });
-      select.appendTo($(this));
-      select.on('change', function () {
-        window.location = $(this).val();
-      });
-    });
-  }
+  // use tinynav
+  $("#sidebar-first ul").tinyNav();
 
   // enable the homepage slides
   if (Probo.fullScreenSlides && $('.home').length) {

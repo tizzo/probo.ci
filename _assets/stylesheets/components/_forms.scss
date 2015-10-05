@@ -39,23 +39,42 @@ textarea {
 }
 
 select {
-    display: block;
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.updates-form {
+  input[type=email] {
     width: 100%;
-    height: 34px;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #555;
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   }
+  .mc-field-group.updates-form__group {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 15px;
+  }
+  input[type=submit] {
+    display: block;
+    clear: both;
+    float: right;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+}
 
 .updates-form {
   @include clearfix;
@@ -73,7 +92,11 @@ select {
   }
 
   &__background {
-    display: none;
+    float: left;
+    width: 18%;
+    margin-top: 15px;
+    padding-right: 10px;
+    display: block;
   }
 
   &__group,
@@ -90,9 +113,10 @@ select {
     width: 650px;
 
     &__background {
-      display: block;
       width: 30%;
-      float: left;
+      margin-left: 10px;
+      padding-right:0;
+
     }
 
     &__form {
@@ -102,12 +126,11 @@ select {
     }
 
     &__group {
-      // margin-left: 50px;
+      width: 100%;
     }
   }
 
   @include breakpoint($bp-large) {
-
     &__background {
       width: 33%;
     }
@@ -116,6 +139,20 @@ select {
       width: 62%;
     }
   }
+}
+
+.fa-times-circle-o.close-request {
+  top: 10px;
+  position: absolute;
+  right: 10px;
+  color:$tapestry;
+  &:hover{
+   color: $toledo;
+  }
+}
+
+.lean-overlay {
+  z-index: 0 !important;
 }
 
 ::-webkit-input-placeholder {
@@ -135,3 +172,5 @@ select {
 input:-moz-placeholder {
   color: $off-black;
 }
+
+

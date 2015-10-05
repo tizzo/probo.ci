@@ -7,28 +7,45 @@
 //= require jquery.sidr.min.js
 //= require fullScreenSlides
 
-(function(Probo, $) {
+(function (Probo, $) {
   // prepare the modal for use
   $('#mc_embed_signup').easyModal();
 
-  $('#sidebar-first ul').each(function() {
+  if (parseInt($(window).width()) < 420) {
+    makeSelectLists();
+  }
+
+  $(window).on('resize', throttle(function() {
     if (parseInt($(window).width()) < 420) {
-      var select = $(document.createElement('select')).insertBefore($(this).hide());
-      $('>li a', this).each(function() {
-          var a = $(this).click(function() {
-              if ($(this).attr('target')==='_blank') {
-                  window.open(this.href);
-              }
-              else {
-                  window.location.href = this.href;
-              }
-          }),
-          option = $(document.createElement('option')).appendTo(select).val(this.href).html($(this).html()).click(function() {
-              a.click();
-          });
-      });
+      makeSelectLists();
     }
-  });
+  }));
+
+  function makeSelectLists() {
+    $('#sidebar-first').each(function () {
+      var select = $('<select/>');
+      var lists = $(this).find('ul');
+      lists.each(function () {
+        var title = $(this).prev('h4');
+        $(title).hide();
+        if (title.length) {
+          var optgroup = $('<optgroup/>').attr('label', $(title).find('a').html()).appendTo(select);
+          $(this).find('li').each(function (i) {
+            var option = $('<option/>').appendTo(optgroup).val(window.location.origin + $(this).find('a').attr('href')).html($(this).find('a').html());
+          });
+        } else {
+          $(this).find('li').each(function (i) {
+            var option = $('<option/>').appendTo(optgroup).val(window.location.origin + $(this).find('a').attr('href')).html($(this).find('a').html());
+          });
+        }
+        $(this).hide();
+      });
+      select.appendTo($(this));
+      select.on('change', function () {
+        window.location = $(this).val();
+      });
+    });
+  }
 
   // enable the homepage slides
   if (Probo.fullScreenSlides && $('.home').length) {

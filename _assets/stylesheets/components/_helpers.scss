@@ -1,3 +1,11 @@
 .u-hidden {
   @extend %visuallyhidden;
 }
+
+
+.right {
+  @include breakpoint($bp-medium-landscape) {
+    float: right;
+    display: inline-block;
+  }
+}

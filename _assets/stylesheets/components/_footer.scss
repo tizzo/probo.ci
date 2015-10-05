@@ -7,10 +7,81 @@
   clear: both;
   overflow: hidden;
   color: $pale-grey;
+  font-size:14px;
   &__logo {
-    display: block;
-    margin: $base-spacing auto;
     filter: grayscale(1);
-    opacity: 0.4;
+    opacity: 0.9;
+    margin: $base-spacing 0;
+    margin-top:20px;
+    @include breakpoint($bp-medium-landscape) {
+      display: inline-block;
+      float: left;
+      margin: 0;
+      margin-top:12px;
+      text-align:left;
+    }
+  }
+  a {
+    color: $white;
+    line-height: 51px;
+    padding-left: 10px;
+  }
+  .wrapper {
+    display: block;
+    overflow: hidden;
+    position:relative;
+  }
+}
+
+.footer-learn-more {
+  background-color: $pale-grey;
+  color: $grey;
+  .wrapper {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    display: block;
+  }
+  a {
+    color: $tapestry;
+    padding-left: 0;
+  }
+  p {
+    display: inline-block;
+    margin: 0;
+  }
+  .right{
+    @include breakpoint($bp-medium-landscape) {
+      position: absolute;
+      right: 112.5px;
+    }
+  }
+  a i {
+    color: $grey;
+    font-size: 30px;
+    padding: 0 10px;
+    transition: color 0.2s ease;
+    vertical-align: middle;
+    &:hover{
+      transition: color 0.2s ease;
+      color: $dark-grey;
+    }
+  }
+}
+
+.site-footer {
+  a.request{
+    display:block;
+    @include breakpoint($bp-medium-landscape) {
+      display:inline-block;
+    }
+  }
+  .copyright {
+    font-size:11px;
+    color:$grey;
+    padding-bottom:15px;
+    @include breakpoint($bp-medium-landscape) {
+    text-align:right;
+    padding-bottom:0;
+    }
   }
 }

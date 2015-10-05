@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="/assets/probo-22e250e43331df327c7e6a6855d5f803.css">
 
-  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-2cd4c2c3021e2d6eb1ff5b38f4c901ee.png" />
+  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-e360b232376a65dfb5957d3ac14b16da.png" />
   <link rel="canonical" href="http://probo.ci/docs/about/">
 </head>
 
@@ -57,12 +57,12 @@
       <div class="wrapper">
 
         <div id="sidebar-first">
-          <h4><a href="/docs/" class="current">Getting Started</a></h4>
+          <h4><a href="/docs/" class="current">Getting Started</a> (for Beta testers)</h4>
           <ul>
 	<li><a href="/docs/about/" class="current">What is Probo?</a></li>
 	<li><a href="/docs/github/" >Github Integration</a></li>
 	<li><a href="/docs/stash/" >Stash Integration</a></li>
- 	<li><a href="/docs/app/" >Probo App</a></li>
+ 	<!-- <li><a href="/docs/app/" >Probo App</a></li> -->
  	<li><a href="/docs/build/" >Build Configuration</a></li>
 <!--	<li><a href="/docs/workflow/" >Probo Recommended Workflow</a></li> -->
 	<li><a href="/docs/faq/" >Probo FAQ</a></li>
@@ -73,7 +73,23 @@
         <div class="page-content">
             <h2 id="what-is-probo">What is Probo?</h2>
 
-<p>Probo is an <a href="https://github.com/ProboCI/probo">open source</a> Quality Assurance (QA) tool for developers and an User Acceptance Testing (UAT) tool for business users. Probo creates various sandbox test sites as the team develops so that other users can see and interact with development changes earlier and more frequently throughout development without waiting for an environment update.</p>
+<p>Probo is an <a href="https://github.com/ProboCI/probo">open source</a> Quality Assurance (QA) tool for web development projects. Probo creates test environments for each new feature as your team develops so that everyone (QA or UAT testers, project managers, developers) can see and interact with development changes earlier and more frequently throughout development without waiting for an environment update.</p>
+
+<h2 id="why-use-probo">Why use Probo?</h2>
+
+<p>Typical web application projects have environments for live, staging, development, and local developer sites. When a developer completes a task, the work needs to be reviewed and tested in multiple ways (for example, automated testing, manual QA, UAT, and code review by a senior developer). Because each environment can only run code from one git branch at a time, in order to test  code it needs to be merged with other work. When you have to merge work in order to test it you run into some of the following  problems:</p>
+
+<ul>
+  <li>Delays before testing occurs.</li>
+  <li>Bottlenecks at the code review step.</li>
+  <li>Confusing or unstable dev or staging environments with many changes happening at once.</li>
+  <li>Insufficiently tested automated deployment steps.</li>
+  <li>Technical barrier of entry to review work before deployment.</li>
+  <li>Difficulty deploying a subset of the work which was already merged.</li>
+  <li>The testing environment becomes ‘junked up’ from testing. You need to re-sync it from the production database but also don’t want to lose the testing content you need for review.</li>
+</ul>
+
+<p>Probo spins up a new environment when you create a pull request - before you merge your code. This makes it easy to preview and test work. We’ve found this workflow to be a massive improvement for quality and efficiency</p>
 
 <h3 id="probo-for-automated-qa">Probo for Automated QA</h3>
 
@@ -81,7 +97,7 @@
 
 <h3 id="probo-for-business-uat">Probo for Business UAT</h3>
 
-<p>The sandbox sites created by Probo can also be used for business users to provide earlylier UAT feedback. Business owners no longer have to wait until the end when a dedicated UAT environment is updated. The sandbox sites are created with realistic data and content from a backup (such as  from a production site). Visually demonstrate each development change to your business user, so that there is no misunderstanding about the end results before the end of your development period, when (and the code is merged).</p>
+<p>The sandbox sites created by Probo can also be used for business users to provide earlier UAT feedback. Business owners no longer have to wait until the end when a dedicated UAT environment is updated. The sandbox sites are created with realistic data and content from a backup (such as  from a production site). Visually demonstrate each development change to your business user, so that there is no misunderstanding about the end results before the end of your development period, when (and the code is merged).</p>
 
         </div>
 
@@ -99,7 +115,7 @@
         </div>
     </div>
     <div class="wrapper">
-        <img src="/assets/probo-logo-bw-225-38631b9acc5fc0b39dbe22a6cdddd550.png" alt='black and white probo logo' class='site-footer__logo'>
+        <img src="/assets/probo-logo-bw-225-cab2a34050115ef1d8028f282718129c.png" alt='black and white probo logo' class='site-footer__logo'>
         <div class="right">
             <a href="/probo" title="Probo Documentation" target="_blank">Documentation</a>
             <a href="https://twitter.com/ProboCI" title="Probo Blog" target="_blank">Blog</a>

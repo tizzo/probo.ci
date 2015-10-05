@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="/assets/probo-22e250e43331df327c7e6a6855d5f803.css">
 
-  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-2cd4c2c3021e2d6eb1ff5b38f4c901ee.png" />
+  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-e360b232376a65dfb5957d3ac14b16da.png" />
   <link rel="canonical" href="http://probo.ci/docs/">
 </head>
 
@@ -57,12 +57,12 @@
       <div class="wrapper">
 
         <div id="sidebar-first">
-          <h4><a href="/docs/" class="current">Getting Started</a></h4>
+          <h4><a href="/docs/" class="current">Getting Started</a> (for Beta testers)</h4>
           <ul>
 	<li><a href="/docs/about/" >What is Probo?</a></li>
 	<li><a href="/docs/github/" >Github Integration</a></li>
 	<li><a href="/docs/stash/" >Stash Integration</a></li>
- 	<li><a href="/docs/app/" >Probo App</a></li>
+ 	<!-- <li><a href="/docs/app/" >Probo App</a></li> -->
  	<li><a href="/docs/build/" >Build Configuration</a></li>
 <!--	<li><a href="/docs/workflow/" >Probo Recommended Workflow</a></li> -->
 	<li><a href="/docs/faq/" >Probo FAQ</a></li>
@@ -71,33 +71,19 @@
         </div>
 
         <div class="page-content">
-            <h2 id="what-is-probo">What is Probo?</h2>
+            <h2 id="using-the-probo-app">Using the Probo App</h2>
 
-<p>Probo is an <a href="https://github.com/ProboCI/probo">open source</a> Quality Assurance (QA) tool for web development projects. Probo creates test environments for each new feature as your team develops so that everyone (QA or UAT testers, project managers, developers) can see and interact with development changes earlier and more frequently throughout development without waiting for an environment update.</p>
+<p>The Probo App is currently being opened to Beta testers on a rolling basis. This documentation is for Beta testers.</p>
 
-<h2 id="why-use-probo">Why use Probo?</h2>
+<p>The Probo App is found at https://app.probo.ci . Log in with your Github or Stash account and enter your invite code.</p>
 
-<p>Typical web application projects have environments for live, staging, development, and local developer sites. When a developer completes a task, the work needs to be reviewed and tested in multiple ways (for example, automated testing, manual QA, UAT, and code review by a senior developer). Because each environment can only run code from one git branch at a time, in order to test  code it needs to be merged with other work. When you have to merge work in order to test it you run into some of the following  problems: </p>
+<p>On the Dashboard you can toggle on a repository to be used with Probo.</p>
 
-<ul>
-  <li>Delays before testing occurs.</li>
-  <li>Bottlenecks at the code review step.</li>
-  <li>Confusing or unstable dev or staging environments with many changes happening at once.</li>
-  <li>Insufficiently tested automated deployment steps.</li>
-  <li>Technical barrier of entry to review work before deployment.</li>
-  <li>Difficulty deploying a subset of the work which was already merged.</li>
-  <li>The testing environment becomes ‘junked up’ from testing. You need to re-sync it from the production database but also don’t want to lose the testing content you need for review.</li>
-</ul>
+<p>Next you need to create a .probo.yaml file in the root of your codebase to configure your builds. You can do this in a new git branch. See documentation on Build Configuration.</p>
 
-<p>Probo spins up a new environment when you create a pull request - before you merge your code. This makes it easy to preview and test work. We’ve found this workflow to be a massive improvement for quality and efficiency</p>
+<p>To include assets (for example, your site’s database) so that they are available to every Probo build, use the Probo Uploader https://github.com/ProboCI/probo-uploader . More information will be found on your project page within the Probo app.</p>
 
-<h3 id="probo-for-automated-qa">Probo for Automated QA</h3>
-
-<p>Probo integrates with version control applications (<a href="http://github.com/">Github</a> and <a href="https://www.atlassian.com/software/stash">Stash</a>) to run automated QA tests upon every <a href="http://oss-watch.ac.uk/resources/pullrequest">pull request</a>. When a developer submits a pull request, Probo automatically builds sandbox sites and runs each test against a Probo sandbox site. From Github or Stash, the pull request reviewer can see the status of all each test run and click into its respective sandbox site to interact within it. If a test fails, then the team knows that there is a problem with the code submitted, saving reviewers, – who are often senior developers, – valuable time. Probo uses <a href="https://www.docker.com/">Docker</a> to create these isolated sandbox sites on demand, so these sites stay available for as long as they are needed.</p>
-
-<h3 id="probo-for-business-uat">Probo for Business UAT</h3>
-
-<p>The sandbox sites created by Probo can also be used for business users to provide earlier UAT feedback. Business owners no longer have to wait until the end when a dedicated UAT environment is updated. The sandbox sites are created with realistic data and content from a backup (such as  from a production site). Visually demonstrate each development change to your business user, so that there is no misunderstanding about the end results before the end of your development period, when (and the code is merged).</p>
+<p>Create a pull request in Github or Stash for the branch that includes the .probo.yaml file. You should see the steps in your .probo.yaml file building both on your pull request and in the Probo app. If a step fails, look at the details in the Probo app for the full console output. Adjust your .probo.yaml or get help in our support room. When you commit a change to a branch with a pull request, a new build will be created.</p>
 
         </div>
 
@@ -115,7 +101,7 @@
         </div>
     </div>
     <div class="wrapper">
-        <img src="/assets/probo-logo-bw-225-38631b9acc5fc0b39dbe22a6cdddd550.png" alt='black and white probo logo' class='site-footer__logo'>
+        <img src="/assets/probo-logo-bw-225-cab2a34050115ef1d8028f282718129c.png" alt='black and white probo logo' class='site-footer__logo'>
         <div class="right">
             <a href="/probo" title="Probo Documentation" target="_blank">Documentation</a>
             <a href="https://twitter.com/ProboCI" title="Probo Blog" target="_blank">Blog</a>

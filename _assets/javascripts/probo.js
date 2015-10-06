@@ -45,4 +45,10 @@
 
 
 
+  $(window).on("resize", function(event){
+    if($('body').hasClass('sidr-open') && $(window).width() >= 768) {
+      $.sidr('close');
+    }
+  });
+
 })(window || {}, jQuery);

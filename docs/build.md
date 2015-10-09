@@ -10,6 +10,7 @@ published: true
 
 
 
+
 ## Build Configuration
 
 Probo runs builds based on a `/.probo.yaml` file found in the root of your repository. You can task the Container Manager to run any number of build steps. Each step is a runnable plugin, and will get a status update sent to Github for the commit.
@@ -73,6 +74,10 @@ steps:
 
 ### Iterating until your build configuration succeeds:
 
-Create a new branch in git and add the new .probo.yaml file in the root of the repository. Create a new Pull Request for that branch. You should see your build steps running on the pull request.
+Create a new branch in git and add the new `.probo.yaml` file in the root of the repository. Create a new Pull Request for that branch. You should see your build steps running on the pull request.
 
-Look at the build details in the Probo app. You can see the output from each step. The output often helps you see what went wrong. 
+Look at the build details in the Probo app. You can see the output from each step. The output often helps you see what went wrong.
+
+Edit your `.probo.yaml` file and commit the changes. Commits to an open pull request will trigger a new build.
+
+Once your build configuration is working, merge your pull request.

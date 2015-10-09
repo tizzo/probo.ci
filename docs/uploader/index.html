@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="/assets/probo-a5e8440b93bb379dded3df00851ecc41.css">
 
-  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-c4109da4c200dd4e3b2951389f0234fc.png" />
+  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-79bdf177c778f48fd3f9df38b9401cf1.png" />
   <link rel="canonical" href="http://probo.ci/docs/uploader/">
 </head>
 
@@ -72,22 +72,25 @@
         </div>
 
         <div class="page-content">
-            <p>You may need to upload assets to Probo for use in your builds. Build Assets are any files you need other than what is within your git repository. For example, you may need to upload a database for your project.</p>
+            <h2 id="uploading-build-assets-to-probo">Uploading Build Assets to Probo</h2>
+
+<p>You may need to upload assets to Probo for use in your builds. Build Assets are any files you need other than what is within your git repository. For example, you may need to upload a database for your project.</p>
 
 <p>When you view your project in the Probo app, you will see above your builds an Upload Token. This token is project-specific.</p>
 
 <h3 id="to-upload-an-asset">To upload an asset:</h3>
 <ul>
-  <li>Install the (Probo Uploader)[https://github.com/ProboCI/probo-uploader] on your machine with npm.<br />
+  <li>Install the <a href="https://github.com/ProboCI/probo-uploader">Probo Uploader</a> on your machine with <code>npm</code>.<br />
 <code>
 sudo npm install -g probo-uploader
 </code></li>
   <li>Run the command as shown on your project page. For example, <br />
 <code>
 probo-uploader --token=[your token] some-file.txt
-</code><br />
-### To use an asset in your builds:</li>
+</code></li>
 </ul>
+
+<h3 id="to-use-an-asset-in-your-builds">To use an asset in your builds:</h3>
 
 <p>See documentation for Build Configuration.</p>
 
@@ -97,7 +100,6 @@ probo-uploader --token=[your token] some-file.txt
 
 <h3 id="for-more-information">For more information:</h3>
 <p>See <a href="https://github.com/ProboCI/probo-uploader">https://github.com/ProboCI/probo-uploader</a></p>
-
 
         </div>
 
@@ -115,7 +117,7 @@ probo-uploader --token=[your token] some-file.txt
         </div>
     </div>
     <div class="wrapper">
-        <img src="/assets/probo-logo-bw-225-92445ff60cd5937e89cc47862ea38cb0.png" alt='black and white probo logo' class='site-footer__logo'>
+        <img src="/assets/probo-logo-bw-225-d845ed2acae7ca260136acf2e140b974.png" alt='black and white probo logo' class='site-footer__logo'>
         <div class="right">
             <a href="/docs" title="Probo Documentation" >Documentation</a>
             <a href="/blog" title="Probo Blog" >Blog</a>

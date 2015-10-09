@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="/assets/probo-a5e8440b93bb379dded3df00851ecc41.css">
 
-  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-a9c7ade6d0956a536d624c1dd128d919.png" />
+  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-22f27a1257187ced0639d94ac2cc6f24.png" />
   <link rel="canonical" href="http://probo.ci/docs/build/">
 </head>
 
@@ -78,12 +78,39 @@
 
 <p>When the build runs, your source code for the commit that triggered the build is automatically available to you in the <code>$SRC_DIR</code> directory inside the container.</p>
 
-<h3 id="assets-and-steps">Assets and Steps</h3>
-<p>The .probo.yaml is split into a section for ‘assets’ and a section for ‘steps’.</p>
+<p>The .probo.yaml is split into a section for <strong>‘assets’</strong> and a section for <strong>‘steps’</strong>.</p>
 
-<p>Assets is where you indicate which assets to import into this build.</p>
+<h2 id="assets">Assets</h2>
+
+<p>Assets is where you indicate which assets to import into this build. These can be any assets that you’ve uploaded with the (Probo Uploader)[http://probo.ci/docs/uploader/].</p>
+
+<p>For example, if you need to use a an asset you’ve uploaded with filename dev.sql.gz, start .probo.yaml file with:</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">assets</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">dev.sql.gz</span></code></pre></div>
+
+<h2 id="steps">Steps</h2>
+
+<p>Steps are the commands to run for the build. These are typically steps for setting up a site and running tests. </p>
+
+<p>Each step must have a ‘name’. The name of each step is the build context, and will get its own status updates.</p>
+
+<p>Each step also has a ‘plugin’. The default plugin is ‘shell’.</p>
+
+<p>Depending on the ‘plugin’ you specify, you may have other parameters depending on the step plugin used. The shell plugin requires a parameter for ‘command’.</p>
+
+<p>For example, a few steps using the ‘shell’ plugin:</p>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">steps</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Run behat tests</span>
+    <span class="l-Scalar-Plain">plugin</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">shell</span>
+    <span class="l-Scalar-Plain">command</span><span class="p-Indicator">:</span> <span class="s">&#39;cd</span><span class="nv"> </span><span class="s">tests</span><span class="nv"> </span><span class="s">;</span><span class="nv"> </span><span class="s">composer</span><span class="nv"> </span><span class="s">install</span><span class="nv"> </span><span class="s">;</span><span class="nv"> </span><span class="s">bin/behat&#39;</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Another example test with default shell plugin</span>
+    <span class="l-Scalar-Plain">command</span><span class="p-Indicator">:</span> <span class="s">&#39;echo</span><span class="nv"> </span><span class="s">&quot;Hello</span><span class="nv"> </span><span class="s">World!&quot;&#39;</span></code></pre></div>
 
 <h3 id="available-variables">Available variables:</h3>
+
+<p>You can use several variables within your .probo.yaml file.</p>
 
 <ul>
   <li><code>$SRC_DIR</code> : The filepath which contains the code from your pull request.</li>
@@ -91,18 +118,18 @@
   <li><code>$BUILD_ID</code> : The ID for the build.</li>
 </ul>
 
-<p>Sample <code>.probo.yaml</code> file:</p>
+<h2 id="sample-proboyaml-file">Sample <code>.probo.yaml</code> file:</h2>
 
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="c1"># Each step is the build/test process</span>
-<span class="c1"># the name of each step is the build context, and will get its own status updates</span>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">assets</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">dev.sql.gz</span>
 <span class="l-Scalar-Plain">steps</span><span class="p-Indicator">:</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Look Around</span>
-    <span class="l-Scalar-Plain">plugin</span><span class="p-Indicator">:</span> <span class="s">&#39;Shell&#39;</span>  <span class="c1"># this is the default plugin</span>
-    <span class="l-Scalar-Plain">command</span><span class="p-Indicator">:</span> <span class="s">&quot;ls</span><span class="nv"> </span><span class="s">$SRC_DIR&quot;</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Create Site</span>
-    <span class="l-Scalar-Plain">command</span><span class="p-Indicator">:</span> <span class="s">&quot;drush</span><span class="nv"> </span><span class="s">fec</span><span class="nv"> </span><span class="s">myrepo</span><span class="nv"> </span><span class="s">--json-config=&#39;{\&quot;settings_php.snippets\&quot;:</span><span class="nv"> </span><span class="s">[]}&#39;&quot;</span></code></pre></div>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Import the database</span>
+    <span class="l-Scalar-Plain">command</span><span class="p-Indicator">:</span> <span class="s">&#39;gunzip</span><span class="nv"> </span><span class="s">-c</span><span class="nv"> </span><span class="s">$ASSET_DIR/dev.sql.gz</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">`mysql</span><span class="nv"> </span><span class="s">foo`</span><span class="nv"> </span><span class="s">;</span><span class="nv"> </span><span class="s">rm</span><span class="nv"> </span><span class="s">$ASSET_DIR/dev.sql.gz&#39;</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Move code in place</span>
+    <span class="l-Scalar-Plain">command</span><span class="p-Indicator">:</span> <span class="s">&#39;mv</span><span class="nv"> </span><span class="s">$SRC_DIR</span><span class="nv"> </span><span class="s">/var/www/foo/code&#39;</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Run behat tests</span>
+    <span class="l-Scalar-Plain">command</span><span class="p-Indicator">:</span> <span class="s">&#39;cd</span><span class="nv"> </span><span class="s">/var/www/foo/code/tests</span><span class="nv"> </span><span class="s">;</span><span class="nv"> </span><span class="s">composer</span><span class="nv"> </span><span class="s">install</span><span class="nv"> </span><span class="s">;</span><span class="nv"> </span><span class="s">bin/behat&#39;</span></code></pre></div>
 
-<p>See the <a href="https://github.com/zivtech/bear">Drupal Bear</a> repository for a full example.</p>
 
         </div>
 
@@ -120,7 +147,7 @@
         </div>
     </div>
     <div class="wrapper">
-        <img src="/assets/probo-logo-bw-225-4c1aafb7b30efa4301a4dca6c3396600.png" alt='black and white probo logo' class='site-footer__logo'>
+        <img src="/assets/probo-logo-bw-225-ea4f2d75d32816cdf946a425f1cf6a29.png" alt='black and white probo logo' class='site-footer__logo'>
         <div class="right">
             <a href="/docs" title="Probo Documentation" >Documentation</a>
             <a href="/blog" title="Probo Blog" >Blog</a>

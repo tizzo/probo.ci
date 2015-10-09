@@ -13,6 +13,9 @@ Probo runs builds based on a `/.probo.yaml` file found in the root of your repos
 
 When the build runs, your source code for the commit that triggered the build is automatically available to you in the `$SRC_DIR` directory inside the container.
 
+### Assets and Steps
+The .probo.yaml is split into a section for 'assets' and a section for 'steps'.
+
 ### Available variables:
 
 - `$SRC_DIR` : The filepath which contains the code from your pull request.

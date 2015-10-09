@@ -8,36 +8,63 @@ published: true
 
 
 
+
 ## Build Configuration
 
 Probo runs builds based on a `/.probo.yaml` file found in the root of your repository. You can task the Container Manager to run any number of build steps. Each step is a runnable plugin, and will get a status update sent to Github for the commit.
 
 When the build runs, your source code for the commit that triggered the build is automatically available to you in the `$SRC_DIR` directory inside the container.
 
-### Assets and Steps
-The .probo.yaml is split into a section for 'assets' and a section for 'steps'.
+The .probo.yaml is split into a section for **'assets'** and a section for **'steps'**.
 
-Assets is where you indicate which assets to import into this build.
+## Assets
+
+Assets is where you indicate which assets to import into this build. These can be any assets that you've uploaded with the (Probo Uploader)[http://probo.ci/docs/uploader/].
+
+For example, if you need to use a an asset you've uploaded with filename dev.sql.gz, start .probo.yaml file with:
+{% highlight yaml%}
+assets:
+  - dev.sql.gz
+{% endhighlight %}
+
+## Steps
+
+Steps are the commands to run for the build. These are typically steps for setting up a site and running tests. 
+
+Each step must have a 'name'. The name of each step is the build context, and will get its own status updates.
+
+Each step also has a 'plugin'. The default plugin is 'shell'.
+
+Depending on the 'plugin' you specify, you may have other parameters depending on the step plugin used. The shell plugin requires a parameter for 'command'.
+
+For example, a few steps using the 'shell' plugin:
+{% highlight yaml%}
+steps:
+  - name: Run behat tests
+    plugin: shell
+    command: 'cd tests ; composer install ; bin/behat'
+  - name: Another example test with default shell plugin
+    command: 'echo "Hello World!"'
+{% endhighlight %}
 
 ### Available variables:
+
+You can use several variables within your .probo.yaml file.
 
 - `$SRC_DIR` : The filepath which contains the code from your pull request.
 - `$ASSET_DIR` : The filepath which contains any assets you uploaded to your Probo project.
 - `$BUILD_ID` : The ID for the build.
 
-Sample `.probo.yaml` file:
+## Sample `.probo.yaml` file:
 
 {% highlight yaml%}
-# Each step is the build/test process
-# the name of each step is the build context, and will get its own status updates
+assets:
+  - dev.sql.gz
 steps:
-  - name: Look Around
-    plugin: 'Shell'  # this is the default plugin
-    command: "ls $SRC_DIR"
-  - name: Create Site
-    command: "drush fec myrepo --json-config='{\"settings_php.snippets\": []}'"
+  - name: Import the database
+    command: 'gunzip -c $ASSET_DIR/dev.sql.gz | `mysql foo` ; rm $ASSET_DIR/dev.sql.gz'
+  - name: Move code in place
+    command: 'mv $SRC_DIR /var/www/foo/code'
+  - name: Run behat tests
+    command: 'cd /var/www/foo/code/tests ; composer install ; bin/behat'
 {% endhighlight %}
-
-
-
-See the [Drupal Bear](https://github.com/zivtech/bear) repository for a full example.

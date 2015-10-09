@@ -7,6 +7,7 @@ published: true
 ---
 
 
+
 ## Build Configuration
 
 Probo runs builds based on a `/.probo.yaml` file found in the root of your repository. You can task the Container Manager to run any number of build steps. Each step is a runnable plugin, and will get a status update sent to Github for the commit.
@@ -15,6 +16,8 @@ When the build runs, your source code for the commit that triggered the build is
 
 ### Assets and Steps
 The .probo.yaml is split into a section for 'assets' and a section for 'steps'.
+
+Assets is where you indicate which assets to import into this build.
 
 ### Available variables:
 

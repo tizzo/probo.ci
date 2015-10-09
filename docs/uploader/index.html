@@ -6,20 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About | Demonstrate. Test. Approve.</title>
+  <title>Uploading Build Assets to Probo | Demonstrate. Test. Approve.</title>
   <meta name="description" content="Probo website">
 
   <link rel="stylesheet" href="/assets/probo-a5e8440b93bb379dded3df00851ecc41.css">
 
   <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-eae68cbf02f0aab46ce82ffd1be92a6d.png" />
-  <link rel="canonical" href="http://probo.ci/about/">
+  <link rel="canonical" href="http://probo.ci/docs/uploader/">
 </head>
 
-  <body class=" site">
+  <body class="sidebar-page site">
     <div class="site-content">
-      <div class="inner">
-
-        <header class="site-header">
+      <header class="site-header">
 
     <div class="wrapper">
 
@@ -56,39 +54,55 @@
 </header>
 
 
+      <div class="wrapper">
+
+        <div id="sidebar-first">
+          <h4><a href="/docs/" class="current">Getting Started</a> (for Beta testers)</h4>
+          <ul>
+	<li><a href="/docs/about/" >What is Probo?</a></li>
+	<li><a href="/docs/github/" >Github Integration</a></li>
+	<li><a href="/docs/stash/" >Stash Integration</a></li>
+ 	<!-- <li><a href="/docs/app/" >Probo App</a></li> -->
+ 	<li><a href="/docs/build/" >Build Configuration (.probo.yaml)</a></li>
+    <li><a href="/docs/uploader/" class="current">Asset Uploader</a></li>
+<!--	<li><a href="/docs/workflow/" >Probo Recommended Workflow</a></li> -->
+	<li><a href="/docs/faq/" >Probo FAQ</a></li>
+</ul>
+
+        </div>
+
         <div class="page-content">
-            <div class="page wrapper">
+            <p>You may need to upload assets to Probo for use in your builds. Build Assets are any files you need other than what is within your git repository. For example, you may need to upload a database for your project.</p>
 
-  <header class="page-header">
-    <h1 class="post-title">About</h1>
-  </header>
+<p>When you view your project in the Probo app, you will see above your builds an Upload Token. This token is project-specific.</p>
 
-  <article class="post-content">
-    <section>
-  <ul class="side-nav">
-  
-  </ul>
-</section>
+<h3 id="to-upload-an-asset">To upload an asset:</h3>
+<ul>
+  <li>Install the (Probo Uploader)[https://github.com/ProboCI/probo-uploader] on your machine with npm.<br />
+<code>
+sudo npm install -g probo-uploader
+</code></li>
+  <li>Run the command as shown on your project page. For example, <br />
+<code>
+probo-uploader --token=[your token] some-file.txt
+</code><br />
+### To use an asset in your builds:</li>
+</ul>
 
-<p>##What is Probo?</p>
+<p>See documentation for Build Configuration.</p>
 
-<p>Probo is an <a href="https://github.com/ProboCI/probo">open sourced</a> Quality Assurance (QA) tool for developers and an User Acceptance Testing (UAT) tool for business users. Probo creates various sandbox test sites as the team develops so that other users can see and interact with changes earlier and more frequently throughout development  with “earlier and more frequently throughout development</p>
+<h3 id="to-update-an-asset-automatically">To update an asset automatically:</h3>
 
-<p>###Probo for Automated QA</p>
+<p>You may want to use Jenkins or other tool to update your asset using the probo-uploader. For example, after Jenkins does a database backup of your production database, have it upload the backup to Probo.</p>
 
-<p>Probo integrates with version control applications (Github and Stash) to run automated QA tests upon every pull request. When a developer submits a pull request, Probo automatically builds sandbox sites and runs each test against a Probo sandbox site. From Github or Stash, the pull request reviewer can see the status of all each test run and click into its respective sandbox site to interact within it. If a test fails, then the team knows that there is a problem with the code submitted, saving reviewers, – who are often senior developers, – valuable time. Probo uses Docker to create these isolated sandbox sites on demand, so these sites stay available for as long as they are needed.</p>
+<h3 id="for-more-information">For more information:</h3>
+<p>See <a href="https://github.com/ProboCI/probo-uploader">https://github.com/ProboCI/probo-uploader</a></p>
 
-<p>###Probo for Business UAT</p>
-
-<p>The sandbox sites created by Probo can also be used for business users to provide earlylier UAT feedback. Business owners no longer have to wait until the end when a dedicated UAT environment is updated. The sandbox sites are created with realistic data and content from a backup (such as  from a production site). Visually demonstrate each development change to your business user, so that there is no misunderstanding about the end results before the end of your development period, when (and the code is merged).</p>
-
-  </article>
-
-</div>
 
         </div>
 
       </div>
+
     </div>
     <footer class="site-footer">
     <div class="footer-learn-more">

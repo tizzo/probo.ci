@@ -3,9 +3,6 @@
   margin-bottom: 24px;
   padding: 0 12px;
   padding-bottom: 24px;
-  @include breakpoint($bp-medium-portrait) {
-    padding: 0;
-  }
   .blog-post-title {
     padding: 0;
   }

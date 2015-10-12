@@ -10,14 +10,11 @@ html {
 }
 
 body {
-  line-height: 1.8;
+  line-height: 1.5;
   @include rem(font-size, 8.75px);
   -webkit-font-smoothing: antialiased;
-
-
-
   @include breakpoint($bp-medium-portrait) {
-    @include rem(font-size, 11.25px);
+    @include rem(font-size, 10.5px);
   }
 }
 
@@ -62,6 +59,7 @@ h2, %h2 {
 
 h3, %h3 {
   @include rem(font-size, 13.75px);
+  margin-bottom: 12px;
 
   @include breakpoint($bp-medium-portrait) {
     @include rem(font-size, 15px);
@@ -74,6 +72,7 @@ h3, %h3 {
 
 h4, %h4, h5, %h5 {
   @include rem(font-size, 11.25px);
+
   @include breakpoint($bp-medium-portrait) {
     @include rem(font-size, 17.5px);
   }
@@ -101,7 +100,6 @@ a {
 
 .highlight {
   padding: 12px;
-  font-size: 14px;
   background: #f7f7f7;
   border: 1px solid #d8d8d8;
   code {

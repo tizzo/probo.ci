@@ -11,6 +11,7 @@ published: true
 
 
 
+
 ## Build Configuration
 
 Probo runs builds based on a `/.probo.yaml` file found in the root of your repository. You can task the Container Manager to run any number of build steps. Each step is a runnable plugin, and will get a status update sent to Github for the commit.
@@ -58,7 +59,9 @@ You can use several variables within your `.probo.yaml` file.
 - `$ASSET_DIR` : The filepath which contains any assets you uploaded to your Probo project.
 - `$BUILD_ID` : The ID for the build.
 
-### Sample `.probo.yaml` file:
+### Sample `.probo.yaml` files:
+
+#### Developing on a site with a database.
 
 {% highlight yaml%}
 assets:
@@ -70,6 +73,20 @@ steps:
     command: 'mv $SRC_DIR /var/www/foo/code'
   - name: Run behat tests
     command: 'cd /var/www/foo/code/tests ; composer install ; bin/behat'
+{% endhighlight %}
+
+#### Developing a Drupal module.
+
+{% highlight yaml%}
+steps:
+  - name: Create a D7 site
+    command: "drush fec drupal7 --json-config='{\"settings_php.snippets\": []}'"
+  - name: Add our module code
+    command: 'cp -r $SRC_DIR /var/www/drupal7/webroot/sites/all/modules'
+  - name: Enable our module, 'foo'.
+    command: 'drush --root=/var/www/drupal7/webroot en foo -y'
+  - name: Fix permissions
+    command: 'chown -R www-data:www-data /var/www/fetcherserver/webroot/sites/default/files'
 {% endhighlight %}
 
 ### Iterating until your build configuration succeeds:

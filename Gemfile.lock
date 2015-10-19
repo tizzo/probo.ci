@@ -214,6 +214,7 @@ DEPENDENCIES
   github-pages (= 33)
   jekyll (= 2.4.0)
   jekyll-assets (= 0.14.0)
+  jekyll-sitemap (~> 0.6.3)
   kramdown (= 1.5.0)
   octopress-minify-html (= 1.2.4)
   rack-jekyll (= 0.3.5)
@@ -222,6 +223,3 @@ DEPENDENCIES
   rubyzip (= 1.1.7)
   sass (>= 3.4)
   uglifier (= 2.7.1)
-
-BUNDLED WITH
-   1.10.6

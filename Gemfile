@@ -17,4 +17,4 @@ gem 'compass-normalize', '1.5'
 gem 'octopress-minify-html', '1.2.4'
 gem 'breakpoint', '2.5.0'
 gem 'font-awesome-sass', '~> 4.4.0'
-
+gem 'jekyll-sitemap', '~> 0.6.3'

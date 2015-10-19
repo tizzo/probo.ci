@@ -46,3 +46,4 @@ gems:
 - compass-normalize
 - jekyll-assets
 - jekyll-assets/compass
+- jekyll-sitemap

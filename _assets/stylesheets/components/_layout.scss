@@ -17,9 +17,6 @@ body {
 
 .github-banner {
   display: none;
-  // @include breakpoint($bp-medium-portrait) {
-  //   display: block;
-  // }
 }
 
 .wrapper {
@@ -42,12 +39,12 @@ body {
   .page-content {
     padding-top: 0;
     @include breakpoint($bp-medium-portrait) {
-      padding-top: 70px;
+      // padding-top: 70px;
     }
   }
 }
 .page-content {
-  padding-top: 70px;
+  // padding-top: 70px;
 }
 
 .row {

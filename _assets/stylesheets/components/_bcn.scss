@@ -179,12 +179,11 @@ body.bcn *{
     z-index:2;
   }
   .page-content{
-    position:relative;
     @include breakpoint($bp-medium-portrait) {
       min-height:700px;
     }
   }
-  .page-content:before {
+  .bg-probo-logo {
     content:"";
     position: absolute;
     z-index: -1;

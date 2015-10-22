@@ -7,7 +7,7 @@ author: Howard Tyson
 <a href="http://probo.ci/">Probo.CI</a> is a new <a href="https://github.com/ProboCI/probo">open source</a> continuous integration system designed from the ground up to work with Drupal.
 </div>
 
-{% image 'probo_blog.jpg' alt="Probo Worflow" class="full-width" %}
+{% image 'probo_blog.jpg' alt="Probo Workflow" class="full-width" %}
 
 [Probo.CI](http://probo.ci/) is a new [open source](https://github.com/ProboCI/probo) continuous integration system designed from the ground up to work with Drupal. It integrates with Githhub to build your pull requests and post the status of your builds back to the Github PR, just like travis.ci. The part that is different from travis.ci is that it does not tear down your environment at the end and but instead posts a link to that environment on the github issue for easy code review, client feedback, and project manager evaluation. In order to save on resources with large numbers of containers, Probo shuts down containers while you're not using them and starts them up again on demand to give you just-in-time access to your development environments. Probo is designed to be easy to extend and easy to wire into a broader devops ecosystem.
 

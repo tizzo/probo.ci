@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="/assets/probo-fc8d7317de3982d04075583b960ddbcf.css">
 
-  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-022efe22633146d6eae3c6aaaa019e21.png" />
+  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-4a386ddb4a4d2aaf960dde1e152e934c.png" />
   <link rel="canonical" href="http://probo.ci/2015/09/03/introducing-probo-cI.html">
   
   <!-- Start of zivtech Zendesk Widget script -->
@@ -76,6 +76,8 @@
 <a href="http://probo.ci/">Probo.CI</a> is a new <a href="https://github.com/ProboCI/probo">open source</a> continuous integration system designed from the ground up to work with Drupal.
 </div>
 
+<p><img src="/assets/probo_blog-2559f5b5473019d0fc47950531318970.jpg" alt="Probo Workflow" class="full-width" /></p>
+
 <p><a href="http://probo.ci/">Probo.CI</a> is a new <a href="https://github.com/ProboCI/probo">open source</a> continuous integration system designed from the ground up to work with Drupal. It integrates with Githhub to build your pull requests and post the status of your builds back to the Github PR, just like travis.ci. The part that is different from travis.ci is that it does not tear down your environment at the end and but instead posts a link to that environment on the github issue for easy code review, client feedback, and project manager evaluation. In order to save on resources with large numbers of containers, Probo shuts down containers while you’re not using them and starts them up again on demand to give you just-in-time access to your development environments. Probo is designed to be easy to extend and easy to wire into a broader devops ecosystem.</p>
 
 <p>Under the hood, Probo.ci is written in <a href="https://nodejs.org/">Node.js</a> and powered by <a href="https://www.docker.com/">Docker</a>.  This means that with just a little configuration you can run on your own container images and test your Drupal sites on whatever versions of whatever services your stack needs. Probo is implemented using a microservice architecture and ships with services for receiving Github notifications of push and pull request events and posting statuses back to the status API, another for creating, starting, and stopping the containers, and a third for proxying incoming requests to the correct container (and starting the container if it was stopped to save on resources). It also ships with tools for use as a local test runner (especially helpful when you’re getting your project ready to build server side).</p>
@@ -114,7 +116,7 @@
         </div>
     </div>
     <div class="wrapper">
-        <img src="/assets/probo-logo-bw-225-96a9130fbd67c090a2d960d335551109.png" alt='black and white probo logo' class='site-footer__logo'>
+        <img src="/assets/probo-logo-bw-225-595286336ed5722f5ea3eee69350baa5.png" alt='black and white probo logo' class='site-footer__logo'>
         <div class="right">
             <a href="/docs" title="Probo Documentation" >Documentation</a>
             <a href="/blog" title="Probo Blog" >Blog</a>

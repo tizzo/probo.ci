@@ -5,8 +5,8 @@
     <description>Probo website</description>
     <link>http://probo.ci/</link>
     <atom:link href="http://probo.ci/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 22 Oct 2015 20:20:04 +0000</pubDate>
-    <lastBuildDate>Thu, 22 Oct 2015 20:20:04 +0000</lastBuildDate>
+    <pubDate>Thu, 22 Oct 2015 20:54:29 +0000</pubDate>
+    <lastBuildDate>Thu, 22 Oct 2015 20:54:29 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -14,6 +14,8 @@
         <description>&lt;div class=&quot;message&quot;&gt;
 &lt;a href=&quot;http://probo.ci/&quot;&gt;Probo.CI&lt;/a&gt; is a new &lt;a href=&quot;https://github.com/ProboCI/probo&quot;&gt;open source&lt;/a&gt; continuous integration system designed from the ground up to work with Drupal.
 &lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/probo_blog-2559f5b5473019d0fc47950531318970.jpg&quot; alt=&quot;Probo Workflow&quot; class=&quot;full-width&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://probo.ci/&quot;&gt;Probo.CI&lt;/a&gt; is a new &lt;a href=&quot;https://github.com/ProboCI/probo&quot;&gt;open source&lt;/a&gt; continuous integration system designed from the ground up to work with Drupal. It integrates with Githhub to build your pull requests and post the status of your builds back to the Github PR, just like travis.ci. The part that is different from travis.ci is that it does not tear down your environment at the end and but instead posts a link to that environment on the github issue for easy code review, client feedback, and project manager evaluation. In order to save on resources with large numbers of containers, Probo shuts down containers while you’re not using them and starts them up again on demand to give you just-in-time access to your development environments. Probo is designed to be easy to extend and easy to wire into a broader devops ecosystem.&lt;/p&gt;
 

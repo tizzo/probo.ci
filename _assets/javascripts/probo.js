@@ -6,6 +6,7 @@
 //= require jquery.slimmenu.min.js
 //= require jquery.sidr.min.js
 //= require tinynav.js
+//= require zendesk.js
 
 (function (window, $) {
   // prepare the modal for use

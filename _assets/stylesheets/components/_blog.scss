@@ -1,8 +1,31 @@
-.blog-post-preview {
+.blog-row {
   border-bottom: 1px solid #f7f2f5;
   margin-bottom: 24px;
   padding: 0 12px;
   padding-bottom: 24px;
+  overflow: auto;
+  zoom: 1;
+}
+.blog-post-date {
+  text-decoration: none;
+  color: #737373;
+  background: #EBEBEB;
+  padding: 12px;
+  font-size: 12px;
+  width: 100%;
+  float: none;
+  @include breakpoint($bp-medium-portrait) {
+    width: 25%;
+    float: left;
+  }
+}
+.blog-post-preview {
+  width: 100%;
+  float: none;
+  @include breakpoint($bp-medium-portrait) {
+    width: 73%;
+    float: right;
+  }
   .blog-post-title {
     padding: 0;
   }
@@ -13,10 +36,6 @@
       text-decoration: none;
       color: #252021;
     }
-  }
-  a.blog-post-date {
-    text-decoration: none;
-    color: #252021;
   }
 }
 .post {

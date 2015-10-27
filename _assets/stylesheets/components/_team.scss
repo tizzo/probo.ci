@@ -1,0 +1,49 @@
+.team {
+  background: none;
+  text-align: center;
+  .member {
+    width: 50%;
+    display: inline;
+    margin-bottom: 40px;
+    float: left;
+    padding: 12px;
+    &:nth-child(2n + 1) {
+      clear: both;
+    }
+    @include breakpoint($bp-small-landscape) {
+      width: 33%;
+      &:nth-child(2n + 1) {
+        clear: none;
+      }
+      &:nth-child(3n + 1) {
+        clear: both;
+      }
+    }
+    @include breakpoint($bp-medium-portrait) {
+      width: 25%;
+      &:nth-child(3n + 1) {
+        clear: none;
+      }
+      &:nth-child(4n + 1) {
+        clear: both;
+      }
+    }
+    .pic {
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      margin: 0 auto;
+      display: block;
+      overflow: hidden;
+      img {
+        max-width: 100%;
+      }
+    }
+    .name {
+      color: #373737;
+      font-weight: bold;
+    }
+    .title {
+    }
+  }
+}

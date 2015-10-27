@@ -5,9 +5,30 @@
     <description>Probo website</description>
     <link>http://probo.ci/</link>
     <atom:link href="http://probo.ci/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 27 Oct 2015 19:51:11 +0000</pubDate>
-    <lastBuildDate>Tue, 27 Oct 2015 19:51:11 +0000</lastBuildDate>
+    <pubDate>Tue, 27 Oct 2015 19:55:59 +0000</pubDate>
+    <lastBuildDate>Tue, 27 Oct 2015 19:55:59 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Probo Demos using Atlassian Bitbucket Server (fka Stash) &amp; Github</title>
+        <description>&lt;div class=&quot;message&quot;&gt;Probo.ci can integrate with whatever Git hosting solution your team uses. In this post you can find demos of it using [Atlassian&#39;s Bitbucket Server](https://www.atlassian.com/software/bitbucket/server) (which was known as Stash until very recently) and [Github](http://github.com).
+&lt;/div&gt;
+
+&lt;p&gt;If you’re interested in a very simple demonstration of the power of &lt;a href=&quot;http://probo.ci&quot;&gt;Probo.ci&lt;/a&gt;, please take a look at this demo we just posted of it integrated in with &lt;a href=&quot;https://www.atlassian.com/software/bitbucket/server&quot;&gt;Atlassian’s Bitbucket Server&lt;/a&gt; (which was known as Stash until very recently), or see it on YouTube by going to &lt;a href=&quot;http://zivte.ch/ProboStashDemo&quot;&gt;zivte.ch/ProboStashDemo&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/RulRFSclQGk&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;We also posted a video of Probo.ci working with &lt;a href=&quot;http://github.com&quot;&gt;Github&lt;/a&gt;, which you can find at &lt;a href=&quot;http://zivte.ch/ProboGithubDemo&quot;&gt;zivte.ch/ProboGithubDemo&lt;/a&gt;. Please note that this video is slightly older than the Bitbucket Server demo, so some of our latest UI improvements won’t be visible. &lt;/p&gt;
+
+&lt;p&gt;Shoot us an email at alex@probo.ci if you’d like a demo or to find out how Probo.ci can dramatically improve your Git-based development and approval workflow.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 27 Oct 2015 00:00:00 +0000</pubDate>
+        <link>http://probo.ci/2015/10/27/probo-demo-atlassian-bitbucket-server.html</link>
+        <guid isPermaLink="true">http://probo.ci/2015/10/27/probo-demo-atlassian-bitbucket-server.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Introducing Probo CI</title>

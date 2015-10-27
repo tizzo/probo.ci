@@ -1,0 +1,14 @@
+---
+layout: page
+title: Team
+permalink: /team/
+---
+<div class="team">
+    {% for member in site.data.members %}
+    <div class="member">
+      <div class="pic"><img src="/team/images/{{ member.pic }}.jpg" alt="{{ member.name }}" style="width:200px;height:auto;"></div>
+      <div class="name">{{ member.name }}</div>
+      <div class="title">{{ member.title }}</div>
+    </div>
+    {% endfor %}
+</div>

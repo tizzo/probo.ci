@@ -5,8 +5,8 @@
     <description>Probo website</description>
     <link>http://probo.ci/</link>
     <atom:link href="http://probo.ci/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 27 Oct 2015 20:41:48 +0000</pubDate>
-    <lastBuildDate>Tue, 27 Oct 2015 20:41:48 +0000</lastBuildDate>
+    <pubDate>Tue, 27 Oct 2015 20:58:55 +0000</pubDate>
+    <lastBuildDate>Tue, 27 Oct 2015 20:58:55 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -14,7 +14,7 @@
         <description>&lt;div class=&quot;message&quot;&gt;Probo.ci can integrate with whatever Git hosting solution your team uses. Here are two useful demos of &lt;a href=&quot;https://www.atlassian.com/software/bitbucket/server&quot;&gt;Atlassian&#39;s Bitbucket Server&lt;/a&gt; (which was known as Stash until very recently) and &lt;a href=&quot;http://github.com&quot;&gt;Github&lt;/a&gt;.
 &lt;/div&gt;
 
-&lt;p&gt;If you’re interested in a very simple demonstration of the power of &lt;a href=&quot;http://probo.ci&quot;&gt;Probo.ci&lt;/a&gt;, please take a look at this demo of integration with &lt;a href=&quot;https://www.atlassian.com/software/bitbucket/server&quot;&gt;Atlassian’s Bitbucket Server&lt;/a&gt; (which was known as Stash until very recently), or see it on YouTube by going to &lt;a href=&quot;http://zivte.ch/ProboStashDemo&quot;&gt;zivte.ch/ProboStashDemo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you’re interested in a very simple demonstration of the power of &lt;a href=&quot;http://probo.ci&quot;&gt;Probo.ci&lt;/a&gt;, please take a look at this demo of integration with &lt;a href=&quot;https://www.atlassian.com/software/bitbucket/server&quot;&gt;Atlassian’s Bitbucket Server&lt;/a&gt; (which was known as Stash until very recently), or see it on YouTube by going to &lt;a href=&quot;http://zivte.ch/ProboStashDemo&quot;&gt;zivte.ch/ProboStashDemo&lt;/a&gt;.&lt;/p&gt;
 
 &lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/RulRFSclQGk&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 

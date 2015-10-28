@@ -6,10 +6,10 @@ published: true
 ---
 
 
-<div class="message">Probo.ci can integrate with whatever Git hosting solution your team uses. In this post you can find demos of it using <a href="https://www.atlassian.com/software/bitbucket/server">Atlassian's Bitbucket Server</a> (which was known as Stash until very recently) and <a href="http://github.com">Github</a>.
+<div class="message">Probo.ci can integrate with whatever Git hosting solution your team uses. Here are two useful demos of <a href="https://www.atlassian.com/software/bitbucket/server">Atlassian's Bitbucket Server</a> (which was known as Stash until very recently) and <a href="http://github.com">Github</a>.
 </div>
 
-If you're interested in a very simple demonstration of the power of [Probo.ci](http://probo.ci), please take a look at this demo we just posted of it integrated in with [Atlassian's Bitbucket Server](https://www.atlassian.com/software/bitbucket/server) (which was known as Stash until very recently), or see it on YouTube by going to [zivte.ch/ProboStashDemo](http://zivte.ch/ProboStashDemo)
+If you're interested in a very simple demonstration of the power of [Probo.ci](http://probo.ci), please take a look at this demo of integration with [Atlassian's Bitbucket Server](https://www.atlassian.com/software/bitbucket/server) (which was known as Stash until very recently), or see it on YouTube by going to [zivte.ch/ProboStashDemo](http://zivte.ch/ProboStashDemo).
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/RulRFSclQGk" frameborder="0" allowfullscreen></iframe>
 

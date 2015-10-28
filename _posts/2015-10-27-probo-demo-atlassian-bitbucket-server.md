@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Probo Demos using Atlassian Bitbucket Server (fka Stash) & Github"
+title: "Probo.ci demos using Atlassian Bitbucket Server (fka Stash) & Github"
 author: "Alex Urevick-Ackelsberg"
 published: true
 ---

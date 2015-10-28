@@ -5,12 +5,12 @@
     <description>Probo website</description>
     <link>http://probo.ci/</link>
     <atom:link href="http://probo.ci/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 28 Oct 2015 13:08:30 +0000</pubDate>
-    <lastBuildDate>Wed, 28 Oct 2015 13:08:30 +0000</lastBuildDate>
+    <pubDate>Wed, 28 Oct 2015 14:46:19 +0000</pubDate>
+    <lastBuildDate>Wed, 28 Oct 2015 14:46:19 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
-        <title>Probo Demos using Atlassian Bitbucket Server (fka Stash) &amp; Github</title>
+        <title>Probo.ci demos using Atlassian Bitbucket Server (fka Stash) &amp; Github</title>
         <description>&lt;div class=&quot;message&quot;&gt;Probo.ci can integrate with whatever Git hosting solution your team uses. Here are two useful demos of &lt;a href=&quot;https://www.atlassian.com/software/bitbucket/server&quot;&gt;Atlassian&#39;s Bitbucket Server&lt;/a&gt; (which was known as Stash until very recently) and &lt;a href=&quot;http://github.com&quot;&gt;Github&lt;/a&gt;.
 &lt;/div&gt;
 

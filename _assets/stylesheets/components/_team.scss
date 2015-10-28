@@ -2,16 +2,30 @@
   background: none;
   text-align: center;
   .member {
-    width: 50%;
+    width: 44%;
+    margin: 12px 3% 40px 3%;
     display: inline;
-    margin-bottom: 40px;
     float: left;
     padding: 12px;
+    transition: left 0.5s;
+    &:nth-of-type(1n) {
+      margin-left: 0;
+    }
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
     &:nth-child(2n + 1) {
       clear: both;
     }
     @include breakpoint($bp-small-landscape) {
-      width: 33%;
+      width: 31%;
+      margin: 12px 1% 40px 1%;
+      &:nth-of-type(1n) {
+        margin-left: 0;
+      }
+      &:nth-of-type(3n) {
+        margin-right: 0;
+      }
       &:nth-child(2n + 1) {
         clear: none;
       }
@@ -20,7 +34,14 @@
       }
     }
     @include breakpoint($bp-medium-portrait) {
-      width: 25%;
+      width: 24%;
+      margin: 12px 2% 40px 2%;
+      &:nth-of-type(1n) {
+        margin-left: 0;
+      }
+      &:nth-of-type(4n) {
+        margin-right: 0;
+      }
       &:nth-child(3n + 1) {
         clear: none;
       }
@@ -42,8 +63,6 @@
     .name {
       color: #373737;
       font-weight: bold;
-    }
-    .title {
     }
   }
 }

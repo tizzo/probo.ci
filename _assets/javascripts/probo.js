@@ -5,6 +5,7 @@
 //= require jquery.easymodal
 //= require jquery.slimmenu.min.js
 //= require jquery.sidr.min.js
+//= require jquery.smoothState.min.js
 //= require tinynav.js
 //= require zendesk.js
 
@@ -44,12 +45,39 @@
     e.preventDefault();
   });
 
-
-
   $(window).on("resize", function(event){
     if($('body').hasClass('sidr-open') && $(window).width() >= 768) {
       $.sidr('close');
     }
   });
+
+  // Adding smoothState for page transitions
+  'use strict';
+  var options = {
+    prefetch: true,
+    cacheLength: 2,
+    onStart: {
+      duration: 600, // Duration of our animation
+      render: function ($container) {
+        // Add your CSS animation reversing class
+        $container.addClass('is-exiting');
+
+        // Restart your animation
+        smoothState.restartCSSAnimations();
+      }
+    },
+    onReady: {
+      duration: 0,
+      render: function ($container, $newContent) {
+        // Remove your CSS animation reversing class
+        $container.removeClass('is-exiting');
+
+        // Inject the new content
+        $container.html($newContent);
+
+      }
+    }
+  },
+  smoothState = $('#site-content').smoothState(options).data('smoothState');
 
 })(window || {}, jQuery);

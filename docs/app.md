@@ -1,5 +1,5 @@
 ---
-layout: "left-sidebar"
+layout: "docs"
 title: Using the Probo App
 class: documentation
 permalink: /docs/app/

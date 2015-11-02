@@ -1,5 +1,5 @@
 ---
-layout: "left-sidebar"
+layout: "docs"
 title: Probo FAQ
 class: documentation
 permalink: /docs/faq/

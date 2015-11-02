@@ -1,5 +1,5 @@
 ---
-layout: "left-sidebar"
+layout: "docs"
 title: Uploading Build Assets to Probo
 class: documentation
 permalink: /docs/uploader/

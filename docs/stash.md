@@ -1,5 +1,5 @@
 ---
-layout: "left-sidebar"
+layout: "docs"
 title: Stash Integration
 class: documentation
 permalink: /docs/stash/

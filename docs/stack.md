@@ -1,5 +1,5 @@
 ---
-layout: "left-sidebar"
+layout: "docs"
 title: The Stack for your builds
 class: documentation
 permalink: /docs/stack/

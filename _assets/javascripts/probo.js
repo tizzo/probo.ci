@@ -57,7 +57,7 @@
     prefetch: true,
     cacheLength: 2,
     onStart: {
-      duration: 600, // Duration of our animation
+      duration: 300, // Duration of our animation
       render: function ($container) {
         // Add your CSS animation reversing class
         $container.addClass('is-exiting');

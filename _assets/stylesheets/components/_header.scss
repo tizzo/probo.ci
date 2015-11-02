@@ -40,6 +40,7 @@ $header-line-height:45px;
     display: block;
     margin: 0 auto;
     text-align: right;
+    float: right;
     margin: 0 auto;
     line-height:$header-line-height;
     @include breakpoint($bp-medium-portrait) {

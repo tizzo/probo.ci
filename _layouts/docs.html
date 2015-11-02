@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body class="sidebar-page site">
+    <div class="site-content">
+      {% include header.html %}
+
+      <div class="wrapper">
+
+        <div id="sidebar-first">
+          {% include sidebars/docs.html %}
+        </div>
+
+        <div class="page-content">
+            {{ content }}
+        </div>
+
+      </div>
+
+    </div>
+    {% include footer.html %}
+
+    {% include updates-form.html %}
+
+    {% include github-fork.html %}
+
+    {% javascript probo %}
+  </body>
+
+</html>

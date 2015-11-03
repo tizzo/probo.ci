@@ -1,14 +1,10 @@
 ---
-layout: "left-sidebar"
+layout: "docs"
 title: Using the Probo App
 class: documentation
 permalink: /docs/app/
 published: true
 ---
-
-
-## Using the Probo App
-
 The Probo App is currently being opened to Beta testers on a rolling basis. This documentation is for Beta testers.
 
 The Probo App is found at https://app.probo.ci . Log in with your Github or Stash account and enter your invite code.

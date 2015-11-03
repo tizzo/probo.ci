@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+# Bundler will not let us specify a minimum version, only a specific version.
+# Using ruby instead.
+raise 'Ruby should be >2.0' unless RUBY_VERSION.to_f > 2.0
 gem 'bundler', '1.8.3'
 gem 'jekyll', '2.4.0'
 gem 'rack-jekyll', '0.3.5'

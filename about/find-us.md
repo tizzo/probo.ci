@@ -1,8 +1,7 @@
 ---
 layout: "about"
-title: Fine Us
+title: Find Us
 class: find
 permalink: /about/contact/
 published: true
 ---
-## Learn More About Probo.ci

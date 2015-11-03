@@ -5,4 +5,4 @@ class: press
 permalink: /about/press/
 published: false
 ---
-## Coming soon!
+Check out our press releases and news coverage of Probo.

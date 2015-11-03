@@ -5,6 +5,8 @@ class: zivtech
 permalink: /about/team/
 published: true
 ---
+### Meet the people who make the rhombic triacontahedron spin.
+
 <div class="team">
     {% for member in site.data.members %}
     <div class="member">

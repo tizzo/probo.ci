@@ -11,7 +11,9 @@ published: true
 
 If you're interested in a very simple demonstration of the power of [Probo.ci](http://probo.ci), please take a look at this demo of integration with [Atlassian's Bitbucket Server](https://www.atlassian.com/software/bitbucket/server) (which was known as Stash until very recently), or see it on YouTube by going to [zivte.ch/ProboStashDemo](http://zivte.ch/ProboStashDemo).
 
-<iframe width="420" height="315" src="https://www.youtube.com/embed/RulRFSclQGk" frameborder="0" allowfullscreen></iframe>
+<div class="video-container">
+	<iframe width="420" height="315" src="https://www.youtube.com/embed/RulRFSclQGk" frameborder="0" allowfullscreen></iframe>
+</div>
 
 We also posted a video of Probo.ci working with [Github](http://github.com), which you can find at [zivte.ch/ProboGithubDemo](http://zivte.ch/ProboGithubDemo). Please note that this video is slightly older than the Bitbucket Server demo, so some of our latest UI improvements won't be visible. 
 

@@ -1,14 +1,11 @@
 .blog-row {
   border-bottom: 1px solid #f7f2f5;
   margin: 12px 0;
-  padding: 0 12px 24px 12px;
+  padding: 0 0 24px 0;
   overflow: auto;
   zoom: 1;
   @include breakpoint($bp-medium-landscape) {
     margin: 0 0 24px 0;
-  }
-  @include breakpoint($bp-medium-portrait) {
-    padding: 0 12px 24px 0;
   }
 }
 .blog-post-date {
@@ -62,6 +59,10 @@
       }
     }
   }
+}
+
+.video-container {
+  margin: 10px 0 30px 0;
 }
 
 .blog-post-preview {

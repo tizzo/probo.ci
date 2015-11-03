@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby '2.2.0'
 gem 'bundler', '1.8.3'
 gem 'jekyll', '2.4.0'
 gem 'rack-jekyll', '0.3.5'

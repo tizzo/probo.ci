@@ -1,0 +1,6 @@
+steps:
+  - name: Provision Jekyll test site
+    plugin: Script
+    script:
+      -  bundle install --path vendor/bundle
+      - bundle exec jekyll build --destination=/var/www/html

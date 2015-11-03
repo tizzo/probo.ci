@@ -2,6 +2,9 @@ steps:
   - name: Provision Jekyll test site
     plugin: Script
     script:
+      - apt-add-repository ppa:brightbox/ruby-ng
+      - apt-get update
+      - apt-get install ruby2.2
       - cd $SRC_DIR
       - bundle install --path vendor/bundle
       - bundle exec jekyll build --destination=/var/www/html

@@ -9,6 +9,7 @@ steps:
       - apt-get install -y ruby2.2 ruby2.2-dev
       - ln -s `which ruby2.2` /usr/local/bin/ruby
       - ln -s `which gem2.2` /usr/local/bin/gem
+      - gem uninstall bundler
       - gem install -y bundler
       - cd $SRC_DIR
       - bundle install --path vendor/bundle

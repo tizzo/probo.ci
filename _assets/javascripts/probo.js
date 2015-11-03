@@ -5,11 +5,12 @@
 //= require jquery.easymodal
 //= require jquery.slimmenu.min.js
 //= require jquery.sidr.min.js
-//= require jquery.smoothState.min.js
+//= require jquery.fitvids.js
 //= require tinynav.js
 //= require zendesk.js
 
 (function (window, $) {
+
   // prepare the modal for use
   $('#mc_embed_signup').easyModal();
 
@@ -51,33 +52,7 @@
     }
   });
 
-  // Adding smoothState for page transitions
-  'use strict';
-  var options = {
-    prefetch: true,
-    cacheLength: 2,
-    onStart: {
-      duration: 300, // Duration of our animation
-      render: function ($container) {
-        // Add your CSS animation reversing class
-        $container.addClass('is-exiting');
-
-        // Restart your animation
-        smoothState.restartCSSAnimations();
-      }
-    },
-    onReady: {
-      duration: 0,
-      render: function ($container, $newContent) {
-        // Remove your CSS animation reversing class
-        $container.removeClass('is-exiting');
-
-        // Inject the new content
-        $container.html($newContent);
-
-      }
-    }
-  },
-  smoothState = $('#site-content').smoothState(options).data('smoothState');
+  // Setting up FitVids for responsive iFrames embeds (videos)
+  $('.video-container').fitVids();
 
 })(window || {}, jQuery);

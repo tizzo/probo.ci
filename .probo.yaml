@@ -7,6 +7,8 @@ steps:
       - apt-add-repository ppa:brightbox/ruby-ng
       - apt-get update
       - apt-get install -y ruby2.2
+      - ln -s `which ruby2.2` /usr/local/bin/ruby
+      - ruby -v
       - cd $SRC_DIR
       - bundle install --path vendor/bundle
       - bundle exec jekyll build --destination=/var/www/html

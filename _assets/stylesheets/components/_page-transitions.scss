@@ -3,23 +3,9 @@
   transition-timing-function: ease-in;
   animation-fill-mode: both; 
 }
-.m-scene.is-exiting .scene_element {
+.m-scene.transiting .scene_element {
   animation-direction: alternate-reverse; 
 }
-.m-scene.is-exiting .scene_element--delayed {
-  animation-delay: 0s; 
-}
-.m-scene.is-exiting .scene_element--noexiting {
-  -webkit-animation-direction: alternate-reverse;
-  animation-direction: alternate-reverse; 
-}
-@media screen and (min-width: 768px) {
-  .m-scene .scene_element--fadeinright-wide {
-    -webkit-animation-name: fadeInRight;
-    animation-name: fadeInRight; 
-  } 
-}
-
 .m-scene .scene_element.scene_element--content {
   animation-name: content;
   animation-duration: 0.3s;

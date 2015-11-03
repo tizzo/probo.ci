@@ -5,8 +5,8 @@
     <description>Probo website</description>
     <link>http://probo.ci/</link>
     <atom:link href="http://probo.ci/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 02 Nov 2015 20:50:31 +0000</pubDate>
-    <lastBuildDate>Mon, 02 Nov 2015 20:50:31 +0000</lastBuildDate>
+    <pubDate>Tue, 03 Nov 2015 14:36:33 +0000</pubDate>
+    <lastBuildDate>Tue, 03 Nov 2015 14:36:33 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -16,7 +16,9 @@
 
 &lt;p&gt;If you’re interested in a very simple demonstration of the power of &lt;a href=&quot;http://probo.ci&quot;&gt;Probo.ci&lt;/a&gt;, please take a look at this demo of integration with &lt;a href=&quot;https://www.atlassian.com/software/bitbucket/server&quot;&gt;Atlassian’s Bitbucket Server&lt;/a&gt; (which was known as Stash until very recently), or see it on YouTube by going to &lt;a href=&quot;http://zivte.ch/ProboStashDemo&quot;&gt;zivte.ch/ProboStashDemo&lt;/a&gt;.&lt;/p&gt;
 
-&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/RulRFSclQGk&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;div class=&quot;video-container&quot;&gt;
+	&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/RulRFSclQGk&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
 
 &lt;p&gt;We also posted a video of Probo.ci working with &lt;a href=&quot;http://github.com&quot;&gt;Github&lt;/a&gt;, which you can find at &lt;a href=&quot;http://zivte.ch/ProboGithubDemo&quot;&gt;zivte.ch/ProboGithubDemo&lt;/a&gt;. Please note that this video is slightly older than the Bitbucket Server demo, so some of our latest UI improvements won’t be visible. &lt;/p&gt;
 

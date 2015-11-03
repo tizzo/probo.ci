@@ -2,6 +2,7 @@ steps:
   - name: Provision Jekyll test site
     plugin: Script
     script:
+      - apt-get update 
       - apt-get install -y software-properties-common
       - apt-add-repository ppa:brightbox/ruby-ng
       - apt-get update

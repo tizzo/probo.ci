@@ -1,5 +1,6 @@
-$header-height:70px;
-$header-line-height:45px;
+$header-height: 70px;
+$header-line-height: 35px;
+$logo-line-height: 45px;
 
 .site-header {
   height: $header-height;
@@ -42,12 +43,12 @@ $header-line-height:45px;
     text-align: right;
     float: right;
     margin: 0 auto;
-    line-height:$header-line-height;
+    line-height:$logo-line-height;
     @include breakpoint($bp-medium-portrait) {
       float: left;
     }
     img {
-      height: $header-line-height;
+      height: $logo-line-height;
       width: auto;
     }
   }
@@ -74,12 +75,17 @@ ul#navigation {
   float: right;
   margin: auto;
   display: none;
+  margin: 10px 0 0 0;
   @include breakpoint($bp-medium-portrait) {
     display: block;
   }
   li {
     list-style-type: none;
     float: left;
+    &.login a {
+      background: #9c066f;
+      border-radius: 18px;
+    }
   }
   a {
     display: block;
@@ -89,7 +95,7 @@ ul#navigation {
     width: 100%;
     border-radius: 0;
     border-bottom: 1px solid #f7f2f5;
-    line-height:$header-line-height;
+    line-height: $header-line-height;
     padding:0 12px;
     color: white;
     &:hover {

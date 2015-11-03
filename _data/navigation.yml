@@ -1,8 +1,17 @@
-- title: Team
-  url: team
+- title: Product
+  url: product
 
-- title: Documentation
-  url: docs
+- title: About
+  url: about
 
 - title: Blog
   url: blog
+
+- title: Pricing
+  url: pricing
+
+- title: FAQ
+  url: faq
+
+- title: Docs
+  url: docs

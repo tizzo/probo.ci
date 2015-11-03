@@ -10,16 +10,16 @@
   <title>Build Configuration | Demonstrate. Test. Approve.</title>
   <meta name="description" content="Probo website">
 
-  <link rel="stylesheet" href="/assets/probo-7b1ae0aaf6fc8153ba516edc9a071a21.css">
+  <link rel="stylesheet" href="/assets/probo-64c69b00f3a99b9891075413961dc06a.css">
 
-  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-f58208705fe6f76811f8993823ac80b7.png" />
+  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-9d3278171ad1344e7855bf1454cc3941.png" />
   <link rel="canonical" href="http://probo.ci/docs/build/">
   
 </head>
 
 
   <body class="sidebar-page site">
-    <div class="site-content m-scene" id="site-content">
+    <div class="site-content">
       <header class="site-header">
 
     <div class="wrapper">
@@ -35,11 +35,17 @@
         <div id="sidr" style="display:none">
             <ul>
                 
-                <li><a href="/team">Team</a></li>
+                <li><a href="/product">Product</a></li>
                 
-                <li><a href="/docs">Documentation</a></li>
+                <li><a href="/about">About</a></li>
                 
                 <li><a href="/blog">Blog</a></li>
+                
+                <li><a href="/pricing">Pricing</a></li>
+                
+                <li><a href="/faq">FAQ</a></li>
+                
+                <li><a href="/docs">Documentation</a></li>
                 
             </ul>
         </div>
@@ -48,11 +54,17 @@
 
         <ul id="navigation">
             
-            <li><a href="/team">Team</a></li>
+            <li><a href="/product">Product</a></li>
             
-            <li><a href="/docs">Documentation</a></li>
+            <li><a href="/about">About</a></li>
             
             <li><a href="/blog">Blog</a></li>
+            
+            <li><a href="/pricing">Pricing</a></li>
+            
+            <li><a href="/faq">FAQ</a></li>
+            
+            <li><a href="/docs">Documentation</a></li>
             
         </ul>
 
@@ -63,25 +75,23 @@
 
       <div class="wrapper">
 
+        <header class="page-header">
+          <h1 class="post-title">Build Configuration</h1>
+        </header>
+
         <div id="sidebar-first">
-          <h4><a href="/docs/" class="current">Getting Started</a> (for Beta testers)</h4>
           <ul>
-	<li><a href="/docs/about/" >What is Probo?</a></li>
+	<li><a href="/docs/app/" >Using the Probo App</a></li>
 	<li><a href="/docs/github/" >Github Integration</a></li>
 	<li><a href="/docs/stash/" >Stash Integration</a></li>
- 	<!-- <li><a href="/docs/app/" >Probo App</a></li> -->
- 	<li><a href="/docs/build/" class="current">Build Configuration (.probo.yaml)</a></li>
-    <li><a href="/docs/uploader/" >Asset Uploader</a></li>
-<!--	<li><a href="/docs/workflow/" >Probo Recommended Workflow</a></li> -->
-	<li><a href="/docs/faq/" >Probo FAQ</a></li>
+	<li><a href="/docs/build/" class="current">Build Configuration</a></li>
+	<li><a href="/docs/uploader/" >Uploading Build Assets to Probo</a></li>
 </ul>
 
         </div>
 
-        <div class="page-content scene_element scene_element--content">
-          <h2 id="build-configuration">Build Configuration</h2>
-
-<p>Probo runs builds based on a <code>/.probo.yaml</code> file found in the root of your repository. You can task the Container Manager to run any number of build steps. Each step is a runnable plugin, and will get a status update sent to Github for the commit.</p>
+        <div class="page-content">
+            <p>Probo runs builds based on a <code>/.probo.yaml</code> file found in the root of your repository. You can task the Container Manager to run any number of build steps. Each step is a runnable plugin, and will get a status update sent to Github for the commit.</p>
 
 <p>When the build runs, your source code for the commit that triggered the build is automatically available to you in the <code>$SRC_DIR</code> directory inside the container.</p>
 
@@ -177,7 +187,7 @@
         </div>
     </div>
     <div class="wrapper">
-        <img src="/assets/probo-logo-bw-225-8017fc1477ce9c56c2b2537e8e0f6d8a.png" alt='black and white probo logo' class='site-footer__logo'>
+        <img src="/assets/probo-logo-bw-225-93799821f2f9f0a4768bce88982b9751.png" alt='black and white probo logo' class='site-footer__logo'>
         <div class="right">
             <a href="/docs" title="Probo Documentation" >Documentation</a>
             <a href="/blog" title="Probo Blog" >Blog</a>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
+<head>
   <meta charset="utf-8">
   <meta name="google-site-verification" content="mxk7-mw5Q4wVVctQb0ckocY0eVXeDnwWsQbLwjiwBJs" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,19 +10,17 @@
   <title>About | Demonstrate. Test. Approve.</title>
   <meta name="description" content="Probo website">
 
-  <link rel="stylesheet" href="/assets/probo-7b1ae0aaf6fc8153ba516edc9a071a21.css">
+  <link rel="stylesheet" href="/assets/probo-64c69b00f3a99b9891075413961dc06a.css">
 
-  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-f58208705fe6f76811f8993823ac80b7.png" />
+  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-9d3278171ad1344e7855bf1454cc3941.png" />
   <link rel="canonical" href="http://probo.ci/about/">
   
 </head>
 
 
-  <body class=" site">
-    <div class="site-content m-scene" id="site-content">
-      <div class="inner">
-
-        <header class="site-header">
+<body class="sidebar-page site">
+<div class="site-content m-scene" id="site-content">
+  <header class="site-header">
 
     <div class="wrapper">
 
@@ -37,11 +35,17 @@
         <div id="sidr" style="display:none">
             <ul>
                 
-                <li><a href="/team">Team</a></li>
+                <li><a href="/product">Product</a></li>
                 
-                <li><a href="/docs">Documentation</a></li>
+                <li><a href="/about">About</a></li>
                 
                 <li><a href="/blog">Blog</a></li>
+                
+                <li><a href="/pricing">Pricing</a></li>
+                
+                <li><a href="/faq">FAQ</a></li>
+                
+                <li><a href="/docs">Documentation</a></li>
                 
             </ul>
         </div>
@@ -50,11 +54,17 @@
 
         <ul id="navigation">
             
-            <li><a href="/team">Team</a></li>
+            <li><a href="/product">Product</a></li>
             
-            <li><a href="/docs">Documentation</a></li>
+            <li><a href="/about">About</a></li>
             
             <li><a href="/blog">Blog</a></li>
+            
+            <li><a href="/pricing">Pricing</a></li>
+            
+            <li><a href="/faq">FAQ</a></li>
+            
+            <li><a href="/docs">Documentation</a></li>
             
         </ul>
 
@@ -63,41 +73,33 @@
 </header>
 
 
-        <div class="page-content scene_element scene_element--content">
-          <div class="page wrapper">
+  <div class="wrapper">
 
-  <header class="page-header">
-    <h1 class="post-title">About</h1>
-  </header>
+    <header class="page-header">
+      <h1 class="post-title">About</h1>
+    </header>
 
-  <article class="post-content">
-    <section>
-  <ul class="side-nav">
-  
-  </ul>
-</section>
+    <div id="sidebar-first">
+      <ul>
+	<li><a href="/about/team/" >Team</a></li>
+	<li><a href="/about/logos/" >Logos</a></li>
+ 	<li><a href="/about/zivtech/" >About Zivtech</a></li>
+ 	<!--<li><a href="/about/contact/" >Find us</a></li>-->
+</ul>
 
-<p>##What is Probo?</p>
+    </div>
 
-<p>Probo is an <a href="https://github.com/ProboCI/probo">open sourced</a> Quality Assurance (QA) tool for developers and an User Acceptance Testing (UAT) tool for business users. Probo creates various sandbox test sites as the team develops so that other users can see and interact with changes earlier and more frequently throughout development  with “earlier and more frequently throughout development</p>
+    <div class="page-content scene_element scene_element--content">
+      <p>Probo, a Zivtech company, was initially created to fulfill an internal need for automated testing of Drupal and other database driven web applications, which popular Continuous Integration tools like CircleCI and Travis couldn’t fill. Once the tool started to take shape we realized that we had created a tool that didn’t just make automated testing a lot better: by giving a very granular real-time view into the state of development before the work was merged into a git branch, it seriously improved the lives of our project managers, product owners/clients, quality assurance/user acceptance testing staff, and junior developers.</p>
 
-<p>###Probo for Automated QA</p>
+<p>The Probo workflow recognizes that there’s more to QA than automated testing: real people will always need a place to see and test changes. By factoring in real human QA into the development to deployment process, we can improve quality and efficiency.</p>
 
-<p>Probo integrates with version control applications (Github and Stash) to run automated QA tests upon every pull request. When a developer submits a pull request, Probo automatically builds sandbox sites and runs each test against a Probo sandbox site. From Github or Stash, the pull request reviewer can see the status of all each test run and click into its respective sandbox site to interact within it. If a test fails, then the team knows that there is a problem with the code submitted, saving reviewers, – who are often senior developers, – valuable time. Probo uses Docker to create these isolated sandbox sites on demand, so these sites stay available for as long as they are needed.</p>
+    </div>
 
-<p>###Probo for Business UAT</p>
-
-<p>The sandbox sites created by Probo can also be used for business users to provide earlylier UAT feedback. Business owners no longer have to wait until the end when a dedicated UAT environment is updated. The sandbox sites are created with realistic data and content from a backup (such as  from a production site). Visually demonstrate each development change to your business user, so that there is no misunderstanding about the end results before the end of your development period, when (and the code is merged).</p>
-
-  </article>
+  </div>
 
 </div>
-
-        </div>
-
-      </div>
-    </div>
-    <footer class="site-footer">
+<footer class="site-footer">
     <div class="footer-learn-more">
         <div class="wrapper">
             <p>To learn more and see Probo in action <a class="button request" href="#">Request a demo today</a></p>
@@ -108,7 +110,7 @@
         </div>
     </div>
     <div class="wrapper">
-        <img src="/assets/probo-logo-bw-225-8017fc1477ce9c56c2b2537e8e0f6d8a.png" alt='black and white probo logo' class='site-footer__logo'>
+        <img src="/assets/probo-logo-bw-225-93799821f2f9f0a4768bce88982b9751.png" alt='black and white probo logo' class='site-footer__logo'>
         <div class="right">
             <a href="/docs" title="Probo Documentation" >Documentation</a>
             <a href="/blog" title="Probo Blog" >Blog</a>
@@ -120,7 +122,7 @@
 
 <div class="overlay"></div>
 
-    <!-- This form is from MailChimp -->
+<!-- This form is from MailChimp -->
 <div id="mc_embed_signup" class="updates-form" style="display: none">
     <i class="fa fa-times-circle-o close-request"></i>
     <img src="/assets/probo-sphere-8f8d00c0853ce6dbdefbaaf7566491f8.png" alt="Probo sphere logo" class='updates-form__background'>
@@ -142,9 +144,9 @@
     </form>
 </div>
 
-    <a href="https://github.com/ProboCI/probo" class="github-banner"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+<a href="https://github.com/ProboCI/probo" class="github-banner"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
 
-    <script src="/assets/probo-49376e153295db2654d90a378462df94.js"></script>
-  </body>
+<script src="/assets/probo-49376e153295db2654d90a378462df94.js"></script>
+</body>
 
 </html>

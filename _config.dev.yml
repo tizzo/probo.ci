@@ -8,3 +8,5 @@ assets:
   cache: false
   cachebust: none
   debug: true
+# We're using Jekyll < 2.0.0 which defaults the necoding to nil
+encoding: utf-8

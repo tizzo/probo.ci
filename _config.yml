@@ -47,3 +47,5 @@ gems:
 - jekyll-assets
 - jekyll-assets/compass
 - jekyll-sitemap
+# We're using Jekyll < 2.0.0 which defaults the necoding to nil
+encoding: utf-8

@@ -3,6 +3,6 @@ layout: "page"
 title: Pricing
 class: pricing
 permalink: /pricing/
-published: true
+published: false
 ---
 ## Coming soon!

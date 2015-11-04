@@ -7,11 +7,11 @@
 - title: Blog
   url: blog
 
-- title: Pricing
-  url: pricing
+#- title: Pricing
+#  url: pricing
 
-- title: FAQ
-  url: faq
+#- title: FAQ
+#  url: faq
 
 - title: Docs
   url: docs

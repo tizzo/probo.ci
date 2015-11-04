@@ -3,6 +3,6 @@ layout: "page"
 title: FAQ
 class: faq
 permalink: /faq/
-published: true
+published: false
 ---
 ## Coming soon!

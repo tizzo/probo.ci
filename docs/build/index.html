@@ -12,7 +12,7 @@
 
   <link rel="stylesheet" href="/assets/probo-1a04cf64215cd2430bfe0618d1237d35.css">
 
-  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-95cc36ee3469ea3af0b406dd4f7b6e51.png" />
+  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-d00190f913e49db3a7b57b604931bdc0.png" />
   <link rel="canonical" href="http://probo.ci/docs/build/">
   
 </head>
@@ -119,6 +119,66 @@
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Another example test with default shell plugin</span>
     <span class="l-Scalar-Plain">command</span><span class="p-Indicator">:</span> <span class="s">&#39;echo</span><span class="nv"> </span><span class="s">&quot;Hello</span><span class="nv"> </span><span class="s">World!&quot;&#39;</span></code></pre></div>
 
+<h4 id="drupal-plugin">Drupal Plugin</h4>
+
+<p>The Drupal plugin provides options for your build steps if you are using Probo for a Drupal site. </p>
+
+<p>Here is the list of available options:</p>
+
+<h5 id="directory-configuration">Directory Configuration</h5>
+
+<p><code>makeFile</code><br />
+  - The name of the make file to run to generate the install directory.<br />
+  - Accepts a <strong>string</strong> value.</p>
+
+<p><code>profileName</code><br />
+  - The profile name used in creating a symlink to this directory if a make file is specified with the <code>makeFile</code> option and used to select the profile to install if the <code>runInstall</code> option is selected.<br />
+  - Accepts a <strong>string</strong> value.</p>
+
+<p><code>runInstall</code><br />
+  - If set, run <code>drush site-install</code> to perform a fresh install of the site using the <code>profileName</code> as the install profile and allowing the <code>installArgs</code> option to configure the install.<br />
+  - Accepts a <strong>boolean</strong> value.</p>
+
+<p><code>installArgs</code><br />
+  - A set of parameters to concatenate onto the <code>drush site-install</code> command if the <code>runInstall</code> option is set.<br />
+  - Defaults to ‘’.<br />
+  - Accepts a <strong>string</strong> value.</p>
+
+<p><code>siteFolder</code> <br />
+  - Specifies the site folder to use for this build (the folder within the Drupal <code>sites</code> folder).<br />
+  - Defaults to <code>default</code>.<br />
+  - Accepts a <strong>string</strong> value.</p>
+
+<p><code>installProfile</code><br />
+  - Use this option to designate an install profile if your site uses one. <br />
+  - <em>Incompatible with the</em> <code>database</code> <em>option).</em><br />
+  - Accepts a <strong>string</strong> value.</p>
+
+<h5 id="database-configuration">Database Configuration</h5>
+
+<p><code>database</code><br />
+  - The name of the database to import if specified. Note that this database <em>must be added as an asset separately</em>.<br />
+  - Accepts a <strong>string</strong> value.</p>
+
+<p><code>databaseGzipped</code><br />
+  - Whether the database was sent gzipped and whether it should therefore be gunzipped before importing.<br />
+  - Accepts a <strong>boolean</strong> value.</p>
+
+<h5 id="additional-options">Additional Options</h5>
+
+<p><code>databaseUpdates</code><br />
+  - Determines whether to run <code>drush updb</code> after the build is finished.<br />
+  - Accepts a <strong>boolean</strong> value.</p>
+
+<p><code>clearCaches</code><br />
+  - Whether to clear all caches after the build is finished. <br />
+  - Defaults to true.<br />
+  - Accepts a <strong>boolean</strong> value.</p>
+
+<p><code>revertFeatures</code><br />
+  - Whether to revert features using <code>drush fra</code> after the build is finished.<br />
+  - Accepts a <strong>boolean</strong> value.</p>
+
 <h4 id="available-variables">Available variables:</h4>
 
 <p>You can use several variables within your <code>.probo.yaml</code> file.</p>
@@ -142,6 +202,18 @@
     <span class="l-Scalar-Plain">command</span><span class="p-Indicator">:</span> <span class="s">&#39;mv</span><span class="nv"> </span><span class="s">$SRC_DIR</span><span class="nv"> </span><span class="s">/var/www/foo/code&#39;</span>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Run behat tests</span>
     <span class="l-Scalar-Plain">command</span><span class="p-Indicator">:</span> <span class="s">&#39;cd</span><span class="nv"> </span><span class="s">/var/www/foo/code/tests</span><span class="nv"> </span><span class="s">;</span><span class="nv"> </span><span class="s">composer</span><span class="nv"> </span><span class="s">install</span><span class="nv"> </span><span class="s">;</span><span class="nv"> </span><span class="s">bin/behat&#39;</span></code></pre></div>
+
+<h4 id="developing-on-a-drupal-site-with-a-database">Developing on a Drupal site with a database.</h4>
+
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">assets</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">mydb.sql.gz</span>
+<span class="l-Scalar-Plain">steps</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Probo site setup</span>
+    <span class="l-Scalar-Plain">plugin</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Drupal</span>
+    <span class="l-Scalar-Plain">database</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">mydb.sql.gz</span>
+    <span class="l-Scalar-Plain">databaseGzipped</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+    <span class="l-Scalar-Plain">databaseUpdates</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+    <span class="l-Scalar-Plain">revertFeatures</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span></code></pre></div>
 
 <h4 id="developing-a-drupal-module">Developing a Drupal module.</h4>
 
@@ -181,7 +253,7 @@
         </div>
     </div>
     <div class="wrapper">
-        <img src="/assets/probo-logo-bw-225-efe2590194066ed26d030158047e9143.png" alt='black and white probo logo' class='site-footer__logo'>
+        <img src="/assets/probo-logo-bw-225-bc8a2e1eb0a30e66ba2156375314d2fb.png" alt='black and white probo logo' class='site-footer__logo'>
         <div class="right">
             <a href="/docs" title="Probo Documentation" >Documentation</a>
             <a href="/blog" title="Probo Blog" >Blog</a>

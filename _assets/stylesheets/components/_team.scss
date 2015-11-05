@@ -34,14 +34,14 @@
       }
     }
     .pic {
-      height: 180px;
-      width: 150px;
+      height: auto;
+      max-width: 150px;
       margin: 0 auto;
       display: block;
       overflow: hidden;
       @include breakpoint($bp-small-landscape) {
-        height: 240px;
-        width: 200px;
+        height: auto;
+        max-width: 200px;
       }
       img {
         max-width: 100%;

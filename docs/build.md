@@ -41,36 +41,65 @@ steps:
     command: 'echo "Hello World!"'
 {% endhighlight %}
 
-##### Drupal Plugin
+#### Drupal Plugin
 
-The Drupal plugin makes it easy to set your build configuration if you are using Probo for a Drupal site. 
+The Drupal plugin provides options for your build steps if you are using Probo for a Drupal site. 
 
 Here is the list of available options:
 
-  * `container` **{object}** : An instantiated and configured Container object.
-  * `options` **{object}** : A hash of configuration options specific to this task.
-    * `clearCaches` **{boolean}** : Whether to clear all caches after the build is finished. Defaults to true.
-    * `siteFolder` **{string}** : The site folder to use for this build (the folder within the drupal `sites` folder).  Defaults to `default`.
-    * `database` **{string}** : The name of the database to import if specified. Note that this database *must be added to the assets array separately*.
-    * `databaseGzipped` **{boolean}** : Whether the database was sent gzipped and whether it should therefore be gunzipped before importing.
-    * `databaseUpdates` **{boolean}** : Determines whether to run `drush updb`.
-    * `revertFeatures` **{boolean}** : Whether to revert features using `drush fra`.
-    * `makeFile` **{string}** : The name of the make file to run to generate the install directory.
-    * `installProfile` **{string}** : If set this install (incompatible with the `database` option).
-    * `runInstall` **{boolean}** : If set, run `drush site-install` to perform a fresh install of the site using the profileName as the profile to install and allowing instlallArgs to configure the install.
-    * `profileName` **{string}** : The profileName, used in symlinking this directory if makeFile is specified and used to select the profile to install if `runInstall` is selected.
-    * `installArgs` **{string}** : A set of params to concat onto the drush `site-install` command (defaults to '').
+##### Directory Configuration
 
-For example:
-{% highlight yaml%}
-steps:
-  - name: Probo site setup
-    plugin: Drupal
-    database: mydb.sql.gz
-    databaseGzipped: true
-    databaseUpdates: true
-    revertFeatures: true
-{% endhighlight %}
+`makeFile`
+  - The name of the make file to run to generate the install directory.
+  - Accepts a **string** value.
+
+`profileName`
+  - The profile name used in creating a symlink to this directory if a make file is specified with the `makeFile` option and used to select the profile to install if the `runInstall` option is selected.
+  - Accepts a **string** value.
+
+`runInstall`
+  - If set, run `drush site-install` to perform a fresh install of the site using the `profileName` as the install profile and allowing the `installArgs` option to configure the install.
+  - Accepts a **boolean** value.
+
+`installArgs`
+  - A set of parameters to concatenate onto the `drush site-install` command if the `runInstall` option is set.
+  - Defaults to ''.
+  - Accepts a **string** value.
+
+`siteFolder` 
+  - Specifies the site folder to use for this build (the folder within the Drupal `sites` folder).
+  - Defaults to `default`.
+  - Accepts a **string** value.
+
+`installProfile`
+  - Use this option to designate an install profile if your site uses one. 
+  - *Incompatible with the* `database` *option).*
+  - Accepts a **string** value.
+
+##### Database Configuration
+
+`database`
+  - The name of the database to import if specified. Note that this database *must be added as an asset separately*.
+  - Accepts a **string** value.
+
+`databaseGzipped`
+  - Whether the database was sent gzipped and whether it should therefore be gunzipped before importing.
+  - Accepts a **boolean** value.
+
+##### Additional Options
+
+`databaseUpdates`
+  - Determines whether to run `drush updb` after the build is finished.
+  - Accepts a **boolean** value.
+
+`clearCaches`
+  - Whether to clear all caches after the build is finished. 
+  - Defaults to true.
+  - Accepts a **boolean** value.
+
+`revertFeatures`
+  - Whether to revert features using `drush fra` after the build is finished.
+  - Accepts a **boolean** value.
 
 #### Available variables:
 
@@ -94,6 +123,20 @@ steps:
     command: 'mv $SRC_DIR /var/www/foo/code'
   - name: Run behat tests
     command: 'cd /var/www/foo/code/tests ; composer install ; bin/behat'
+{% endhighlight %}
+
+#### Developing on a Drupal site with a database.
+
+{% highlight yaml%}
+assets:
+  - mydb.sql.gz
+steps:
+  - name: Probo site setup
+    plugin: Drupal
+    database: mydb.sql.gz
+    databaseGzipped: true
+    databaseUpdates: true
+    revertFeatures: true
 {% endhighlight %}
 
 #### Developing a Drupal module.

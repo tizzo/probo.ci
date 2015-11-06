@@ -71,11 +71,6 @@ Here is the list of available options:
   - Defaults to `default`.
   - Accepts a **string** value.
 
-`installProfile`
-  - Use this option to designate an install profile if your site uses one. 
-  - *Incompatible with the* `database` *option).*
-  - Accepts a **string** value.
-
 ##### Database Configuration
 
 `database`

@@ -149,7 +149,7 @@ steps:
     revertFeatures: true
 {% endhighlight %}
 
-#### Available variables:
+### Available variables:
 
 You can use several variables within your `.probo.yaml` file.
 
@@ -157,7 +157,7 @@ You can use several variables within your `.probo.yaml` file.
 - `$ASSET_DIR` : The filepath which contains any assets you uploaded to your Probo project.
 - `$BUILD_ID` : The ID for the build.
 
-### Iterating until your build configuration succeeds:
+## Iterating until your build configuration succeeds:
 
 Create a new branch in git and add the new `.probo.yaml` file in the root of the repository. Create a new Pull Request for that branch. You should see your build steps running on the pull request.
 

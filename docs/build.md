@@ -13,7 +13,7 @@ The .probo.yaml is split into a section for **'assets'** and a section for **'st
 
 ## Assets
 
-Assets is where you indicate which assets to import into this build. These can be any assets that you've uploaded with the (Probo Uploader)[http://probo.ci/docs/uploader/].
+Assets is where you indicate which assets to import into this build. These can be any assets that you've uploaded with the [Probo Uploader](http://probo.ci/docs/uploader/).
 
 For example, if you need to use a an asset you've uploaded with filename dev.sql.gz, start .probo.yaml file with:
 {% highlight yaml%}
@@ -29,11 +29,17 @@ Each step must have a `name`. The name of each step is the build context, and wi
 
 ### Plugins
 
+Each step also has a `plugin`. The default plugin is `shell`.  Depending on the `plugin` you specify, you will have access to various parameters. These parameters allow you to configure your Probo site build.
+
 #### 1. Shell Plugin
 
-Each step also has a `plugin`. The default plugin is `shell`.
+The shell plugin requires a parameter for `command`. This allows you to define shell commands to run during the site build. You can list as many commands as you like within the steps in your .probo.yaml file. Remember to include a `name` for each `command`.
 
-Depending on the `plugin` you specify, you may have other parameters depending on the step plugin used. The shell plugin requires a parameter for 'command'.
+The shell plugin provides several variables to use within your `.probo.yaml` file.
+
+- `$SRC_DIR` : The filepath which contains the code from your pull request.
+- `$ASSET_DIR` : The filepath which contains any assets you uploaded to your Probo project.
+- `$BUILD_ID` : The ID for the build.
 
 ##### Examples
 
@@ -61,21 +67,6 @@ steps:
     command: 'mv $SRC_DIR /var/www/foo/code'
   - name: Run behat tests
     command: 'cd /var/www/foo/code/tests ; composer install ; bin/behat'
-{% endhighlight %}
-
-###### Developing a Drupal module:
-
-{% highlight yaml%}
-steps:
-  - plugin: shell
-  - name: Create a D7 site
-    command: "drush fec drupal7 --json-config='{\"settings_php.snippets\": []}'"
-  - name: Add our module code
-    command: 'cp -r $SRC_DIR /var/www/drupal7/webroot/sites/all/modules'
-  - name: Enable our module, 'foo'.
-    command: 'drush --root=/var/www/drupal7/webroot en foo -y'
-  - name: Fix permissions
-    command: 'chown -R www-data:www-data /var/www/fetcherserver/webroot/sites/default/files'
 {% endhighlight %}
 
 #### 2. Drupal Plugin
@@ -148,14 +139,6 @@ steps:
     databaseUpdates: true
     revertFeatures: true
 {% endhighlight %}
-
-### Available variables:
-
-You can use several variables within your `.probo.yaml` file.
-
-- `$SRC_DIR` : The filepath which contains the code from your pull request.
-- `$ASSET_DIR` : The filepath which contains any assets you uploaded to your Probo project.
-- `$BUILD_ID` : The ID for the build.
 
 ## Iterating until your build configuration succeeds:
 

@@ -79,22 +79,22 @@ The Drupal plugin provides parameters for your build steps if you are using Prob
 
 | Directory Configuration |                                                                                                   |
 |-------------------------|---------------------------------------------------------------------------------------------------|
-|`makeFile`               | <ul><li>The name of the [Drush make file](http://www.drush.org/en/master/make/) to run to generate                             the install directory.</li> <li>Accepts a **string** value.</li></ul>                             |
-|`profileName`            | <ul><li>The profile name used in creating a symlink to this directory if a Drush make file is                                  specified with the `makeFile` option and used to select the profile to install if the `runInstall`                             option is selected.</li> <li>Accepts a **string** value.</li></ul>                                |
-|`runInstall`             | <ul><li>If set, run `drush site-install` to perform a fresh install of the site using the                                      `profileName` as the install profile and allowing the `installArgs` option to configure the                                    install.</li><li>Accepts a **boolean** value.</i>/ul>                                             |
-|`installArgs`            | <ul><li>A set of parameters to concatenate onto the `drush site-install` command if the                                        `runInstall` option is set.</li><li>Defaults to ''.</li><li>Accepts a **string** value.</li></ul> |
-|`siteFolder`             | <ul><li>Specifies the site folder to use for this build (the folder within the Drupal `sites`                                  folder).</li><li>Defaults to `default`.</li><li>Accepts a **string** value.</li></ul>             |
+|`makeFile`               | The name of the [Drush make file](http://www.drush.org/en/master/make/) to run to generate                             the install directory. Accepts a **string** value.                             |
+|`profileName`            | The profile name used in creating a symlink to this directory if a Drush make file is                                  specified with the `makeFile` option and used to select the profile to install if the `runInstall`                             option is selected. Accepts a **string** value.                                |
+|`runInstall`             | If set, run `drush site-install` to perform a fresh install of the site using the                                      `profileName` as the install profile and allowing the `installArgs` option to configure the                                    install.Accepts a **boolean** value.</i>/ul>                                             |
+|`installArgs`            | A set of parameters to concatenate onto the `drush site-install` command if the                                        `runInstall` option is set.Defaults to ''.Accepts a **string** value. |
+|`siteFolder`             | Specifies the site folder to use for this build (the folder within the Drupal `sites`                                  folder).Defaults to `default`.Accepts a **string** value.             |
 
 | Database Configuration  |                                                                                                   |
 --------------------------|---------------------------------------------------------------------------------------------------|
-| `database`              |<ul><li>The name of the database to import if specified. Note that this database *must be added as                             an asset separately*.</li><li>Accepts a **string** value.</li></ul>                                |
-| `databaseGzipped`       |<ul><li>Whether the database was sent gzipped and whether it should therefore be gunzipped before                               importing.</li><li>Accepts a **boolean** value.</li></ul>                                         |
+| `database`              |The name of the database to import if specified. Note that this database *must be added as                             an asset separately*.Accepts a **string** value.                                |
+| `databaseGzipped`       |Whether the database was sent gzipped and whether it should therefore be gunzipped before                               importing.Accepts a **boolean** value.                                         |
 
 | Additional Options    |                                                                                                     |
 |-----------------------|-----------------------------------------------------------------------------------------------------|
-| `databaseUpdates`     |<ul><li>Determines whether to run `drush updb` after the build is finished.</li><li>Accepts a                                  **boolean** value.</li></ul>                                                                         |
-| `clearCaches`         |<ul><li>Whether to clear all caches after the build is finished.</li><li>Defaults to                                           true.</li><li>Accepts a **boolean** value.</li></ul>                                                 |
-| `revertFeatures`      |<ul><li>Whether to revert features using `drush fra` after the build is finished.</li><li>Accepts a                             **boolean** value.</li></ul>                                                                        |
+| `databaseUpdates`     |Determines whether to run `drush updb` after the build is finished.Accepts a                                  **boolean** value.                                                                         |
+| `clearCaches`         |Whether to clear all caches after the build is finished.Defaults to                                           true.Accepts a **boolean** value.                                                 |
+| `revertFeatures`      |Whether to revert features using `drush fra` after the build is finished.Accepts a                             **boolean** value.                                                                        |
 
 ##### Examples
 

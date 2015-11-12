@@ -77,13 +77,13 @@ The Drupal plugin provides parameters for your build steps if you are using Prob
 
 ##### Available Parameters
 
-| Directory Configuration |                                                                                                 |
-|-------------------------|-------------------------------------------------------------------------------------------------|
-|`makeFile`               | <ul><li>The name of the make file to run to generate the install directory.</li> <li>Accepts a                                 **string** value.</li></ul>                                                                     |
-|`profileName`            | <ul><li>The profile name used in creating a symlink to this directory if a make file is specified                              with the `makeFile` option and used to select the profile to install if the `runInstall` option is                             selected.</li> <li>Accepts a **string** value.</li></ul>                                        |
-|`runInstall`             | <ul><li>If set, run `drush site-install` to perform a fresh install of the site using the                                      `profileName` as the install profile and allowing the `installArgs` option to configure the                                    install.</li><li>Accepts a **boolean** value.</i>/ul>                                           |
-|`installArgs`            | <ul><li>A set of parameters to concatenate onto the `drush site-install` command if the                                        `runInstall` option is set.</li><li>Defaults to ''.</li><li>Accepts a **string** value.</li></ul>|
-|`siteFolder`             | <ul><li>Specifies the site folder to use for this build (the folder within the Drupal `sites`                                  folder).</li><li>Defaults to `default`.</li><li>Accepts a **string** value.</li></ul>           |
+| Directory Configuration |                                                                                                   |
+|-------------------------|---------------------------------------------------------------------------------------------------|
+|`makeFile`               | <ul><li>The name of the [Drush make file](http://www.drush.org/en/master/make/) to run to generate                             the install directory.</li> <li>Accepts a **string** value.</li></ul>                             |
+|`profileName`            | <ul><li>The profile name used in creating a symlink to this directory if a Drush make file is                                  specified with the `makeFile` option and used to select the profile to install if the `runInstall`                             option is selected.</li> <li>Accepts a **string** value.</li></ul>                                |
+|`runInstall`             | <ul><li>If set, run `drush site-install` to perform a fresh install of the site using the                                      `profileName` as the install profile and allowing the `installArgs` option to configure the                                    install.</li><li>Accepts a **boolean** value.</i>/ul>                                             |
+|`installArgs`            | <ul><li>A set of parameters to concatenate onto the `drush site-install` command if the                                        `runInstall` option is set.</li><li>Defaults to ''.</li><li>Accepts a **string** value.</li></ul> |
+|`siteFolder`             | <ul><li>Specifies the site folder to use for this build (the folder within the Drupal `sites`                                  folder).</li><li>Defaults to `default`.</li><li>Accepts a **string** value.</li></ul>             |
 
 | Database Configuration  |                                                                                                   |
 --------------------------|---------------------------------------------------------------------------------------------------|

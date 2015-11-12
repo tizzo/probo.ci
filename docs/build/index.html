@@ -12,7 +12,7 @@
 
   <link rel="stylesheet" href="/assets/probo-882ad8545b75d5c2880f6eafeee429f9.css">
 
-  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-c723f1c2c062d8e5986a33d8bfa54675.png" />
+  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-2fe420f548ccd6a54a91c707d9b11696.png" />
   <link rel="canonical" href="http://probo.ci/docs/build/">
   
 </head>
@@ -91,26 +91,57 @@
 
 <p>The .probo.yaml is split into a section for <strong>‘assets’</strong> and a section for <strong>‘steps’</strong>.</p>
 
-<h3 id="assets">Assets</h3>
+<h2 id="assets">Assets</h2>
 
-<p>Assets is where you indicate which assets to import into this build. These can be any assets that you’ve uploaded with the (Probo Uploader)[http://probo.ci/docs/uploader/].</p>
+<p>Assets is where you indicate which assets to import into this build. These can be any assets that you’ve uploaded with the <a href="http://probo.ci/docs/uploader/">Probo Uploader</a>.</p>
 
 <p>For example, if you need to use a an asset you’ve uploaded with filename dev.sql.gz, start .probo.yaml file with:</p>
 
 <div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">assets</span><span class="p-Indicator">:</span>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">dev.sql.gz</span></code></pre></div>
 
-<h3 id="steps">Steps</h3>
+<h2 id="steps">Steps</h2>
 
 <p>Steps are the commands to run for the build. These are typically steps for setting up a site and running tests. </p>
 
 <p>Each step must have a <code>name</code>. The name of each step is the build context, and will get its own status updates.</p>
 
-<p>Each step also has a <code>plugin</code>. The default plugin is <code>shell</code>.</p>
+<h3 id="plugins">Plugins</h3>
 
-<p>Depending on the <code>plugin</code> you specify, you may have other parameters depending on the step plugin used. The shell plugin requires a parameter for ‘command’.</p>
+<p>Each step also has a <code>plugin</code>. The default plugin is <code>shell</code>.  Depending on the <code>plugin</code> you specify, you will have access to various parameters. These parameters allow you to configure your Probo site build.</p>
 
-<p>For example, a few steps using the ‘shell’ plugin:</p>
+<h4 id="shell-plugin">1. Shell Plugin</h4>
+
+<p>The shell plugin requires a parameter for <code>command</code>. This allows you to define shell commands to run during the site build. You can list as many commands as you like within the steps in your .probo.yaml file. Remember to include a <code>name</code> for each <code>command</code>.</p>
+
+<p>The shell plugin provides several variables to use within your <code>.probo.yaml</code> file.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Available Variables</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>$SRC_DIR</code></td>
+      <td>The filepath which contains the code from your pull request.</td>
+    </tr>
+    <tr>
+      <td><code>$ASSET_DIR</code></td>
+      <td>The filepath which contains any assets you uploaded to your Probo project.</td>
+    </tr>
+    <tr>
+      <td><code>$BUILD_ID</code></td>
+      <td>The ID for the build.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="examples">Examples</h5>
+
+<h6 id="using-the-shell-plugin">Using the <code>shell</code> plugin</h6>
 
 <div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">steps</span><span class="p-Indicator">:</span>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Run behat tests</span>
@@ -119,78 +150,12 @@
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Another example test with default shell plugin</span>
     <span class="l-Scalar-Plain">command</span><span class="p-Indicator">:</span> <span class="s">&#39;echo</span><span class="nv"> </span><span class="s">&quot;Hello</span><span class="nv"> </span><span class="s">World!&quot;&#39;</span></code></pre></div>
 
-<h4 id="drupal-plugin">Drupal Plugin</h4>
-
-<p>The Drupal plugin provides options for your build steps if you are using Probo for a Drupal site. </p>
-
-<p>Here is the list of available options:</p>
-
-<h5 id="directory-configuration">Directory Configuration</h5>
-
-<p><code>makeFile</code><br />
-  - The name of the make file to run to generate the install directory.<br />
-  - Accepts a <strong>string</strong> value.</p>
-
-<p><code>profileName</code><br />
-  - The profile name used in creating a symlink to this directory if a make file is specified with the <code>makeFile</code> option and used to select the profile to install if the <code>runInstall</code> option is selected.<br />
-  - Accepts a <strong>string</strong> value.</p>
-
-<p><code>runInstall</code><br />
-  - If set, run <code>drush site-install</code> to perform a fresh install of the site using the <code>profileName</code> as the install profile and allowing the <code>installArgs</code> option to configure the install.<br />
-  - Accepts a <strong>boolean</strong> value.</p>
-
-<p><code>installArgs</code><br />
-  - A set of parameters to concatenate onto the <code>drush site-install</code> command if the <code>runInstall</code> option is set.<br />
-  - Defaults to ‘’.<br />
-  - Accepts a <strong>string</strong> value.</p>
-
-<p><code>siteFolder</code> <br />
-  - Specifies the site folder to use for this build (the folder within the Drupal <code>sites</code> folder).<br />
-  - Defaults to <code>default</code>.<br />
-  - Accepts a <strong>string</strong> value.</p>
-
-<h5 id="database-configuration">Database Configuration</h5>
-
-<p><code>database</code><br />
-  - The name of the database to import if specified. Note that this database <em>must be added as an asset separately</em>.<br />
-  - Accepts a <strong>string</strong> value.</p>
-
-<p><code>databaseGzipped</code><br />
-  - Whether the database was sent gzipped and whether it should therefore be gunzipped before importing.<br />
-  - Accepts a <strong>boolean</strong> value.</p>
-
-<h5 id="additional-options">Additional Options</h5>
-
-<p><code>databaseUpdates</code><br />
-  - Determines whether to run <code>drush updb</code> after the build is finished.<br />
-  - Accepts a <strong>boolean</strong> value.</p>
-
-<p><code>clearCaches</code><br />
-  - Whether to clear all caches after the build is finished. <br />
-  - Defaults to true.<br />
-  - Accepts a <strong>boolean</strong> value.</p>
-
-<p><code>revertFeatures</code><br />
-  - Whether to revert features using <code>drush fra</code> after the build is finished.<br />
-  - Accepts a <strong>boolean</strong> value.</p>
-
-<h4 id="available-variables">Available variables:</h4>
-
-<p>You can use several variables within your <code>.probo.yaml</code> file.</p>
-
-<ul>
-  <li><code>$SRC_DIR</code> : The filepath which contains the code from your pull request.</li>
-  <li><code>$ASSET_DIR</code> : The filepath which contains any assets you uploaded to your Probo project.</li>
-  <li><code>$BUILD_ID</code> : The ID for the build.</li>
-</ul>
-
-<h3 id="sample-proboyaml-files">Sample <code>.probo.yaml</code> files:</h3>
-
-<h4 id="developing-on-a-site-with-a-database">Developing on a site with a database.</h4>
+<h6 id="developing-on-a-site-with-a-database">Developing on a site with a database:</h6>
 
 <div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">assets</span><span class="p-Indicator">:</span>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">dev.sql.gz</span>
 <span class="l-Scalar-Plain">steps</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">plugin</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">shell</span>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Import the database</span>
     <span class="l-Scalar-Plain">command</span><span class="p-Indicator">:</span> <span class="s">&#39;gunzip</span><span class="nv"> </span><span class="s">-c</span><span class="nv"> </span><span class="s">$ASSET_DIR/dev.sql.gz</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">`mysql</span><span class="nv"> </span><span class="s">foo`</span><span class="nv"> </span><span class="s">;</span><span class="nv"> </span><span class="s">rm</span><span class="nv"> </span><span class="s">$ASSET_DIR/dev.sql.gz&#39;</span>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Move code in place</span>
@@ -198,7 +163,88 @@
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Run behat tests</span>
     <span class="l-Scalar-Plain">command</span><span class="p-Indicator">:</span> <span class="s">&#39;cd</span><span class="nv"> </span><span class="s">/var/www/foo/code/tests</span><span class="nv"> </span><span class="s">;</span><span class="nv"> </span><span class="s">composer</span><span class="nv"> </span><span class="s">install</span><span class="nv"> </span><span class="s">;</span><span class="nv"> </span><span class="s">bin/behat&#39;</span></code></pre></div>
 
-<h4 id="developing-on-a-drupal-site-with-a-database">Developing on a Drupal site with a database.</h4>
+<h4 id="drupal-plugin">2. Drupal Plugin</h4>
+
+<p>The Drupal plugin provides parameters for your build steps if you are using Probo for a Drupal site. </p>
+
+<h5 id="available-parameters">Available Parameters</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Directory Configuration</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>makeFile</code></td>
+      <td>&lt;ul&gt;&lt;li&gt;The name of the <a href="http://www.drush.org/en/master/make/">Drush make file</a> to run to generate                             the install directory.&lt;/li&gt; &lt;li&gt;Accepts a <strong>string</strong> value.&lt;/li&gt;&lt;/ul&gt;</td>
+    </tr>
+    <tr>
+      <td><code>profileName</code></td>
+      <td>&lt;ul&gt;&lt;li&gt;The profile name used in creating a symlink to this directory if a Drush make file is                                  specified with the <code>makeFile</code> option and used to select the profile to install if the <code>runInstall</code>                             option is selected.&lt;/li&gt; &lt;li&gt;Accepts a <strong>string</strong> value.&lt;/li&gt;&lt;/ul&gt;</td>
+    </tr>
+    <tr>
+      <td><code>runInstall</code></td>
+      <td>&lt;ul&gt;&lt;li&gt;If set, run <code>drush site-install</code> to perform a fresh install of the site using the                                      <code>profileName</code> as the install profile and allowing the <code>installArgs</code> option to configure the                                    install.&lt;/li&gt;&lt;li&gt;Accepts a <strong>boolean</strong> value.&lt;/i&gt;/ul&gt;</td>
+    </tr>
+    <tr>
+      <td><code>installArgs</code></td>
+      <td>&lt;ul&gt;&lt;li&gt;A set of parameters to concatenate onto the <code>drush site-install</code> command if the                                        <code>runInstall</code> option is set.&lt;/li&gt;&lt;li&gt;Defaults to ‘’.&lt;/li&gt;&lt;li&gt;Accepts a <strong>string</strong> value.&lt;/li&gt;&lt;/ul&gt;</td>
+    </tr>
+    <tr>
+      <td><code>siteFolder</code></td>
+      <td>&lt;ul&gt;&lt;li&gt;Specifies the site folder to use for this build (the folder within the Drupal <code>sites</code>                                  folder).&lt;/li&gt;&lt;li&gt;Defaults to <code>default</code>.&lt;/li&gt;&lt;li&gt;Accepts a <strong>string</strong> value.&lt;/li&gt;&lt;/ul&gt;</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Database Configuration</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>database</code></td>
+      <td>&lt;ul&gt;&lt;li&gt;The name of the database to import if specified. Note that this database <em>must be added as                             an asset separately</em>.&lt;/li&gt;&lt;li&gt;Accepts a <strong>string</strong> value.&lt;/li&gt;&lt;/ul&gt;</td>
+    </tr>
+    <tr>
+      <td><code>databaseGzipped</code></td>
+      <td>&lt;ul&gt;&lt;li&gt;Whether the database was sent gzipped and whether it should therefore be gunzipped before                               importing.&lt;/li&gt;&lt;li&gt;Accepts a <strong>boolean</strong> value.&lt;/li&gt;&lt;/ul&gt;</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Additional Options</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>databaseUpdates</code></td>
+      <td>&lt;ul&gt;&lt;li&gt;Determines whether to run <code>drush updb</code> after the build is finished.&lt;/li&gt;&lt;li&gt;Accepts a                                  <strong>boolean</strong> value.&lt;/li&gt;&lt;/ul&gt;</td>
+    </tr>
+    <tr>
+      <td><code>clearCaches</code></td>
+      <td>&lt;ul&gt;&lt;li&gt;Whether to clear all caches after the build is finished.&lt;/li&gt;&lt;li&gt;Defaults to                                           true.&lt;/li&gt;&lt;li&gt;Accepts a <strong>boolean</strong> value.&lt;/li&gt;&lt;/ul&gt;</td>
+    </tr>
+    <tr>
+      <td><code>revertFeatures</code></td>
+      <td>&lt;ul&gt;&lt;li&gt;Whether to revert features using <code>drush fra</code> after the build is finished.&lt;/li&gt;&lt;li&gt;Accepts a                             <strong>boolean</strong> value.&lt;/li&gt;&lt;/ul&gt;</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="examples-1">Examples</h5>
+
+<h6 id="using-the-drupal-plugin">Using the <code>drupal</code> plugin</h6>
 
 <div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">assets</span><span class="p-Indicator">:</span>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">mydb.sql.gz</span>
@@ -210,19 +256,7 @@
     <span class="l-Scalar-Plain">databaseUpdates</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
     <span class="l-Scalar-Plain">revertFeatures</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span></code></pre></div>
 
-<h4 id="developing-a-drupal-module">Developing a Drupal module.</h4>
-
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">steps</span><span class="p-Indicator">:</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Create a D7 site</span>
-    <span class="l-Scalar-Plain">command</span><span class="p-Indicator">:</span> <span class="s">&quot;drush</span><span class="nv"> </span><span class="s">fec</span><span class="nv"> </span><span class="s">drupal7</span><span class="nv"> </span><span class="s">--json-config=&#39;{\&quot;settings_php.snippets\&quot;:</span><span class="nv"> </span><span class="s">[]}&#39;&quot;</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Add our module code</span>
-    <span class="l-Scalar-Plain">command</span><span class="p-Indicator">:</span> <span class="s">&#39;cp</span><span class="nv"> </span><span class="s">-r</span><span class="nv"> </span><span class="s">$SRC_DIR</span><span class="nv"> </span><span class="s">/var/www/drupal7/webroot/sites/all/modules&#39;</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Enable our module, &#39;foo&#39;.</span>
-    <span class="l-Scalar-Plain">command</span><span class="p-Indicator">:</span> <span class="s">&#39;drush</span><span class="nv"> </span><span class="s">--root=/var/www/drupal7/webroot</span><span class="nv"> </span><span class="s">en</span><span class="nv"> </span><span class="s">foo</span><span class="nv"> </span><span class="s">-y&#39;</span>
-  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">name</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Fix permissions</span>
-    <span class="l-Scalar-Plain">command</span><span class="p-Indicator">:</span> <span class="s">&#39;chown</span><span class="nv"> </span><span class="s">-R</span><span class="nv"> </span><span class="s">www-data:www-data</span><span class="nv"> </span><span class="s">/var/www/fetcherserver/webroot/sites/default/files&#39;</span></code></pre></div>
-
-<h3 id="iterating-until-your-build-configuration-succeeds">Iterating until your build configuration succeeds:</h3>
+<h2 id="iterating-until-your-build-configuration-succeeds">Iterating until your build configuration succeeds:</h2>
 
 <p>Create a new branch in git and add the new <code>.probo.yaml</code> file in the root of the repository. Create a new Pull Request for that branch. You should see your build steps running on the pull request.</p>
 
@@ -248,7 +282,7 @@
         </div>
     </div>
     <div class="wrapper">
-        <img src="/assets/probo-logo-bw-225-109874e74e3b50b43e5b43d50ad41a33.png" alt='black and white probo logo' class='site-footer__logo'>
+        <img src="/assets/probo-logo-bw-225-f8f0808f11e2ba82b59c00897b6b4477.png" alt='black and white probo logo' class='site-footer__logo'>
         <div class="right">
             <a href="/docs" title="Probo Documentation" >Documentation</a>
             <a href="/blog" title="Probo Blog" >Blog</a>

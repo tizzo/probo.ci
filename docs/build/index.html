@@ -12,7 +12,7 @@
 
   <link rel="stylesheet" href="/assets/probo-882ad8545b75d5c2880f6eafeee429f9.css">
 
-  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-2fe420f548ccd6a54a91c707d9b11696.png" />
+  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-4c1724e12cefc0a5c62c0583264f3f71.png" />
   <link rel="canonical" href="http://probo.ci/docs/build/">
   
 </head>
@@ -179,23 +179,23 @@
   <tbody>
     <tr>
       <td><code>makeFile</code></td>
-      <td>&lt;ul&gt;&lt;li&gt;The name of the <a href="http://www.drush.org/en/master/make/">Drush make file</a> to run to generate                             the install directory.&lt;/li&gt; &lt;li&gt;Accepts a <strong>string</strong> value.&lt;/li&gt;&lt;/ul&gt;</td>
+      <td>The name of the <a href="http://www.drush.org/en/master/make/">Drush make file</a> to run to generate                             the install directory. Accepts a <strong>string</strong> value.</td>
     </tr>
     <tr>
       <td><code>profileName</code></td>
-      <td>&lt;ul&gt;&lt;li&gt;The profile name used in creating a symlink to this directory if a Drush make file is                                  specified with the <code>makeFile</code> option and used to select the profile to install if the <code>runInstall</code>                             option is selected.&lt;/li&gt; &lt;li&gt;Accepts a <strong>string</strong> value.&lt;/li&gt;&lt;/ul&gt;</td>
+      <td>The profile name used in creating a symlink to this directory if a Drush make file is                                  specified with the <code>makeFile</code> option and used to select the profile to install if the <code>runInstall</code>                             option is selected. Accepts a <strong>string</strong> value.</td>
     </tr>
     <tr>
       <td><code>runInstall</code></td>
-      <td>&lt;ul&gt;&lt;li&gt;If set, run <code>drush site-install</code> to perform a fresh install of the site using the                                      <code>profileName</code> as the install profile and allowing the <code>installArgs</code> option to configure the                                    install.&lt;/li&gt;&lt;li&gt;Accepts a <strong>boolean</strong> value.&lt;/i&gt;/ul&gt;</td>
+      <td>If set, run <code>drush site-install</code> to perform a fresh install of the site using the                                      <code>profileName</code> as the install profile and allowing the <code>installArgs</code> option to configure the                                    install.Accepts a <strong>boolean</strong> value.&lt;/i&gt;/ul&gt;</td>
     </tr>
     <tr>
       <td><code>installArgs</code></td>
-      <td>&lt;ul&gt;&lt;li&gt;A set of parameters to concatenate onto the <code>drush site-install</code> command if the                                        <code>runInstall</code> option is set.&lt;/li&gt;&lt;li&gt;Defaults to ‘’.&lt;/li&gt;&lt;li&gt;Accepts a <strong>string</strong> value.&lt;/li&gt;&lt;/ul&gt;</td>
+      <td>A set of parameters to concatenate onto the <code>drush site-install</code> command if the                                        <code>runInstall</code> option is set.Defaults to ‘‘.Accepts a <strong>string</strong> value.</td>
     </tr>
     <tr>
       <td><code>siteFolder</code></td>
-      <td>&lt;ul&gt;&lt;li&gt;Specifies the site folder to use for this build (the folder within the Drupal <code>sites</code>                                  folder).&lt;/li&gt;&lt;li&gt;Defaults to <code>default</code>.&lt;/li&gt;&lt;li&gt;Accepts a <strong>string</strong> value.&lt;/li&gt;&lt;/ul&gt;</td>
+      <td>Specifies the site folder to use for this build (the folder within the Drupal <code>sites</code>                                  folder).Defaults to <code>default</code>.Accepts a <strong>string</strong> value.</td>
     </tr>
   </tbody>
 </table>
@@ -210,11 +210,11 @@
   <tbody>
     <tr>
       <td><code>database</code></td>
-      <td>&lt;ul&gt;&lt;li&gt;The name of the database to import if specified. Note that this database <em>must be added as                             an asset separately</em>.&lt;/li&gt;&lt;li&gt;Accepts a <strong>string</strong> value.&lt;/li&gt;&lt;/ul&gt;</td>
+      <td>The name of the database to import if specified. Note that this database <em>must be added as                             an asset separately</em>.Accepts a <strong>string</strong> value.</td>
     </tr>
     <tr>
       <td><code>databaseGzipped</code></td>
-      <td>&lt;ul&gt;&lt;li&gt;Whether the database was sent gzipped and whether it should therefore be gunzipped before                               importing.&lt;/li&gt;&lt;li&gt;Accepts a <strong>boolean</strong> value.&lt;/li&gt;&lt;/ul&gt;</td>
+      <td>Whether the database was sent gzipped and whether it should therefore be gunzipped before                               importing.Accepts a <strong>boolean</strong> value.</td>
     </tr>
   </tbody>
 </table>
@@ -229,15 +229,15 @@
   <tbody>
     <tr>
       <td><code>databaseUpdates</code></td>
-      <td>&lt;ul&gt;&lt;li&gt;Determines whether to run <code>drush updb</code> after the build is finished.&lt;/li&gt;&lt;li&gt;Accepts a                                  <strong>boolean</strong> value.&lt;/li&gt;&lt;/ul&gt;</td>
+      <td>Determines whether to run <code>drush updb</code> after the build is finished.Accepts a                                  <strong>boolean</strong> value.</td>
     </tr>
     <tr>
       <td><code>clearCaches</code></td>
-      <td>&lt;ul&gt;&lt;li&gt;Whether to clear all caches after the build is finished.&lt;/li&gt;&lt;li&gt;Defaults to                                           true.&lt;/li&gt;&lt;li&gt;Accepts a <strong>boolean</strong> value.&lt;/li&gt;&lt;/ul&gt;</td>
+      <td>Whether to clear all caches after the build is finished.Defaults to                                           true.Accepts a <strong>boolean</strong> value.</td>
     </tr>
     <tr>
       <td><code>revertFeatures</code></td>
-      <td>&lt;ul&gt;&lt;li&gt;Whether to revert features using <code>drush fra</code> after the build is finished.&lt;/li&gt;&lt;li&gt;Accepts a                             <strong>boolean</strong> value.&lt;/li&gt;&lt;/ul&gt;</td>
+      <td>Whether to revert features using <code>drush fra</code> after the build is finished.Accepts a                             <strong>boolean</strong> value.</td>
     </tr>
   </tbody>
 </table>
@@ -282,7 +282,7 @@
         </div>
     </div>
     <div class="wrapper">
-        <img src="/assets/probo-logo-bw-225-f8f0808f11e2ba82b59c00897b6b4477.png" alt='black and white probo logo' class='site-footer__logo'>
+        <img src="/assets/probo-logo-bw-225-c84983ac8393f07a756786794fcd233b.png" alt='black and white probo logo' class='site-footer__logo'>
         <div class="right">
             <a href="/docs" title="Probo Documentation" >Documentation</a>
             <a href="/blog" title="Probo Blog" >Blog</a>

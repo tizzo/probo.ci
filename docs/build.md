@@ -29,13 +29,15 @@ Each step must have a `name`. The name of each step is the build context, and wi
 
 ### Plugins
 
-Each step also has a `plugin`. The default plugin is `shell`.  Depending on the `plugin` you specify, you will have access to various parameters. These parameters allow you to configure your Probo site build.
+Each step also has a `Plugin`. The default Plugin is `Shell`.  Depending on the `Plugin` you specify, you will have access to various parameters. These parameters allow you to configure your Probo site build.
+
+**Please Note:** Currently, Plugin names are case sensitive. This means that `shell` will not work.
 
 #### 1. Shell Plugin
 
-The shell plugin requires a parameter for `command`. This allows you to define shell commands to run during the site build. You can list as many commands as you like within the steps in your .probo.yaml file. Remember to include a `name` for each `command`.
+The Shell plugin requires a parameter for `command`. This allows you to define Shell commands to run during the site build. You can list as many commands as you like within the steps in your .probo.yaml file. Remember to include a `name` for each `command`.
 
-The shell plugin provides several variables to use within your `.probo.yaml` file.
+The Shell plugin provides several variables to use within your `.probo.yaml` file.
 
 | Available Variables |                                                                     |
 | ----------- | --------------------------------------------------------------------------- |
@@ -45,14 +47,14 @@ The shell plugin provides several variables to use within your `.probo.yaml` fil
 
 ##### Examples
 
-###### Using the `shell` plugin
+###### Using the `Shell` plugin
 
 {% highlight yaml%}
 steps:
   - name: Run behat tests
-    plugin: shell
+    plugin: Shell
     command: 'cd tests ; composer install ; bin/behat'
-  - name: Another example test with default shell plugin
+  - name: Another example test with default Shell plugin
     command: 'echo "Hello World!"'
 {% endhighlight %}
 
@@ -62,7 +64,7 @@ steps:
 assets:
   - dev.sql.gz
 steps:
-  - plugin: shell
+  - plugin: Shell
   - name: Import the database
     command: 'gunzip -c $ASSET_DIR/dev.sql.gz | `mysql foo` ; rm $ASSET_DIR/dev.sql.gz'
   - name: Move code in place
@@ -98,7 +100,7 @@ The Drupal plugin provides parameters for your build steps if you are using Prob
 
 ##### Examples
 
-###### Using the `drupal` plugin
+###### Using the `Drupal` plugin
 
 {% highlight yaml%}
 assets:

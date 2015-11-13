@@ -7,11 +7,11 @@ published: true
 ---
 QA and code review is a critical part of any delivery process. Probo simplifies the workflow and eliminates the need for a senior developer to push and merge changes before testing. Probo creates a real instance of your site where you can preview each change.
 
-1. Developers complete a feature and make a pull request in Github or Stash/Bitbucket.
+1. Developers complete a feature and make a pull request in GitHub or Stash/Bitbucket.
 
 2. Probo creates a new build.
 
-3. If automated tests pass, it’s ready for review.
+3. If automated tests pass, it is ready for review.
 
 4. QA or product owner reviews the new feature in the Probo build.
 

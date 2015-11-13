@@ -1,6 +1,6 @@
 ---
 layout: "about"
-title: About
+title: About Us
 class: about
 permalink: /about/
 published: true

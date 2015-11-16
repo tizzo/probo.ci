@@ -24,6 +24,6 @@ You're probably not going to execute all of that code, but you're going to have 
 
 The other thing that makes it almost impossible to get perfect testing for Drupal is that there's too much in the database. There's a huge amount of configuration in the database and while it's really instructive and useful to do brand new, blue sky builds where you say, "Let me build this as an install profile from scratch," there's still a huge amount of stuff that can go into the database, can change on production, and can break stuff.
 
-The problem with Drupal is that it's really difficult to build some kind of automated test suite where a computer can really tell you that 100% of the stuff you care about isn't broken. What’s the solution? Probo.ci.
+The problem with Drupal is that it's really difficult to build some kind of automated test suite where a computer can really tell you that 100% of the stuff you care about isn't broken. What’s the solution? [Probo.ci](http://probo.ci).
 
 _Stay tuned for Part 2 of Howard’s talk on revolutionizing user acceptance testing through Probo.ci._

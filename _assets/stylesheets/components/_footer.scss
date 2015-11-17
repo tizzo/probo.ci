@@ -50,7 +50,7 @@
     display: inline-block;
     margin: 0;
   }
-  .right{
+  .right {
     @include breakpoint($bp-medium-landscape) {
       position: absolute;
       right: 112.5px;
@@ -81,8 +81,18 @@
     color:$grey;
     padding-bottom:15px;
     @include breakpoint($bp-medium-landscape) {
-    text-align:right;
-    padding-bottom:0;
+      text-align:right;
+      padding-bottom:0;
+      clear: both;
     }
+  }
+}
+
+ul.footer-navigation {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style-type: none;
+    display: inline;
   }
 }

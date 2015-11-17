@@ -1,3 +1,14 @@
+$probo-blue: #0e4f6d;
+$probo-green: #6dc28e;
+$probo-purple: #4d0939;
+
+@mixin white-text {
+  color: $off-white;
+  h1, h2, h3, h4, h5 {
+    color: $off-white;
+  }
+}
+
 .home {
   display: table;
   width: 100%;
@@ -47,31 +58,46 @@
 [data-slide='0'] {
   background: image-url('probo-gradient-bg.png') top left repeat-x #19010E;
   background-size: cover;
-  color: $off-white;
+  @include white-text;
 }
 
 [data-slide='1'] {
-  color: $off-black;
 }
 
 [data-slide='2'] {
-  background-color: $toledo;
-  color: $off-white;
 }
 
 [data-slide='3'] {
-  background-color: white;
-  color: $off-black;
 }
 
 .two-col .col {
-  width: 45%;
-  float: left;
+  width: 100%;
+  float: none;
   display: block;
   margin-left: 0;
-  margin-right: 5%;
+  margin-right: 0;
   text-align: left;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
+  clear: both;
+  @include breakpoint($bp-medium-portrait) {
+    width: 45%;
+    float: left;
+    display: block;
+    margin-left: 0;
+    margin-right: 5%;
+    text-align: left;
+    margin-bottom: 24px;
+    clear: none;
+    &:nth-of-type(1n) {
+      margin-left: 0;
+    }
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+    &:nth-child(2n + 1) {
+      clear: both;
+    }
+  }
   &:nth-of-type(1n) {
     margin-left: 0;
   }
@@ -83,6 +109,44 @@
   }
 }
 
+.three-col .col {
+  width: 100%;
+  float: none;
+  display: block;
+  margin-left: 0;
+  margin-right: 0%;
+  text-align: left;
+  margin-bottom: 12px;
+  clear: both;
+  @include breakpoint($bp-medium-portrait) {
+    width: 30%;
+    float: left;
+    display: block;
+    margin-left: 0;
+    margin-right: 3%;
+    text-align: left;
+    margin-bottom: 24px;
+    clear: none;
+    &:nth-of-type(1n) {
+      margin-left: 0;
+    }
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
+    &:nth-child(3n + 1) {
+      clear: both;
+    }
+  }
+  &:nth-of-type(1n) {
+    margin-left: 0;
+  }
+  &:nth-of-type(3n) {
+    margin-right: 0;
+  }
+  &:nth-child(3n + 1) {
+    clear: both;
+  }
+}
 .column.create,
 .column.test,
 .column.verify {
@@ -96,8 +160,6 @@
       margin-right: 0;
     }
   }
-
-
 
   @at-root {
     .column__svg {
@@ -120,9 +182,23 @@
       display: block;
       margin: 0;
     }
-
     .column__content {
       @include rem(font-size, 12px);
     }
   }
+}
+
+.blue-slide {
+  background: $probo-blue;
+  @include white-text;
+}
+
+.green-slide {
+  background: $probo-green;
+  @include white-text;
+}
+
+.purple-slide {
+  background: $probo-purple;
+  @include white-text;
 }

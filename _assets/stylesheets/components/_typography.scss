@@ -11,7 +11,7 @@ html {
 
 body {
   line-height: 1.5;
-  color: #404040;
+  color: gray;
   @include rem(font-size, 8.75px);
   -webkit-font-smoothing: antialiased;
   @include breakpoint($bp-medium-portrait) {
@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5 {
   font-weight: 400;
   line-height: 1.5;
   padding: 0;
+  color: #333;
   @include breakpoint($bp-medium-portrait) {
     @include rem(font-size, 17.5px);
   }
@@ -45,11 +46,16 @@ h1, %h1 {
   }
 }
 h1.post-title {
+  @include rem(font-size, 12px);
+  margin-bottom: 26px;
+  font-family: Helvetica Neue, Helvetica, Arial;
+  font-weight: bold;
+}
+h1.page-title {
   @include rem(font-size, 16px);
   margin-bottom: 26px;
   padding-bottom: 26px;
   border-bottom: 1px solid #EBEBEB;
-
 }
 h2, %h2 {
   @include rem(font-size, 12.5px);

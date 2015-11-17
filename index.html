@@ -4,8 +4,10 @@ layout: default
 <div class="home">
   <section data-slide="0" class="segment slide">
     <div class="wrapper">
-      <div class="inner">
-        {% include slides/make-life-easier.html %}
+      <div class="two-col">
+        <div class="col">
+          {% include slides/make-life-easier.html %}
+        </div>
       </div>
     </div>
   </section>
@@ -16,36 +18,61 @@ layout: default
       </div>
     </div>
   </section>
-  <section data-slide="2" class="segment slide">
+  <section data-slide="2" class="segment slide blue-slide">
     <div class="wrapper">
-      <div class="inner">
-        {% include slides/optimized-for-database-driven-apps.html %}
+      <div class="two-col">
+        <div class="col">
+          {% include slides/continuous-integration.html %}
+        </div>
+        <div class="col">
+          {% image 'probo-checks.png' alt="Probo checks" class="right" %}
+        </div>
       </div>
     </div>
   </section>
   <section data-slide="3" class="segment slide">
     <div class="wrapper">
-      <div class="two-col">
-        <div class="col">
-          {% include slides/for-all-things.html %}
-        </div>
-        <div class="col">
-          {% include slides/continuous-integration.html %}
-        </div>
-        <div class="col">
-          {% include slides/site-seeing.html %}
-        </div>
-        <div class="col">
-          {% include slides/open-source.html %}
-        </div>
+      <div class="three-col">
         <div class="col">
           {% include slides/no-time-restrictions.html %}
         </div>
         <div class="col">
+          {% include slides/synchronization.html %}
+        </div>
+        <div class="col">
+          {% include slides/optimized-for-database-driven-apps.html %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section data-slide="4" class="segment slide green-slide">
+    <div class="wrapper">
+      <div class="two-col">
+        <div class="col">
           {% include slides/easy-integration.html %}
         </div>
         <div class="col">
-          {% include slides/synchronization.html %}
+          {% image 'probo-github.png' alt="Probo screenshot in Github" class="right" %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section data-slide="5" class="segment slide">
+    <div class="wrapper">
+      <div class="two-col">
+        <div class="col">
+        </div>
+        <div class="col">
+          {% include slides/for-all-things.html %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section data-slide="6" class="segment slide purple-slide">
+    <div class="wrapper">
+      <div class="two-col">
+        <div class="col">
+          {% include slides/open-source.html %}
         </div>
       </div>
     </div>

@@ -1,11 +1,11 @@
 ---
 layout: "docs"
-title: Github Integration
+title: GitHub Integration
 class: documentation
 permalink: /docs/github/
 published: true
 ---
-Probo integrates with [Github](http://github.com/) (a popular version control application for open source projects). In the Github pull request user interface, Probo adds a list of sandbox site builds, their automated test status, and their test links. Senior developers who are reviewing the pull request can immediately see whether any automated tests failed against a Probo site build.
+Probo integrates with [GitHub](http://github.com/), a popular version control application for open source projects. In the GitHub pull request user interface, Probo adds a list of sandbox site builds, their automated test status, and their test links. Senior developers who are reviewing the pull request can immediately see whether any automated tests failed against a Probo site build.
 
 {% image 'probo-github-builds.png' alt="Probo YAML configuration file" class="full-width" %}
 

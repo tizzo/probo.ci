@@ -177,6 +177,7 @@ body.signup .page-content *{
 .signup {
   .site-header{
     z-index:2;
+    position:relative;
   }
   .page-content{
     @include breakpoint($bp-medium-portrait) {

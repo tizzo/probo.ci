@@ -17,7 +17,7 @@ $probo-purple: #4d0939;
 .slide {
   margin: 0;
   text-align: center;
-  display: table-row;
+  display: flex;
 
   .inner {
     vertical-align: middle;
@@ -36,12 +36,9 @@ $probo-purple: #4d0939;
   }
 
   img {
-    width: 98%;
     display: block;
-    margin: em(4 * $base-spacing) auto;
 
     @include breakpoint($bp-medium-portrait) {
-      width: 400px;
     }
 
     &.full-width {
@@ -59,6 +56,15 @@ $probo-purple: #4d0939;
   background: image-url('probo-gradient-bg.png') top left repeat-x #19010E;
   background-size: cover;
   @include white-text;
+  padding-bottom: 0;
+  .two-col {
+    .col {
+      margin-bottom: 0;
+      img {
+        margin: 0;
+      }
+    }
+  }
 }
 
 [data-slide='1'] {
@@ -108,7 +114,9 @@ $probo-purple: #4d0939;
     clear: both;
   }
 }
-
+.col {
+  display: flex;
+}
 .three-col .col {
   width: 100%;
   float: none;
@@ -118,13 +126,18 @@ $probo-purple: #4d0939;
   text-align: left;
   margin-bottom: 12px;
   clear: both;
+  text-align: center;
+  img {
+    max-width: 60px;
+    height: auto;
+    margin: 0 auto;
+  }
   @include breakpoint($bp-medium-portrait) {
     width: 30%;
     float: left;
     display: block;
     margin-left: 0;
     margin-right: 3%;
-    text-align: left;
     margin-bottom: 24px;
     clear: none;
     &:nth-of-type(1n) {

@@ -4,17 +4,20 @@ layout: default
 <div class="home">
   <section data-slide="0" class="segment slide">
     <div class="wrapper">
-      <div class="two-col">
-        <div class="col">
-          {% include slides/make-life-easier.html %}
-        </div>
+      <div class="inner">
+        {% include slides/demonstrate-test-approve.html %}
       </div>
     </div>
   </section>
   <section data-slide="1" class="segment slide">
     <div class="wrapper">
-      <div class="inner">
-        {% include slides/demonstrate-test-approve.html %}
+      <div class="two-col">
+        <div class="col">
+          {% include slides/make-life-easier.html %}
+        </div>
+        <div class="col">
+          {% image 'super-probo.png' alt="super probo" class="left" %}
+        </div>
       </div>
     </div>
   </section>
@@ -22,10 +25,10 @@ layout: default
     <div class="wrapper">
       <div class="two-col">
         <div class="col">
-          {% include slides/continuous-integration.html %}
+          {% image 'probo-checks.png' alt="Probo checks" class="right" %}
         </div>
         <div class="col">
-          {% image 'probo-checks.png' alt="Probo checks" class="right" %}
+          {% include slides/continuous-integration.html %}
         </div>
       </div>
     </div>
@@ -34,12 +37,15 @@ layout: default
     <div class="wrapper">
       <div class="three-col">
         <div class="col">
+          {% image 'clock.png' alt="clock" class="center" %}
           {% include slides/no-time-restrictions.html %}
         </div>
         <div class="col">
+          {% image 'clouds.png' alt="clouds" class="center" %}
           {% include slides/synchronization.html %}
         </div>
         <div class="col">
+          {% image 'synchronized.png' alt="synchronized" class="center" %}
           {% include slides/optimized-for-database-driven-apps.html %}
         </div>
       </div>
@@ -49,10 +55,10 @@ layout: default
     <div class="wrapper">
       <div class="two-col">
         <div class="col">
-          {% include slides/easy-integration.html %}
+          {% image 'probo-github-laptop.png' alt="Probo screenshot in Github" class="right" %}
         </div>
         <div class="col">
-          {% image 'probo-github.png' alt="Probo screenshot in Github" class="right" %}
+          {% include slides/easy-integration.html %}
         </div>
       </div>
     </div>
@@ -61,6 +67,7 @@ layout: default
     <div class="wrapper">
       <div class="two-col">
         <div class="col">
+          {% image 'logos.png' alt="logos" class="left" %}
         </div>
         <div class="col">
           {% include slides/for-all-things.html %}
@@ -73,6 +80,9 @@ layout: default
       <div class="two-col">
         <div class="col">
           {% include slides/open-source.html %}
+        </div>
+        <div class="col">
+          {% image 'probo-screen.png' alt="Probo screen" class="center" %}
         </div>
       </div>
     </div>

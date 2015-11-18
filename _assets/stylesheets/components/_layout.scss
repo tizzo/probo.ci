@@ -29,7 +29,7 @@ body {
   }
 
   @include breakpoint($bp-large) {
-    width: $site-width;
+    max-width: $site-width;
     padding-left: $inner-width-padding;
     padding-right: $inner-width-padding;
   }

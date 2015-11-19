@@ -2,6 +2,6 @@
 layout: "about"
 title: Find Us
 class: find
-permalink: /about/contact/
-published: true
+permalink: /about/find/
+published: false
 ---

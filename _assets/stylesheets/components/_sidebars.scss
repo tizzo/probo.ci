@@ -5,6 +5,7 @@
       float: none;
       margin-bottom: 24px;
       padding: 25px 0 0 0;
+      clear: both;
       @include breakpoint($bp-medium-portrait) {
         padding: 0;
         width: 24%;

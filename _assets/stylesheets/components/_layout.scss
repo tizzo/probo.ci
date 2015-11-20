@@ -23,9 +23,11 @@ body {
   // width: 94%;
   margin: 0 auto;
   padding: 10px 22px;
+  @include cf;
   @include breakpoint($bp-medium-landscape) {
     width: 95%;
     padding: em(4 * $base-spacing) $inner-width-padding / 2;
+    padding-top: 12px;
   }
 
   @include breakpoint($bp-large) {

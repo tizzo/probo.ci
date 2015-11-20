@@ -12,7 +12,7 @@
 
   <link rel="stylesheet" href="/assets/probo-983c1bd237d0995901c6da3a5be673b7.css">
 
-  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-6b6f0c114ecefd02257f57aa3a7b83a1.png" />
+  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-639620372fc92ef2675b77928aaaea2f.png" />
   <link rel="canonical" href="http://probo.ci/docs/app/">
   
 </head>
@@ -37,7 +37,7 @@
                 
                 <li><a href="/product">Product</a></li>
                 
-                <li><a href="/about">About</a></li>
+                <li><a href="/about">About Us</a></li>
                 
                 <li><a href="/blog">Blog</a></li>
                 
@@ -53,7 +53,7 @@
             
             <li><a href="/product">Product</a></li>
             
-            <li><a href="/about">About</a></li>
+            <li><a href="/about">About Us</a></li>
             
             <li><a href="/blog">Blog</a></li>
             
@@ -86,15 +86,17 @@
 
         <div class="page-content">
           <h1 class="page-title">Using the Probo App</h1>
-          <p>The Probo App is currently being opened to Beta testers on a rolling basis. This documentation is for Beta testers.</p>
+          <p>The <a href="https://app.probo.ci/" title="Probo App">Probo App</a> is currently being opened to Beta testers on a rolling basis. This documentation is for Beta testers.</p>
 
-<p>The Probo App is found at https://app.probo.ci . Log in with your GitHub or Stash account and enter your invite code.</p>
+<p>The Probo App is found at https://app.probo.ci/. <a href="https://app.probo.ci/auth/github" title="Login with GitHub">Login with GitHub</a> or login with Stash. Then enter your beta invite code.</p>
 
-<p>On the Dashboard you can toggle on a repository to be used with Probo.</p>
+<p>On the <a href="https://app.probo.ci/dashboard" title="Probo Dashboard">Probo Dashboard</a> you can toggle on or off repositories to be used with Probo that are available to your GitHub or Stash account.</p>
 
-<p>Next you need to create a .probo.yaml file in the root of your codebase to configure your builds. You can do this in a new git branch. See documentation on Build Configuration.</p>
+<p><img src="/assets/probo-dashboard-354dc73677bf69c3efabd564af198245.png" alt="Probo Dashboard screenshot" class="full-width" /></p>
 
-<p>To include assets (for example, your site’s database) so that they are available to every Probo build, use the Probo Uploader https://github.com/ProboCI/probo-uploader . More information will be found on your project page within the Probo app.</p>
+<p>Next you need to create a .probo.yaml file in the root of your codebase to configure your Probo builds. You can do this in a new git branch. See documentation on <a href="http://probo.ci/docs/build/" title="Probo Build Configuration">Probo Build Configuration</a> for specific details on how to setup the .probo.yaml file.</p>
+
+<p>Include important website assets like your site’s database dump so that those assets are available to every Probo build with the <a href="https://github.com/ProboCI/probo-uploader" title="Probo Uploader">Probo Uploader</a>. More information will be found on your project page within the Probo App on how to upload assets to your project.</p>
 
 <p>Create a pull request in GitHub or Stash for the branch that includes the .probo.yaml file. You should see the steps in your .probo.yaml file building both on your pull request and in the Probo app. If a step fails, look at the details in the Probo app for the full console output. Adjust your .probo.yaml or get help in our support room. When you commit a change to a branch with a pull request, a new build will be created.</p>
 
@@ -114,7 +116,7 @@
         </div>
     </div>
     <div class="wrapper">
-        <img src="/assets/probo-logo-bw-225-2467f1d65903277b471f7674da6b3abd.png" alt='black and white probo logo' class='site-footer__logo'>
+        <img src="/assets/probo-logo-bw-225-e55e0e5638049f916054b38a57f89486.png" alt='black and white probo logo' class='site-footer__logo'>
         <div class="right">
             <a href="/docs" title="Probo Documentation" >Documentation</a>
             <a href="/blog" title="Probo Blog" >Blog</a>
@@ -148,6 +150,7 @@
         </div>
     </form>
 </div>
+
 
     <a href="https://github.com/ProboCI/probo" class="github-banner"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
 

@@ -1,11 +1,14 @@
 - title: Product
-  url: product
+  url: /product/
+  text: Product
 
 - title: About Us
-  url: about
+  url: /about/
+  text: About
 
 - title: Blog
-  url: blog
+  url: /blog/
+  text: Blog
 
 #- title: Pricing
 #  url: pricing
@@ -14,4 +17,5 @@
 #  url: faq
 
 - title: Docs
-  url: docs
+  url: /docs/
+  text: Docs 

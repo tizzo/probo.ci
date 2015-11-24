@@ -82,6 +82,9 @@ ul#navigation {
   @include breakpoint($bp-medium-portrait) {
     display: block;
   }
+  li.current a {
+    color:#a11276;
+      }
   li {
     list-style-type: none;
     float: left;

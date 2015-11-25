@@ -60,6 +60,16 @@ $probo-purple: #4d0939;
   background-size: cover;
   @include white-text;
   padding-bottom: 0;
+  img {
+    display: none;
+    height: 0;
+    @include breakpoint($bp-medium-portrait) {
+      display: block;
+      height: auto;
+      margin: 0 auto;
+      visibility: visible;
+    }
+  }
   .two-col {
     .col {
       margin-bottom: 0;

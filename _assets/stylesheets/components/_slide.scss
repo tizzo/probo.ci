@@ -148,11 +148,20 @@ $probo-purple: #4d0939;
   text-align: left;
   margin-bottom: 12px;
   clear: both;
-  text-align: center;
+  @include breakpoint($bp-medium-portrait) {
+    text-align: center;
+  }
   img {
-    max-width: 60px;
-    height: auto;
-    margin: 0 auto;
+    display: none;
+    height: 0;
+    visibility: hidden;
+    @include breakpoint($bp-medium-portrait) {
+      display: block;
+      max-width: 60px;
+      height: auto;
+      margin: 0 auto;
+      visibility: visible;
+    }
   }
   @include breakpoint($bp-medium-portrait) {
     width: 30%;

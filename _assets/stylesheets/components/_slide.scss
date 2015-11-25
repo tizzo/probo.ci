@@ -16,8 +16,11 @@ $probo-purple: #4d0939;
 
 .slide {
   margin: 0;
-  text-align: center;
   display: flex;
+  text-align: left;
+  @include breakpoint($bp-medium-portrait) {
+    text-align: center;
+  }
 
   .inner {
     vertical-align: middle;

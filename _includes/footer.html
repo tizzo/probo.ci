@@ -10,12 +10,13 @@
     </div>
     <div class="wrapper">
         {% image 'probo-logo-bw.png' alt='black and white probo logo' class='site-footer__logo' [resize:225] %}
-        <div class="right">
-            <a href="/docs" title="Probo Documentation" >Documentation</a>
-            <a href="/blog" title="Probo Blog" >Blog</a>
-            <a href="https://app.probo.ci/" target="_blank">Login</a>
-            <div class="copyright">&copy; 2015 Probo.ci</div>
-        </div>
+        <ul class="footer-navigation right">
+            {% for link in site.data.navigation %}
+            <li><a href="/{{ link.url }}">{{ link.title }}</a></li>
+            {% endfor %}
+            <li class="login"><a href="https://app.probo.ci/" target="_blank"><i class="fa fa-cog">&nbsp;</i>Login</a></li>
+        </ul>
+        <div class="copyright">&copy; 2015 Probo.ci</div>
     </div>
 
 </footer>

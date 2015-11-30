@@ -52,10 +52,16 @@ h1.post-title {
   font-weight: bold;
 }
 h1.page-title {
-  @include rem(font-size, 16px);
-  margin-bottom: 26px;
-  padding-bottom: 26px;
+  @include rem(font-size, 14px);
+  margin-bottom: 12px;
+  padding-bottom: 12px;
   border-bottom: 1px solid #EBEBEB;
+  @include breakpoint($bp-medium-portrait) {
+    @include rem(font-size, 16px);
+    margin-bottom: 26px;
+    padding-bottom: 26px;
+    border-bottom: 1px solid #EBEBEB;
+  }
 }
 h2, %h2 {
   @include rem(font-size, 12.5px);
@@ -134,5 +140,18 @@ code {
     font-size: .7em;
     position: relative;
     top: -1px;
+  }
+}
+
+.breadcrumb {
+  padding-left: 0;
+  padding-bottom: 24px;
+  margin-bottom: 0;
+  @include cf;
+  li {
+    list-style: none;
+    display: inline-block;
+    float: left;
+    margin-right: 12px;
   }
 }

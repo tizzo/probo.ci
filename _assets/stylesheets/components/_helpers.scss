@@ -2,7 +2,6 @@
   @extend %visuallyhidden;
 }
 
-
 .right {
   @include breakpoint($bp-medium-landscape) {
     float: right;

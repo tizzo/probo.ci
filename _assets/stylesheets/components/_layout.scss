@@ -23,13 +23,13 @@ body {
   // width: 94%;
   margin: 0 auto;
   padding: 10px 22px;
+  @include cf;
   @include breakpoint($bp-medium-landscape) {
     width: 95%;
-    padding: em(4 * $base-spacing) $inner-width-padding / 2;
   }
 
   @include breakpoint($bp-large) {
-    width: $site-width;
+    max-width: $site-width;
     padding-left: $inner-width-padding;
     padding-right: $inner-width-padding;
   }
@@ -38,7 +38,6 @@ body {
   .page-content {
     padding-top: 0;
     @include breakpoint($bp-medium-portrait) {
-      // padding-top: 70px;
     }
   }
 }
@@ -52,4 +51,34 @@ body {
 
 .column {
   padding: em($base-spacing);
+}
+
+table {
+  padding: 0;
+  margin-bottom: 24px;
+  tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: em($base-spacing);
+    }
+    td {
+      border: 1px solid #cccccc;
+      text-align: left;
+      margin: 0;
+      padding: em($base-spacing);
+    }
+  }
+  tr:nth-child(2n) {
+    background-color: #f8f8f8;
+  }
+  tr th :last-child, table tr td :last-child {
+    margin-bottom: 0;
+  }
 }

@@ -1,5 +1,5 @@
 /**
- * zivtech Zendesk Widget script
+ * Probo.CI Zendesk Widget script
  */
 
 window.zEmbed || function (e, t) {
@@ -16,4 +16,4 @@ window.zEmbed || function (e, t) {
     var o = this.createElement("script");
     n && (this.domain = n), o.id = "js-iframe-async", o.src = e, this.t = +new Date, this.zendeskHost = t, this.zEQueue = a, this.body.appendChild(o)
   }, o.write('<body onload="document._l();">'), o.close()
-}("https://assets.zendesk.com/embeddable_framework/main.js", "zivtech.zendesk.com");
+}("https://assets.zendesk.com/embeddable_framework/main.js", "proboci.zendesk.com");

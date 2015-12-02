@@ -13,8 +13,9 @@
 #- title: Pricing
 #  url: pricing
 
-#- title: FAQ
-#  url: faq
+- title: FAQ
+  url: /faq/
+  text: FAQ
 
 - title: Docs
   url: /docs/

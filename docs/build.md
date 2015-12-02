@@ -13,9 +13,9 @@ The .probo.yaml is split into a section for **'assets'** and a section for **'st
 
 ## Assets
 
-Assets is where you indicate which assets to import into this build. These can be any assets that you've uploaded with the [Probo Uploader](http://probo.ci/docs/uploader/).
+Assets is where you indicate which assets to import into this build. These can be any assets that you've uploaded with the [Probo Uploader](http://probo.ci/docs/uploader/). If you compress your file use gzip. You cannot use the zip format.
 
-For example, if you need to use a an asset you've uploaded with filename dev.sql.gz, start .probo.yaml file with:
+For example, if you need to use an asset you've uploaded with filename dev.sql.gz, start .probo.yaml file with:
 {% highlight yaml%}
 assets:
   - dev.sql.gz
@@ -32,6 +32,7 @@ Each step must have a `name`. The name of each step is the build context, and wi
 Each step also has a `Plugin`. The default Plugin is `Shell`.  Depending on the `Plugin` you specify, you will have access to various parameters. These parameters allow you to configure your Probo site build.
 
 **Please Note:** Currently, Plugin names are case sensitive. This means that `shell` will not work.
+
 
 #### 1. Shell Plugin
 
@@ -75,7 +76,7 @@ steps:
 
 #### 2. Drupal Plugin
 
-The Drupal plugin provides parameters for your build steps if you are using Probo for a Drupal site. 
+The Drupal plugin provides parameters for your build steps if you are using Probo for a Drupal site. Use the Drupal Plugin as an alternative to the shell plugin.
 
 ##### Available Parameters
 
@@ -83,9 +84,10 @@ The Drupal plugin provides parameters for your build steps if you are using Prob
 |-------------------------|---------------------------------------------------------------------------------------------------|
 |`makeFile`               | The name of the [Drush make file](http://www.drush.org/en/master/make/) to run to generate                             the install directory. Accepts a **string** value.                             |
 |`profileName`            | The profile name used in creating a symlink to this directory if a Drush make file is                                  specified with the `makeFile` option and used to select the profile to install if the `runInstall`                             option is selected. Accepts a **string** value.                                |
-|`runInstall`             | If set, run `drush site-install` to perform a fresh install of the site using the                                      `profileName` as the install profile and allowing the `installArgs` option to configure the                                    install. Accepts a **boolean** value.</i>/ul>                                             |
+|`runInstall`             | If set, run `drush site-install` to perform a fresh install of the site using the                                      `profileName` as the install profile and allowing the `installArgs` option to configure the                                    install. Accepts a **boolean** value.                                            |
 |`installArgs`            | A set of parameters to concatenate onto the `drush site-install` command if the                                        `runInstall` option is set. Defaults to ''. Accepts a **string** value. |
 |`siteFolder`             | Specifies the site folder to use for this build (the folder within the Drupal `sites`                                  folder). Defaults to `default`. Accepts a **string** value.             |
+| `subDirectory`     |The path to your docroot if it is a subdirectory of your git repository. Accepts a **string** value. |
 
 | Database Configuration  |                                                                                                   |
 --------------------------|---------------------------------------------------------------------------------------------------|
@@ -111,6 +113,7 @@ steps:
     database: mydb.sql.gz
     databaseGzipped: true
     databaseUpdates: true
+    subDirectory: docroot
     revertFeatures: true
 {% endhighlight %}
 

@@ -13,11 +13,15 @@ When you view your project in the Probo app, you will see above your builds an U
 - Install the [Probo Uploader](https://github.com/ProboCI/probo-uploader) on your machine with `npm`.
 ```
 sudo npm install -g probo-uploader
-```
+``` 
 - Run the command as shown on your project page. For example, 
 ```
 probo-uploader --token=[your token] some-file.txt
 ```
+- If you compress your file use Gzip. You cannot use the zip format.
+````
+gzip some-file.txt
+````
 
 ### To use an asset in your builds:
 

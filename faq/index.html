@@ -7,13 +7,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>GitHub Integration | Demonstrate. Test. Approve.</title>
+  <title>FAQ | Demonstrate. Test. Approve.</title>
   <meta name="description" content="Probo website">
 
   <link rel="stylesheet" href="/assets/probo-df772e01aac9beaa23a555b8c0c5edd0.css">
 
   <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-5cc2df397c2402f7b318d45f502ecdea.png" />
-  <link rel="canonical" href="http://probo.ci/docs/github/">
+  <link rel="canonical" href="http://probo.ci/faq/">
   
 </head>
 
@@ -48,7 +48,7 @@
           <a href="/blog/" title="Blog">Blog</a>
         </li>
         
-        <li >
+        <li class="current">
           <a href="/faq/" title="FAQ">FAQ</a>
         </li>
         
@@ -78,7 +78,7 @@
         <a href="/blog/" title="Blog">Blog</a>
       </li>
       
-      <li >
+      <li class="current">
         <a href="/faq/" title="FAQ">FAQ</a>
       </li>
       
@@ -104,38 +104,73 @@
 
 <ul class="breadcrumb">
   
-  <li><a href="/">home</a> &#187; </li>
-
-  
-  
-  
-
-  <li><a href="/docs">docs</a> &#187; </li>
-  
-  
+  <li><a href="/">home</a> &nbsp; </li>
   
 </ul>
 
-          <h1 class="page-title">GitHub Integration</h1>
+          <h1 class="page-title">FAQ</h1>
         </header>
 
         <div id="sidebar-first">
           <ul>
-	<li><a href="/docs/app/" >Using the Probo App</a></li>
-	<li><a href="/docs/github/" class="current">Github Integration</a></li>
-	<li><a href="/docs/stash/" >Stash Integration</a></li>
-	<li><a href="/docs/build/" >Build Configuration</a></li>
-	<li><a href="/docs/uploader/" >Uploading Build Assets to Probo</a></li>
+	<li><a href="#faq-1" >How is it different from other CI tools?</a></li>
+	<li><a href="#faq-2" >Can I use it with my other testing tools?</a></li>
+	<li><a href="#faq-3" >Can I test with an actual database or do I need to do a fresh install of my app every time?</a></li>
+	<li><a href="#faq-4" >Can I upload my files to Probo?</a></li>
+	<li><a href="#faq-5" >Is there a hosted version of Probo and where is it hosted?</a></li>
+	<li><a href="#faq-6" >What can I run inside of Probo?</a></li>
+	<li><a href="#faq-7" >Can I use probo to host all of my websites?</a></li>
+	<li><a href="#faq-8" >How many containers can I have at the same time?</a></li>
+	<li><a href="#faq-9" >What’s that shape?</a></li>
 </ul>
 
         </div>
 
         <div class="page-content">
-          <p>Probo integrates with <a href="http://github.com/">GitHub</a>, a popular version control application for open source projects. In the GitHub pull request user interface, Probo adds a list of sandbox site builds, their automated test status, and their test links. Senior developers who are reviewing the pull request can immediately see whether any automated tests failed against a Probo site build.</p>
+          <p><a id="faq-1"></a></p>
 
-<p><img src="/assets/probo-github-builds-2b7a91f98737426e4cef5b32d3a9413a.png" alt="Probo YAML configuration file" class="full-width" /></p>
+<h2 id="how-is-it-different-from-other-ci-tools">How is it different from other CI tools?</h2>
+<p>When your build is finished, the environment where your build ran does not go away.  Instead, you receive a link where you can go see the result before changes are merged into the master branch, and share it with your stakeholders. That way, your stakeholders are brought in much earlier in the process, saving the whole company huge amounts of time, money and aggravation.</p>
 
-<p>For each Probo sandbox site build, click the “Details” link to be directed to an isolated copy of the site, which uses code from the pull request.</p>
+<p><a id="faq-2"></a></p>
+
+<h2 id="can-i-use-it-with-my-other-testing-tools">Can I use it with my other testing tools?</h2>
+<p>Yes! You can run your test suite on Probo.ci. If you already have a CI pipeline and just want to add QA environments you can run Probo.ci alongside another test runner like Jenkins or Travis.CI in order to provide QA environments.</p>
+
+<p><a id="faq-3"></a></p>
+
+<h2 id="can-i-test-with-an-actual-database-or-do-i-need-to-do-a-fresh-install-of-my-app-every-time">Can I test with an actual database or do I need to do a fresh install of my app every time?</h2>
+<p>Yes, you can use your own database! Probo gives you the ability to upload copies of your production database (though you may want to sanitize and shrink it first) to use in your build. You can upload your database nightly and always be testing against recent data from production.</p>
+
+<p><a id="faq-4"></a></p>
+
+<h2 id="can-i-upload-my-files-to-probo">Can I upload my files to Probo?</h2>
+<p>Absolutely. That’s how you use your actual database. We allow you to upload any build asset that you want and then use it from within your build steps.</p>
+
+<p><a id="faq-5"></a></p>
+
+<h2 id="is-there-a-hosted-version-of-probo-and-where-is-it-hosted">Is there a hosted version of Probo and where is it hosted?</h2>
+<p>Probo.ci is hosted on Packet.net that provides some of the fastest bare metal servers available today. This allows us to scale up and down with the ease of more traditional cloud providers and also allows us to provide the fastest builds possible without any abstraction or virtualization overhead. The core of Probo is open source so you can run a copy of it in any Linux environment that supports Docker and Node.js.</p>
+
+<p><a id="faq-6"></a></p>
+
+<h2 id="what-can-i-run-inside-of-probo">What can I run inside of Probo?</h2>
+<p>Right now, you can run any LAMP stack application complete with selenium testing and solr search. We will be adding additional images with other stacks. If there is something you want to use, please shoot us a note.</p>
+
+<p><a id="faq-7"></a></p>
+
+<h2 id="can-i-use-probo-to-host-all-of-my-websites">Can I use probo to host all of my websites?</h2>
+<p>Probo is not a hosting solution. We provide environments for quality assurance and testing but they are not optimized nor intended for production use.</p>
+
+<p><a id="faq-8"></a></p>
+
+<h2 id="how-many-containers-can-i-have-at-the-same-time">How many containers can I have at the same time?</h2>
+<p>At the moment, the number of containers that you can have at once is unlimited. When we release our pricing plans the number of containers you can have at one time will vary with the plan that you select.</p>
+
+<p><a id="faq-9"></a></p>
+
+<h2 id="whats-that-shape">What’s that shape?</h2>
+<p>The Probo logo is a rhombic triacontahedron, a convex polyhedron with 30 rhombic faces, 60 edges and 32 vertices of two types. </p>
 
         </div>
 

@@ -13,7 +13,7 @@ The .probo.yaml is split into a section for **'assets'** and a section for **'st
 
 ## Assets
 
-Assets is where you indicate which assets to import into this build. These can be any assets that you've uploaded with the [Probo Uploader](http://probo.ci/docs/uploader/). If you compress your file use gzip. You cannot use the zip format.
+Assets is where you indicate which assets to import into this build. These can be any assets that you've uploaded with the [Probo Uploader](http://probo.ci/docs/uploader/).
 
 For example, if you need to use an asset you've uploaded with filename dev.sql.gz, start .probo.yaml file with:
 {% highlight yaml%}
@@ -76,7 +76,9 @@ steps:
 
 #### 2. Drupal Plugin
 
-The Drupal plugin provides parameters for your build steps if you are using Probo for a Drupal site. Use the Drupal Plugin as an alternative to the shell plugin.
+The Drupal plugin provides parameters for your build steps if you are using Probo for a Drupal site. 
+
+Use the Drupal Plugin as an alternative to the shell plugin. If you compress your database use gzip. You cannot use the zip format.
 
 ##### Available Parameters
 

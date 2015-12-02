@@ -12,10 +12,14 @@
 
     <div id="sidr" style="display:none">
       <ul>
+        {% assign url = page.url|remove:'index.html' %}
         {% for link in site.data.navigation %}
-        <li><a href="/{{ link.url }}">{{ link.title }}</a></li>
+        <li {% if url == link.url %}class="current"{% endif %}>
+          <a href="{{link.url}}" title="{{link.title}}">{{link.text}}</a>
+        </li>
         {% endfor %}
-        <li class="login"><a href="https://app.probo.ci/" target="_blank"><i class="fa fa-cog">&nbsp;</i>Login</a>
+        <li class="login"><a href="https://app.probo.ci/" target="_blank"><i class="fa fa-cog">&nbsp;</i>Login</a></li>
+
       </ul>
     </div>
 

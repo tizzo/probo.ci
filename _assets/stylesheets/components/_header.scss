@@ -12,15 +12,13 @@ $logo-line-height: 45px;
   }
   .wrapper {
     padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    padding-bottom: 0;
     position: relative;
-    display: blck;
-    clear: both;
-    overflow: hidden;
+    @include cf;
   }
   #simple-menu {
     position: absolute;
-    left: 15px;
+    right: 15px;
     top: 10px;
     display: block;
     z-index: 10000;

@@ -18,7 +18,7 @@
   $("#sidebar-first ul").tinyNav();
 
   if ($.fn.sidr instanceof Function) {
-    $('#simple-menu').css('display', '').sidr({side: 'left'});
+    $('#simple-menu').css('display', '').sidr({side: 'right'});
   }
 
   //fallback for css animation breaking on ios scroll

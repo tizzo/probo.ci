@@ -40,8 +40,8 @@ $logo-line-height: 45px;
   .site-title {
     display: block;
     margin: 0 auto;
-    text-align: right;
-    float: right;
+    text-align: center;
+    float: none;
     margin: 0 auto;
     line-height:$logo-line-height;
     @include breakpoint($bp-medium-portrait) {

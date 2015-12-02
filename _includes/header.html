@@ -13,7 +13,7 @@
     <div id="sidr" style="display:none">
       <ul>
         {% for link in site.data.navigation %}
-        <li><a href="/{{ link.url }}">{{ link.title }}</a></li>
+        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
         {% endfor %}
         <li class="login"><a href="https://app.probo.ci/" target="_blank"><i class="fa fa-cog">&nbsp;</i>Login</a>
       </ul>

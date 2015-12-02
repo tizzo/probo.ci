@@ -15,7 +15,7 @@ body {
   @include rem(font-size, 8.75px);
   -webkit-font-smoothing: antialiased;
   @include breakpoint($bp-medium-portrait) {
-    @include rem(font-size, 10.5px);
+    @include rem(font-size, 9.5px);
   }
 }
 

@@ -76,9 +76,10 @@ steps:
 
 #### 2. Drupal Plugin
 
-The Drupal plugin provides parameters for your build steps if you are using Probo for a Drupal site. 
+The Drupal plugin provides parameters for your build steps if you are using Probo for a Drupal site.
 
-Use the Drupal Plugin as an alternative to the shell plugin. If you compress your database use gzip. You cannot use the zip format.
+You can save some shell scripting by using the Drupal Plugin. To use any plugin you must name it first. For example:  `plugin: Drupal`. You can use both plugins; but you must declare each plugin in your `.probo.yaml` file before its parameters. The Drupal plugin parameters can automate your Drupal build by reverting features, run database updates or other build configuration. 
+
 
 ##### Available Parameters
 
@@ -93,7 +94,7 @@ Use the Drupal Plugin as an alternative to the shell plugin. If you compress you
 
 | Database Configuration  |                                                                                                   |
 --------------------------|---------------------------------------------------------------------------------------------------|
-| `database`              |The name of the database to import if specified. Note that this database *must be added as                             an asset separately*. Accepts a **string** value.                                |
+| `database`              |The name of the database to import if specified. Note that this database *must be added as                             an asset separately*. Accepts a **string** value. If you use this parameter don't add the database with the shell plugin. Do not use the zip format for your compressed database. Use the gzip format.                           |
 | `databaseGzipped`       |Whether the database was sent gzipped and whether it should therefore be gunzipped before                               importing. Accepts a **boolean** value.                                         |
 
 | Additional Options    |                                                                                                     |

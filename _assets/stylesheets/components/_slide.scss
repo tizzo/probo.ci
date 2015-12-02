@@ -18,16 +18,24 @@ $probo-purple: #4d0939;
   margin: 0;
   display: flex;
   text-align: left;
+  padding: 40px 0;
   @include breakpoint($bp-medium-portrait) {
     text-align: center;
   }
 
+  .column {
+    @include cf;
+  }
+
   .inner {
     vertical-align: middle;
-    padding: 20px 0;
-    @include breakpoint($bp-medium-portrait) {
-      padding: 50px 0;
-    }
+  }
+
+  p {
+    max-width: 650px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 24px;
   }
 
   .row {
@@ -61,13 +69,14 @@ $probo-purple: #4d0939;
   @include white-text;
   padding-bottom: 0;
   img {
-    display: none;
-    height: 0;
+    display: block;
+    width: 120px;
+    height: auto;
+    margin: 0 24px 24px 0;
+    float: left;
     @include breakpoint($bp-medium-portrait) {
-      display: block;
-      height: auto;
       margin: 0 auto;
-      visibility: visible;
+      float: none;
     }
   }
   .two-col {
@@ -157,10 +166,10 @@ $probo-purple: #4d0939;
     visibility: hidden;
     @include breakpoint($bp-medium-portrait) {
       display: block;
-      max-width: 60px;
-      height: auto;
       margin: 0 auto;
       visibility: visible;
+      width: 100px;
+      height: auto;
     }
   }
   @include breakpoint($bp-medium-portrait) {

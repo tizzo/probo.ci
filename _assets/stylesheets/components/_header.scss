@@ -3,7 +3,6 @@ $header-line-height: 35px;
 $logo-line-height: 45px;
 
 .site-header {
-  height: $header-height;
   width: 100%;
   opacity: 1;
   transition: none !important;
@@ -13,15 +12,13 @@ $logo-line-height: 45px;
   }
   .wrapper {
     padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    padding-bottom: 0;
     position: relative;
-    display: blck;
-    clear: both;
-    overflow: hidden;
+    @include cf;
   }
   #simple-menu {
     position: absolute;
-    left: 15px;
+    right: 15px;
     top: 10px;
     display: block;
     z-index: 10000;
@@ -43,8 +40,8 @@ $logo-line-height: 45px;
   .site-title {
     display: block;
     margin: 0 auto;
-    text-align: right;
-    float: right;
+    text-align: center;
+    float: none;
     margin: 0 auto;
     line-height:$logo-line-height;
     @include breakpoint($bp-medium-portrait) {

@@ -18,10 +18,6 @@ sudo npm install -g probo-uploader
 ```
 probo-uploader --token=[your token] some-file.txt
 ```
-- If you compress your file use Gzip. You cannot use the zip format.
-````
-gzip some-file.txt
-````
 
 ### To use an asset in your builds:
 

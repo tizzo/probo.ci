@@ -12,7 +12,7 @@
 
   <link rel="stylesheet" href="/assets/probo-188c03cb02bc6e7ecacb7ddccf2c1e32.css">
 
-  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-b56ab50dfcecff3181f2a6cefd67cb44.png" />
+  <link rel="icon" type="image/png" href="/assets/probo-sphere-32x32-e318c2f314f98ef972dcd1a164b38d26.png" />
   <link rel="canonical" href="http://probo.ci/docs/build/">
   
 </head>
@@ -43,7 +43,8 @@
         
         <li><a href="//docs/">Docs</a></li>
         
-        <li class="login"><a href="https://app.probo.ci/" target="_blank"><i class="fa fa-cog">&nbsp;</i>Login</a>
+        <li class="login"><a href="https://app.probo.ci/" target="_blank"><i class="fa fa-cog">&nbsp;</i>Login</a></li>
+
       </ul>
     </div>
 
@@ -70,7 +71,7 @@
       
       <li class="login">
         <a href="https://app.probo.ci/" target="_blank"><i class="fa fa-cog">&nbsp;</i>Login</a>
-      </li>>
+      </li>
     </ul>
 
   </div>
@@ -122,7 +123,7 @@
 
 <p>Assets is where you indicate which assets to import into this build. These can be any assets that you’ve uploaded with the <a href="http://probo.ci/docs/uploader/">Probo Uploader</a>.</p>
 
-<p>For example, if you need to use a an asset you’ve uploaded with filename dev.sql.gz, start .probo.yaml file with:</p>
+<p>For example, if you need to use an asset you’ve uploaded with filename dev.sql.gz, start .probo.yaml file with:</p>
 
 <div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">assets</span><span class="p-Indicator">:</span>
   <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">dev.sql.gz</span></code></pre></div>
@@ -194,7 +195,9 @@
 
 <h4 id="drupal-plugin">2. Drupal Plugin</h4>
 
-<p>The Drupal plugin provides parameters for your build steps if you are using Probo for a Drupal site. </p>
+<p>The Drupal plugin provides parameters for your build steps if you are using Probo for a Drupal site.</p>
+
+<p>You can save some shell scripting by using the Drupal Plugin. To use any plugin you must name it first. For example:  <code>plugin: Drupal</code>. You can use both plugins; but you must declare each plugin in your <code>.probo.yaml</code> file before its parameters. The Drupal plugin parameters can automate your Drupal build by reverting features, run database updates or other build configuration. </p>
 
 <h5 id="available-parameters">Available Parameters</h5>
 
@@ -216,7 +219,7 @@
     </tr>
     <tr>
       <td><code>runInstall</code></td>
-      <td>If set, run <code>drush site-install</code> to perform a fresh install of the site using the                                      <code>profileName</code> as the install profile and allowing the <code>installArgs</code> option to configure the                                    install. Accepts a <strong>boolean</strong> value.&lt;/i&gt;/ul&gt;</td>
+      <td>If set, run <code>drush site-install</code> to perform a fresh install of the site using the                                      <code>profileName</code> as the install profile and allowing the <code>installArgs</code> option to configure the                                    install. Accepts a <strong>boolean</strong> value.</td>
     </tr>
     <tr>
       <td><code>installArgs</code></td>
@@ -225,6 +228,10 @@
     <tr>
       <td><code>siteFolder</code></td>
       <td>Specifies the site folder to use for this build (the folder within the Drupal <code>sites</code>                                  folder). Defaults to <code>default</code>. Accepts a <strong>string</strong> value.</td>
+    </tr>
+    <tr>
+      <td><code>subDirectory</code></td>
+      <td>The path to your docroot if it is a subdirectory of your git repository. Accepts a <strong>string</strong> value.</td>
     </tr>
   </tbody>
 </table>
@@ -239,7 +246,7 @@
   <tbody>
     <tr>
       <td><code>database</code></td>
-      <td>The name of the database to import if specified. Note that this database <em>must be added as                             an asset separately</em>. Accepts a <strong>string</strong> value.</td>
+      <td>The name of the database to import if specified. Note that this database <em>must be added as                             an asset separately</em>. Accepts a <strong>string</strong> value. If you use this parameter don’t add the database with the shell plugin. Do not use the zip format for your compressed database. Use the gzip format.</td>
     </tr>
     <tr>
       <td><code>databaseGzipped</code></td>
@@ -283,6 +290,7 @@
     <span class="l-Scalar-Plain">database</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">mydb.sql.gz</span>
     <span class="l-Scalar-Plain">databaseGzipped</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
     <span class="l-Scalar-Plain">databaseUpdates</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span>
+    <span class="l-Scalar-Plain">subDirectory</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">docroot</span>
     <span class="l-Scalar-Plain">revertFeatures</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">true</span></code></pre></div>
 
 <h2 id="iterating-until-your-build-configuration-succeeds">Iterating until your build configuration succeeds:</h2>
@@ -311,7 +319,7 @@
         </div>
     </div>
     <div class="wrapper">
-        <img src="/assets/probo-logo-bw-225-d40ee4cf294b83e7f0d837438b5a3243.png" alt='black and white probo logo' class='site-footer__logo'>
+        <img src="/assets/probo-logo-bw-225-6e677ac72ba7a11d2f76d8a09271136c.png" alt='black and white probo logo' class='site-footer__logo'>
         <ul class="footer-navigation right">
             
             <li><a href="/product/">Product</a></li>

@@ -15,6 +15,8 @@ The .probo.yaml is split into a section for **'assets'** and a section for **'st
 
 Assets is where you indicate which assets to import into this build. These can be any assets that you've uploaded with the [Probo Uploader](http://probo.ci/docs/uploader/).
 
+Please sanitize your database. We store your database encrypted at rest.
+
 For example, if you need to use an asset you've uploaded with filename dev.sql.gz, start .probo.yaml file with:
 {% highlight yaml%}
 assets:
@@ -23,7 +25,7 @@ assets:
 
 ## Steps
 
-Steps are the commands to run for the build. These are typically steps for setting up a site and running tests. 
+Steps are the commands to run for the build. These are typically steps for setting up a site and running tests.
 
 Each step must have a `name`. The name of each step is the build context, and will get its own status updates.
 
@@ -78,7 +80,9 @@ steps:
 
 The Drupal plugin provides parameters for your build steps if you are using Probo for a Drupal site.
 
-You can save some shell scripting by using the Drupal Plugin. To use any plugin you must name it first. For example:  `plugin: Drupal`. You can use both plugins; but you must declare each plugin in your `.probo.yaml` file before its parameters. The Drupal plugin parameters can automate your Drupal build by reverting features, run database updates or other build configuration. 
+You can save some shell scripting by using the Drupal Plugin. If you are using the Drupal plugin you must declare  `plugin: Drupal` in your `.probo.yaml`
+ 
+To use any plugin you must name it first. For example:  `plugin: Drupal`. You can use both plugins; but you must declare each plugin in your `.probo.yaml` file before its parameters. The Drupal plugin parameters can automate your Drupal build by reverting features, run database updates or other build configuration.
 
 
 ##### Available Parameters

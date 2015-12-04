@@ -7,21 +7,27 @@ published: true
 ---
 
 Probo is here to make your development work cycle more fluid. We want you to be able to configure Probo to fit your project's needs; because Probo is highly configurable there are many ways to integrate it with your project. 
-Below is a step by step example of a standard Drupal Site install with Github. This walkthrough does not use all the available parameters provided by the Drupal Plugin. You can see more available parameters in the [Probo build documentation](http://probo.ci/docs/build/#drupal-plugin).
+Below is a step by step example of a standard Drupal Site install with Github. This walkthrough does not use all the available parameters provided by the Drupal Plugin. You can see more available parameters in the [Probo build documentation](http://probo.ci/docs/build/#drupal-plugin). You can find this example repository [github.com/Probo-beta-tester](https://github.com/Probo-beta-tester).
 
 Build Specs:
 - Standard Drupal Site with a MYSQL database.
-- Your repository is stored on Github.
+- Your repository is stored on Github. 
 
 ----
 
-## Sign in and sync your Github and Probo app. 
-**Step 1: Sign into your [Probo App](https://app.probo.ci/) with GitHub.**
+## Sign in and Sync up.
+**Step 1: Sign into your [Probo App](https://app.probo.ci/) and authenticate GitHub.**
+Go to [Probo App](https://app.probo.ci/) and click on the github link. Once you get to Github, click 'Authenticate application'.
 
-**Step 2: Enter your beta invite code. Use your personalized beta tester invite code that we emailed you.**     
+**Step 2: Enter your beta invite code. Use your personalized beta tester invite code that we emailed you.** 
+You will be sent back to the Probo app where you will need to enter in your information.  
 Note: Still need an invite code? You can email [probo-support@probo.ci](mailto:probo-support@probo.ci). We are inviting beta testers in on a rolling basis. 
 
 **Step 3: Sync your Github Repos** 
+Click the 'Sync Repos' button at the top right corner. This will pull in all of your github repositories. Click the button next to each repo you want to use with Probo.
+{% image 'authenticate.gif' alt='Authenticate Gif' class='docs-gif'%}
+
+
 
 
 ## Prepare your Database
@@ -77,16 +83,16 @@ vim .probo.yaml
 Tell Probo what database you are going to use for your Probo.builds.
 Add in your Parameters. You can read more on the [docs](http://probo.ci/docs/build/) about different parameter options. 
 ````
-assets:  
-  - drupal_github.sql.gz  
-steps:  
-  - name: Probo site setup  
-    plugin: Drupal  
-    database: drupal_github.sql.gz  
-    databaseGzipped: true  
-    databaseUpdates: true  
-    revertFeatures: true  
-    clearCaches: true  
+assets:     
+  - drupal_github.sql.gz    
+steps:     
+  - name: Probo site setup     
+    plugin: Drupal    
+    database: drupal_github.sql.gz     
+    databaseGzipped: true     
+    databaseUpdates: true    
+    revertFeatures: true    
+    clearCaches: true    
 ````
 
 **Step 12: In your new branch probo-build, add and commit your files to your remote origin.**

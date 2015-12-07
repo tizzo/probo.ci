@@ -1,57 +1,44 @@
-- name: Alex Urevick-Ackelsberg
-  title: Co-Founder / CEO
-  github: AlexU-A
-  pic: alex
-
-- name: Jody Hamilton
-  title: Co-Founder / CTO
-  pic: jody
-
 - name: Howard Tyson
-  title: VP of Engineering
+  title: VP of Engineering at Zivtech and CTO
   pic: howard
 
+- name: Jody Hamilton
+  title: Cofounder/CTO of Zivtech and Consulting Technical Lead
+  pic: jody
+
+- name: Alex Urevick-Ackelsberg
+  title: Cofounder/CEO of Zivtech and Consulting Business Lead
+  pic: alex
+
+- name: Ilya Braude
+  title: Consulting Technical Lead
+  pic: Ilya
+
 - name: James Cole
-  title: Senior Developer
+  title: Consulting Developer
   pic: jcole
 
-- name: Alban Bailly
-  title: Senior Front End Developer
-  pic: alban
-
-- name: Allison Law
-  title: Developer
-  pic: allison
+- name: Allie Jones
+  title: Consulting Developer
+  pic: allie
 
 - name: Jason Moore
-  title: Developer
+  title: Consulting Developer
   pic: jmoore
 
 - name: Daniel Zinkevich
-  title: Developer
+  title: Consulting Developer
   pic: dan
 
-- name: Allie Jones
-  title: Developer
-  pic: allie
-
-- name: Jason Oscar
-  title: Developer
-  pic: joscar
-
-- name: Sue Spolan
-  title: Director of Marketing
-  pic: sue
-
 - name: Sean Wolfe
-  title: Creative Director
+  title: Consulting Creative Director
   pic: sean
 
-- name: Sara Sherwood
-  title: Jr. Web Designer
-  pic: sara
+- name: Sue Spolan
+  title: Consulting Director of Marketing
+  pic: sue
 
 - name: John Kaeser
-  title: Jr. Solutions Architect
+  title: Customer Success Manager
   pic: john
 

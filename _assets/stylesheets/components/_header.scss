@@ -1,6 +1,6 @@
 $header-height: 70px;
 $header-line-height: 35px;
-$logo-line-height: 45px;
+$logo-line-height: 35px;
 
 .site-header {
   width: 100%;
@@ -18,8 +18,8 @@ $logo-line-height: 45px;
   }
   #simple-menu {
     position: absolute;
-    right: 15px;
-    top: 10px;
+    right: 3px;
+    top: 3px;
     display: block;
     z-index: 10000;
     height: 48px;
@@ -75,7 +75,6 @@ ul#navigation {
   float: right;
   margin: auto;
   display: none;
-  margin: 10px 0 0 0;
   @include breakpoint($bp-medium-portrait) {
     display: block;
   }

@@ -11,9 +11,6 @@
 
 (function (window, $) {
 
-  // prepare the modal for use
-  $('#mc_embed_signup').easyModal();
-
   // use tinynav
   $("#sidebar-first ul").tinyNav();
 
@@ -34,17 +31,6 @@
       });
     });
   }, 4000);
-
-  //click for modal
-  $('.request').click(function(e) {
-    $('#mc_embed_signup').trigger('openModal');
-    e.preventDefault();
-  });
-
-  $('.close-request').click(function(e) {
-    $('#mc_embed_signup').trigger('closeModal');
-    e.preventDefault();
-  });
 
   $(window).on("resize", function(event){
     if($('body').hasClass('sidr-open') && $(window).width() >= 768) {

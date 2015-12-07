@@ -26,7 +26,7 @@
     float: left;
     color: $pale-grey;
     @include breakpoint($bp-medium-portrait) {
-      height: 43px;
+      height: 40px;
     }
     i {
       display: block;
@@ -34,7 +34,7 @@
       font-family: fontawesome;
       vertical-align: middle;
       @include breakpoint($bp-medium-portrait) {
-        line-height: 43px;
+        line-height: 40px;
       }
 
     }

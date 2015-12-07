@@ -2,9 +2,10 @@
 layout: "docs"
 title: Step by Step
 class: documentation
-permalink: /docs/step-by-step/
+permalink: /docs/drupal-github-config-tutorial/
 published: true
 ---
+
 
 ## Setup Probo for a Drupal site that uses Github.
 Probo is here to make your development work cycle more fluid. We want you to be able to configure Probo to fit your project's needs; because Probo is highly configurable there are many ways to integrate it with your project. 

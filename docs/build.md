@@ -15,7 +15,7 @@ The .probo.yaml is split into a section for **'assets'** and a section for **'st
 
 Assets is where you indicate which assets to import into this build. These can be any assets that you've uploaded with the [Probo Uploader](http://probo.ci/docs/uploader/).
 
-Please sanitize your database. We store your database encrypted at rest.
+We store your database encrypted at rest and we do our best to keep your data safe, but we'd rather not have your sensitive data at all if you we can avoid it.
 
 For example, if you need to use an asset you've uploaded with filename dev.sql.gz, start .probo.yaml file with:
 {% highlight yaml%}
@@ -29,7 +29,7 @@ Steps are the commands to run for the build. These are typically steps for setti
 
 Each step must have a `name`. The name of each step is the build context, and will get its own status updates.
 
-### Plugins
+## Plugins
 
 Each step also has a `Plugin`. The default Plugin is `Shell`.  Depending on the `Plugin` you specify, you will have access to various parameters. These parameters allow you to configure your Probo site build.
 

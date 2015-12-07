@@ -15,7 +15,7 @@ The .probo.yaml is split into a section for **'assets'** and a section for **'st
 
 Assets is where you indicate which assets to import into this build. These can be any assets that you've uploaded with the [Probo Uploader](http://probo.ci/docs/uploader/).
 
-We store your database encrypted at rest and we do our best to keep your data safe, but we'd rather not have your sensitive data at all if you we can avoid it.
+We store your database encrypted at rest and we do our best to keep your data safe, but we'd rather not have your sensitive data at all if we can avoid it.
 
 For example, if you need to use an asset you've uploaded with filename dev.sql.gz, start .probo.yaml file with:
 {% highlight yaml%}
@@ -80,10 +80,9 @@ steps:
 
 The Drupal plugin provides parameters for your build steps if you are using Probo for a Drupal site.
 
-You can save some shell scripting by using the Drupal Plugin. If you are using the Drupal plugin you must declare  `plugin: Drupal` in your `.probo.yaml`
+Probo will by defualt use the Shell plugin. We provide the Drupal plugin as an easy way for you to configure your Drupal build and to save you some shell scripting. If you are using the Drupal plugin you must declare  `plugin: Drupal` in your `.probo.yaml`. You can use both plugins; but you must declare each plugin in your `.probo.yaml` file before its parameters. The Drupal plugin parameters can automate your Drupal build by reverting features, run database updates or other build configuration.
  
-To use any plugin you must name it first. For example:  `plugin: Drupal`. You can use both plugins; but you must declare each plugin in your `.probo.yaml` file before its parameters. The Drupal plugin parameters can automate your Drupal build by reverting features, run database updates or other build configuration.
-
+ 
 
 ##### Available Parameters
 
